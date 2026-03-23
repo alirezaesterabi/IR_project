@@ -1,54 +1,51 @@
-# Data files (large datasets)
-data/
-raw_data/
+# ── Large data files (not tracked — see data/DATA_SOURCE.md) ─────────────────
+# Full OpenSanctions dump (~3.7 GB)
+data/raw_data/targets.nested.json
+# Pipeline output over full corpus (~1.1 GB)
+data/processed/
 
-# Python
+# Small data files that ARE tracked:
+#   data/raw_data/sample_targets.json     (100-record sample, used by learning notebooks)
+#   data/toy_example/documents.jsonl      (flattened toy corpus, 100 records)
+#   data/evaluation/queries_part_a.xlsx   (evaluation query set)
+#   data/DATA_SOURCE.md                   (data provenance notes)
+
+# ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# ── Virtual environments ──────────────────────────────────────────────────────
 env/
 venv/
 ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
-# Virtual environments
-venv/
-ENV/
-env/
-
-# Jupyter Notebook
-.ipynb_checkpoints
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
 *.ipynb_checkpoints/
 
-# Models and indices
+# ── Build artefacts ───────────────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# ── Models and vector indices ─────────────────────────────────────────────────
 models/
 *.index
 *.pkl
 *.pickle
 chromadb/
 
-# Results and logs
+# ── Results and logs ──────────────────────────────────────────────────────────
 results/
 logs/
 *.log
 
-# OS files
+# ── OS / IDE ──────────────────────────────────────────────────────────────────
 .DS_Store
 .DS_Store?
 ._*
@@ -56,19 +53,18 @@ logs/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Temporary files
+# ── Temporary files ───────────────────────────────────────────────────────────
 *.tmp
 *.bak
 *.cache
-
-# Excel temporary files
 ~$*.xlsx
 ~$*.xls
+
+# ── Tool settings (local only) ────────────────────────────────────────────────
+.claude/

@@ -2074,35 +2074,112 @@ Module 1 covered **how to build an index** and **exact matching** (Boolean).
 
 ## Exercises
 
-See `example.ipynb` for hands-on implementation exercises!
+This module has two companion notebooks. Work through them in order:
 
-**By hand:**
+| Notebook | Topics | Estimated time |
+|----------|--------|----------------|
+| `01_preprocessing.ipynb` | Tokenization, normalization, stop words, stemming/lemmatization, Zipf's Law, Heap's Law, full pipeline | 60–90 min |
+| `02_indexing_boolean_retrieval.ipynb` | Term-doc matrix, inverted index, BSBI, Boolean retrieval, phrase queries, compression, TF-IDF, BM25 | 90–120 min |
 
-1. Stem 20 words using Porter algorithm (step-by-step)
-2. Calculate Zipf's Law parameters for toy corpus
-3. Build inverted index for 5 documents (manually)
-4. Perform Boolean query intersection (trace algorithm)
-5. Add skip pointers, show intersection saves comparisons
-6. Compress postings list with VB and Gamma codes
+---
 
-**Programming:**
+### Notebook 1 — Preprocessing
 
-1. Implement Porter Stemmer from scratch
-2. Build BSBI indexer
-3. Build SPIMI indexer, compare performance
-4. Implement positional index
-5. Phrase query processor
-6. Compression algorithms (VB, Gamma, Delta)
+**Section 1: IR Introduction**
+- Run the Precision/Recall cell and verify the F₁ scores by hand for all three systems.
+- Change `RETRIEVED_NAIVE` to return all 8 documents. What does Precision become? What does Recall become?
 
-**Analysis:**
+**Section 2a: Tokenization**
+- The code compares naive split, spaCy, and regex tokenizers. Which produces the most tokens for `E003` (DONG CHANG)? Why?
+- Add a fourth tokenizer using `nltk.word_tokenize` and compare.
 
-1. Plot Zipf's Law for your data
-2. Verify Heap's Law prediction
-3. Measure compression ratios
-4. Benchmark: Boolean query speed with/without skip pointers
+**Section 2b: Normalization**
+- Run the normalization function on the Arabic name `"فاطمة الراشدي"` (E004). What comes out? Is this useful for search?
+- Try `"café au lait"` — does the accent strip work correctly?
+
+**Section 2c: Stop Words**
+- After stop word removal on E001's notes, count how many tokens remain vs. the raw count. What is the reduction percentage?
+- The code uses a Python `set` for the vocabulary. Change it to a `list` and re-run. What changes in the output, and why?
+
+**Section 2d: Stemming vs Lemmatization**
+- Find a token in the corpus where stemming and lemmatization produce **different** results. Note the Porter stem and the spaCy lemma.
+- For the token `"evading"`: what does Porter return? What does spaCy return? Which is more useful for IR?
+
+**Section 3a: Zipf's Law**
+- Look at the log-log plot. Does the toy corpus follow the Zipf ideal line? Why or why not (small corpus)?
+- Identify the top 3 terms. Are they stop words? What does this confirm?
+
+**Section 3b: Heap's Law**
+- The fitted Heap's Law exponent `b` is printed. Is it in the expected range (0.4–0.6)?
+- Predict: if we doubled the corpus to 16 entities, what vocabulary size does Heap's Law predict?
+
+**Section 4: Full Pipeline**
+- Trace the step-by-step pipeline cell for `E003` (DONG CHANG vessel). How many tokens survive each step?
+- Compare the final `tokens` list for `E001` (Viktor Petrov) with the raw `notes` text. What has been lost? Is any lost information important for retrieval?
+
+---
+
+### Notebook 2 — Indexing & Boolean Retrieval
+
+**Section 1: Term-Document Matrix**
+- The matrix sparsity percentage is printed. What is it? Why does sparsity increase with collection size?
+- Complete the Week 2 Lab exercises:
+  - Q3: Calculate `TF('sanction', 'E003')` manually and verify against the cell output.
+  - Q4: Calculate `DF('sanction')` manually (count docs containing it) and verify.
+
+**Section 2: Inverted Index**
+- Inspect the postings list for `'sanction'`. How many documents does it appear in?
+- Compare `DF('sanction')` from the index vs. the term-doc matrix. Do they match?
+- Find the term with the highest DF. What is it? Is it a good search term?
+
+**Section 3: BSBI**
+- The BSBI code splits 8 documents into blocks of 3. How many blocks are created?
+- Trace block 1: list all the (term, doc_id) pairs it contains (first 5 shown).
+- The final merged index is compared to the hand-built index (`len(bsbi_index) == len(INDEX)`). Does it match? Why is this a good sanity check?
+
+**Section 4: Boolean Retrieval**
+- Run `boolean_AND('russian', 'sanction')`. List the results.
+- Run `boolean_AND('vessel', 'sanction')`. How many results?
+- Manually verify `boolean_AND_NOT('sanction', 'vessel')` by listing the postings for each term and doing the subtraction by hand.
+- Complete the lab tracing exercise: verify `boolean_AND('russian', 'crime')` matches the manual set intersection.
+
+**Section 4.1: Query Optimisation**
+- The optimised AND prints terms in increasing DF order. For `('sanction', 'russian', 'crime')`, what is the order? Look up the DFs in the index to verify.
+- Why is it better to intersect the smallest list first?
+
+**Section 5: Positional Index**
+- Find the positions of `'crude'` and `'oil'` in E003. Are they adjacent?
+- Run `phrase_query('crude oil')`. Does E003 appear? Verify manually from the positional index.
+- Try `phrase_query('russian sanction')`. Does it match? Why or why not (are these terms actually adjacent in any document)?
+
+**Section 6: Index Compression**
+- For the `'sanction'` postings list, what are the raw bytes vs. compressed bytes?
+- The VByte encoding table shows savings for different numbers. Which number gets the biggest savings? Why?
+- Calculate the overall compression ratio printed by the last cell. Is it consistent with typical IR benchmarks (30–50% reduction)?
+
+**Section 7: TF-IDF & BM25**
+- Run the comparison cell for query `['russian', 'sanction']`. Which document ranks highest under BM25? Does this match your intuition?
+- Complete Week 3 Lab Q1–Q4 (BM25 parameter sensitivity):
+  - What happens to the score when `k1 → 0`? (TF has no effect)
+  - What happens when `b = 0`? (no length normalisation)
+  - What happens when `b = 1`? (full length normalisation)
+
+---
+
+### Challenge Exercises
+
+1. **Vocabulary overlap:** After running the full preprocessing pipeline, how many unique terms are shared between at least 3 different entities? Write a one-liner using set operations.
+
+2. **Extended phrase query:** Modify `phrase_query()` to return the **matching positions** alongside the doc_id, so you can see exactly where in the document the phrase appears.
+
+3. **SPIMI simulation:** The notebook implements BSBI. Modify it to simulate SPIMI: instead of sorting pairs, accumulate term→postings in a dict per block, then merge the dicts.
+
+4. **Compression benchmark:** Implement Gamma coding (as described in Manning §5.3.2) and compare its compression ratio against VByte on the full index.
+
+5. **Real data connection:** Load the first 100 lines of `data/processed/full/documents.jsonl` and build a real inverted index using the `tokens` field already computed by Phase 2. Compare its vocabulary size against Heap's Law prediction.
 
 ---
 
 **End of Module 1 Theory**
 
-Next: Work through `example.ipynb` to implement these concepts!
+Next: `01_preprocessing.ipynb` → `02_indexing_boolean_retrieval.ipynb` → **Module 2: Ranked Retrieval**
