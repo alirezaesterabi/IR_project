@@ -10,17 +10,20 @@
 ## Table of Contents
 
 ### Part 1: From Boolean to Ranked Retrieval
+
 1.1 Why Boolean Retrieval is Not Enough  
 1.2 The Ranking Problem  
 1.3 Relevance as a Score  
 
 ### Part 2: Term Weighting — TF, IDF, TF-IDF
+
 2.1 Term Frequency (TF) and Its Variants  
 2.2 Document Frequency and Inverse Document Frequency (IDF)  
 2.3 TF-IDF Weighting Schemes (SMART Notation)  
 2.4 The IDF Derivation — Where Does log Come From?  
 
 ### Part 3: Vector Space Model (VSM)
+
 3.1 Documents and Queries as Vectors  
 3.2 Cosine Similarity — Derivation and Geometry  
 3.3 Why Not Euclidean Distance?  
@@ -28,12 +31,14 @@
 3.5 Limitations of VSM  
 
 ### Part 4: Probabilistic Information Retrieval
+
 4.1 The Probability Ranking Principle (PRP)  
 4.2 Binary Independence Model (BIM)  
 4.3 Estimating Term Weights — Robertson-Sparck Jones (RSJ)  
 4.4 From RSJ to BM25: Bridging the Gap  
 
 ### Part 5: BM25 — The Most Important Ranking Function
+
 5.1 Full Derivation of BM25  
 5.2 TF Saturation — the k₁ Parameter  
 5.3 Document Length Normalisation — the b Parameter  
@@ -43,12 +48,14 @@
 5.7 Worked Example by Hand  
 
 ### Part 6: BM25F — Multi-Field BM25
+
 6.1 Motivation: Fields Have Different Importance  
 6.2 Naive Concatenation and Why It Fails  
 6.3 BM25F Formula and Field Weights  
 6.4 BM25F in Elasticsearch (Week 5 Lab)  
 
 ### Part 7: Language Models for IR
+
 7.1 Query Likelihood Approach  
 7.2 The Zero-Probability Problem and Smoothing  
 7.3 Jelinek-Mercer Smoothing  
@@ -56,6 +63,7 @@
 7.5 Relationship to BM25  
 
 ### Part 8: Model Comparison and Practical Guidance
+
 8.1 Summary: When to Use Which Model  
 8.2 What BM25 Parameters to Set  
 8.3 Connection to the OpenSanctions Project  
@@ -82,6 +90,7 @@ Consider a compliance analyst searching OpenSanctions for `"Russian sanctions"`:
 This is called the **feast-or-famine problem** of Boolean retrieval.
 
 **The solution:** compute a real-valued **score** for every document and return them ranked highest first. The analyst gets:
+
 - the most relevant documents at the top
 - a graceful degradation (partial matches still appear, lower)
 
@@ -90,12 +99,14 @@ This is called the **feast-or-famine problem** of Boolean retrieval.
 **Formal statement:**
 
 Given:
+
 - A collection $\mathcal{D}$ of $N$ documents
 - A query $q$ consisting of terms $t_1, t_2, \ldots, t_k$
 
 Compute a score $s(q, d) \in \mathbb{R}$ for each $d \in \mathcal{D}$, then return the top-$K$ documents sorted by score descending.
 
 The score function must be:
+
 1. **Efficient** — computable in milliseconds, not hours
 2. **Meaningful** — higher score = more likely relevant
 3. **Comparable** — scores across different queries must be interpretable
@@ -124,18 +135,21 @@ This is called the **TF saturation problem**: the 10th occurrence of a term adds
 
 **Solution variants:**
 
-| Variant | Formula | When to use |
-|---------|---------|-------------|
-| Raw count | $\text{tf}(t,d)$ | Rarely used directly |
-| Binary | $\mathbf{1}[\text{tf}(t,d) > 0]$ | When presence/absence is enough |
-| Log-scaled | $1 + \log\text{tf}(t,d)$ if $\text{tf}>0$, else 0 | Most common in VSM |
-| Normalized | $\frac{\text{tf}(t,d)}{\max_{t'} \text{tf}(t',d)}$ | When doc length varies greatly |
-| Augmented | $0.5 + 0.5 \cdot \frac{\text{tf}(t,d)}{\max_{t'} \text{tf}(t',d)}$ | Long docs, prevents 0 for present terms |
-| BM25 saturation | $\frac{\text{tf}(t,d) \cdot (k_1+1)}{\text{tf}(t,d) + k_1}$ | BM25 (see Part 5) |
+
+| Variant         | Formula                                                            | When to use                             |
+| --------------- | ------------------------------------------------------------------ | --------------------------------------- |
+| Raw count       | $\text{tf}(t,d)$                                                   | Rarely used directly                    |
+| Binary          | $\mathbf{1}[\text{tf}(t,d) > 0]$                                   | When presence/absence is enough         |
+| Log-scaled      | $1 + \log\text{tf}(t,d)$ if $\text{tf}>0$, else 0                  | Most common in VSM                      |
+| Normalized      | $\frac{\text{tf}(t,d)}{\max_{t'} \text{tf}(t',d)}$                 | When doc length varies greatly          |
+| Augmented       | $0.5 + 0.5 \cdot \frac{\text{tf}(t,d)}{\max_{t'} \text{tf}(t',d)}$ | Long docs, prevents 0 for present terms |
+| BM25 saturation | $\frac{\text{tf}(t,d) \cdot (k_1+1)}{\text{tf}(t,d) + k_1}$        | BM25 (see Part 5)                       |
+
 
 **Log-scaled TF visualised:**
 
 For raw TF = {0, 1, 2, 5, 10, 100}:
+
 - Raw TF:    {0, 1, 2, 5, 10, 100}
 - Log TF:    {0, 1, 1.3, 1.7, 2.0, 3.0}
 
@@ -155,12 +169,14 @@ The harmonic series approximation gives us the log function directly. This is wh
 
 Observation:
 
-| Term | df | Meaning |
-|------|----|---------|
-| `the` | 1,240,000 | Appears in nearly every doc → useless |
-| `sanction` | 1,180,000 | Very common in our corpus → low info |
-| `proliferation` | 12,400 | Moderately rare → medium info |
-| `imo9553359` | 1 | Unique → maximum info |
+
+| Term            | df        | Meaning                               |
+| --------------- | --------- | ------------------------------------- |
+| `the`           | 1,240,000 | Appears in nearly every doc → useless |
+| `sanction`      | 1,180,000 | Very common in our corpus → low info  |
+| `proliferation` | 12,400    | Moderately rare → medium info         |
+| `imo9553359`    | 1         | Unique → maximum info                 |
+
 
 Terms with high $\text{df}$ carry little **discriminative power** — they don't help distinguish relevant from non-relevant documents.
 
@@ -172,22 +188,26 @@ where $N$ is the total number of documents.
 
 **Why log?** Without log:
 
-| Term | df | $N/\text{df}$ | $\log(N/\text{df})$ |
-|------|----|--------------|-------------------|
-| `the` | $N$ | 1 | 0 |
-| `proliferation` | $N/100$ | 100 | 2 |
-| `imo9553359` | 1 | $N$ | $\log N$ |
+
+| Term            | df      | $N/\text{df}$ | $\log(N/\text{df})$ |
+| --------------- | ------- | ------------- | ------------------- |
+| `the`           | $N$     | 1             | 0                   |
+| `proliferation` | $N/100$ | 100           | 2                   |
+| `imo9553359`    | 1       | $N$           | $\log N$            |
+
 
 The log keeps scores on a human-scale range. Without it, a rare term would dominate by a factor of millions.
 
 **IDF table for our OpenSanctions corpus ($N = 1{,}245{,}931$):**
 
-| Term | df | idf |
-|------|----|-----|
-| `sanction` | 1,180,000 | $\log(1.06) \approx 0.02$ |
-| `vessel` | 98,000 | $\log(12.7) \approx 1.10$ |
-| `proliferation` | 12,400 | $\log(100) \approx 2.00$ |
-| `imo9553359` | 1 | $\log(1{,}245{,}931) \approx 6.10$ |
+
+| Term            | df        | idf                                |
+| --------------- | --------- | ---------------------------------- |
+| `sanction`      | 1,180,000 | $\log(1.06) \approx 0.02$          |
+| `vessel`        | 98,000    | $\log(12.7) \approx 1.10$          |
+| `proliferation` | 12,400    | $\log(100) \approx 2.00$           |
+| `imo9553359`    | 1         | $\log(1{,}245{,}931) \approx 6.10$ |
+
 
 **IDF smoothing variants:**
 
@@ -206,28 +226,32 @@ The probabilistic variant (Manning eq. 6.11) is what BM25 uses — we'll return 
 The **SMART system** (Salton, 1971) introduced a systematic notation for weighting schemes: `ddd.qqq` where the first triple applies to documents and the second to queries. Each triple has three characters: TF variant, DF variant, normalisation variant.
 
 **TF variants (first character):**
+
 - `n` — natural (raw): $\text{tf}(t,d)$
 - `l` — logarithm: $1 + \log\text{tf}(t,d)$
 - `a` — augmented: $0.5 + 0.5 \cdot \text{tf}/\max\text{tf}$
 - `b` — binary: $\mathbf{1}[\text{tf}>0]$
 
 **DF variants (second character):**
+
 - `n` — none: 1
 - `t` — idf: $\log(N/\text{df})$
 - `p` — prob. idf: $\log\frac{N-\text{df}}{\text{df}}$
 
 **Normalisation (third character):**
+
 - `n` — none
 - `c` — cosine: divide by $L_2$ norm of vector
 - `u` — pivoted unique normalisation
 
 The most common scheme in practice is **lnc.ltc**:
+
 - Documents: log TF, no IDF, cosine normalised
 - Queries: log TF, IDF weighted, cosine normalised
 
-$$w_{t,d}^{\text{lnc}} = \frac{(1 + \log\text{tf}_{t,d})}{\sqrt{\sum_{t'} (1 + \log\text{tf}_{t',d})^2}}$$
+$$w_{t,d}^{\text{lnc}} = \frac{(1 + \log\text{tf}*{t,d})}{\sqrt{\sum*{t'} (1 + \log\text{tf}_{t',d})^2}}$$
 
-$$w_{t,q}^{\text{ltc}} = \frac{(1 + \log\text{tf}_{t,q}) \cdot \log(N/\text{df}_t)}{\sqrt{\sum_{t'} [(1 + \log\text{tf}_{t',q}) \cdot \log(N/\text{df}_{t'})]^2}}$$
+$$w_{t,q}^{\text{ltc}} = \frac{(1 + \log\text{tf}*{t,q}) \cdot \log(N/\text{df}t)}{\sqrt{\sum{t'} [(1 + \log\text{tf}*{t',q}) \cdot \log(N/\text{df}_{t'})]^2}}$$
 
 ### 2.4 The IDF Derivation — Where Does log Come From?
 
@@ -254,6 +278,7 @@ $$\vec{d} = (w_{t_1,d},\ w_{t_2,d},\ \ldots,\ w_{t_{|V|},d}) \in \mathbb{R}^{|V|
 $$\vec{q} = (w_{t_1,q},\ w_{t_2,q},\ \ldots,\ w_{t_{|V|},q}) \in \mathbb{R}^{|V|}$$
 
 **For OpenSanctions:**
+
 - $|V| \approx 500{,}000$ terms
 - $N = 1{,}245{,}931$ documents
 - Matrix would be $500K \times 1.25M = 6.25 \times 10^{11}$ cells — impossible to store explicitly
@@ -283,12 +308,14 @@ Two documents about the same topic will have similar term distributions → simi
 
 Terms: `russian`, `sanction`, `vessel`
 
-| | russian | sanction | vessel |
-|-|---------|----------|--------|
-| E001 (Viktor Petrov) | 2 | 1 | 0 |
-| E003 (DONG CHANG) | 0 | 1 | 3 |
-| E005 (Black Sea Corp) | 1 | 1 | 0 |
-| query: "russian sanction" | 1 | 1 | 0 |
+
+|                           | russian | sanction | vessel |
+| ------------------------- | ------- | -------- | ------ |
+| E001 (Viktor Petrov)      | 2       | 1        | 0      |
+| E003 (DONG CHANG)         | 0       | 1        | 3      |
+| E005 (Black Sea Corp)     | 1       | 1        | 0      |
+| query: "russian sanction" | 1       | 1        | 0      |
+
 
 Step 1: IDF weights (toy with $N=3$):
 $$\text{idf(russian)} = \log(3/2) = 0.41, \quad \text{idf(sanction)} = \log(3/3) = 0, \quad \text{idf(vessel)} = \log(3/1) = 0.48$$
@@ -351,15 +378,10 @@ For a query with 5 terms, each with df ≈ 1000, this is 5000 operations — not
 ### 3.5 Limitations of VSM
 
 1. **Term independence assumption:** Each term is treated independently. "New York" ≠ "New" + "York" in VSM.
-
 2. **No term proximity:** A document with query terms adjacent scores the same as one with them scattered.
-
-3.**Bag-of-words:** Word order is completely ignored.
-
+3. 3.**Bag-of-words:** Word order is completely ignored.
 4. **IDF is a heuristic:** It works empirically but has no principled probabilistic justification within VSM.
-
 5. **TF saturation is not properly handled:** Log-scaling helps but doesn't model diminishing returns optimally.
-
 6. **No document length normalisation that handles very long/short documents well:** Cosine normalisation over-penalises long documents.
 
 These limitations motivate the probabilistic approach — leading to BM25.
@@ -406,12 +428,14 @@ D4 tokens: iranian, vessel, suspect, arms, smuggl
 
 Rows = documents, columns = terms (0 or 1 in this small example):
 
-|    | russian | sanction | vessel | crude | oil | oligarch | evad | energi | north | korean | shell | compani | evas | iranian | arms | suspect | smuggl |
-|----|---------|----------|--------|-------|-----|----------|------|--------|-------|--------|-------|---------|------|---------|------|---------|--------|
-| D1 | **1** | **1** | 0 | 0 | 0 | **1** | **1** | **1** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| D2 | 0 | **1** | **1** | **1** | **1** | 0 | 0 | 0 | **1** | **1** | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| D3 | **1** | **1** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **1** | **1** | **1** | 0 | 0 | 0 | 0 |
-| D4 | 0 | 0 | **1** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **1** | **1** | **1** | **1** |
+
+|     | russian | sanction | vessel | crude | oil   | oligarch | evad  | energi | north | korean | shell | compani | evas  | iranian | arms  | suspect | smuggl |
+| --- | ------- | -------- | ------ | ----- | ----- | -------- | ----- | ------ | ----- | ------ | ----- | ------- | ----- | ------- | ----- | ------- | ------ |
+| D1  | **1**   | **1**    | 0      | 0     | 0     | **1**    | **1** | **1**  | 0     | 0      | 0     | 0       | 0     | 0       | 0     | 0       | 0      |
+| D2  | 0       | **1**    | **1**  | **1** | **1** | 0        | 0     | 0      | **1** | **1**  | 0     | 0       | 0     | 0       | 0     | 0       | 0      |
+| D3  | **1**   | **1**    | 0      | 0     | 0     | 0        | 0     | 0      | 0     | 0      | **1** | **1**   | **1** | 0       | 0     | 0       | 0      |
+| D4  | 0       | 0        | **1**  | 0     | 0     | 0        | 0     | 0      | 0     | 0      | 0     | 0       | 0     | **1**   | **1** | **1**   | **1**  |
+
 
 ---
 
@@ -421,15 +445,17 @@ $$\text{df}(t) = \text{number of documents containing } t$$
 
 $$\text{idf}(t) = \log_{10}\frac{N}{\text{df}(t)} = \log_{10}\frac{4}{\text{df}(t)}$$
 
-| Term | df | idf = log₁₀(4/df) |
-|------|----|-------------------|
-| sanction | 3 | $\log_{10}(4/3) = \mathbf{0.125}$ |
-| russian | 2 | $\log_{10}(4/2) = \mathbf{0.301}$ |
-| vessel | 2 | $\log_{10}(4/2) = \mathbf{0.301}$ |
-| crude | 1 | $\log_{10}(4/1) = \mathbf{0.602}$ |
-| oil | 1 | $\log_{10}(4/1) = \mathbf{0.602}$ |
-| oligarch | 1 | $\log_{10}(4/1) = \mathbf{0.602}$ |
-| iranian | 1 | $\log_{10}(4/1) = \mathbf{0.602}$ |
+
+| Term     | df  | idf = log₁₀(4/df)                 |
+| -------- | --- | --------------------------------- |
+| sanction | 3   | $\log_{10}(4/3) = \mathbf{0.125}$ |
+| russian  | 2   | $\log_{10}(4/2) = \mathbf{0.301}$ |
+| vessel   | 2   | $\log_{10}(4/2) = \mathbf{0.301}$ |
+| crude    | 1   | $\log_{10}(4/1) = \mathbf{0.602}$ |
+| oil      | 1   | $\log_{10}(4/1) = \mathbf{0.602}$ |
+| oligarch | 1   | $\log_{10}(4/1) = \mathbf{0.602}$ |
+| iranian  | 1   | $\log_{10}(4/1) = \mathbf{0.602}$ |
+
 
 **Key observation:** `sanction` appears in 3 of 4 docs → idf = 0.125 (weak discriminator).  
 `crude` appears in only 1 doc → idf = 0.602 (strong discriminator).
@@ -442,12 +468,14 @@ $$w(t, d) = \text{tf}(t, d) \times \text{idf}(t)$$
 
 Since all tf values here are 0 or 1, each weight is simply the idf when the term is present:
 
-|    | russian | sanction | vessel | crude | oil | oligarch | energi | iranian |
-|----|---------|----------|--------|-------|-----|----------|--------|---------|
-| D1 | **0.301** | **0.125** | 0 | 0 | 0 | **0.602** | **0.602** | 0 |
-| D2 | 0 | **0.125** | **0.301** | **0.602** | **0.602** | 0 | 0 | 0 |
-| D3 | **0.301** | **0.125** | 0 | 0 | 0 | 0 | 0 | 0 |
-| D4 | 0 | 0 | **0.301** | 0 | 0 | 0 | 0 | **0.602** |
+
+|     | russian   | sanction  | vessel    | crude     | oil       | oligarch  | energi    | iranian   |
+| --- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| D1  | **0.301** | **0.125** | 0         | 0         | 0         | **0.602** | **0.602** | 0         |
+| D2  | 0         | **0.125** | **0.301** | **0.602** | **0.602** | 0         | 0         | 0         |
+| D3  | **0.301** | **0.125** | 0         | 0         | 0         | 0         | 0         | 0         |
+| D4  | 0         | 0         | **0.301** | 0         | 0         | 0         | 0         | **0.602** |
+
 
 Each document is now a **sparse vector** in 17-dimensional space.
 
@@ -471,23 +499,27 @@ All other 15 dimensions = 0.
 
 The simplest scoring: add up the TF-IDF weights of the query terms that appear in each document.
 
-$$\text{score}_{\text{sum}}(q, d) = \sum_{t \in q} w(t, d)$$
+$$\text{score}*{\text{sum}}(q, d) = \sum*{t \in q} w(t, d)$$
+
 
 | Doc | w(russian, d) | w(sanction, d) | Sum score |
-|-----|--------------|----------------|-----------|
-| D1 | 0.301 | 0.125 | **0.426** |
-| D2 | 0 | 0.125 | **0.125** |
-| D3 | 0.301 | 0.125 | **0.426** |
-| D4 | 0 | 0 | **0.000** |
+| --- | ------------- | -------------- | --------- |
+| D1  | 0.301         | 0.125          | **0.426** |
+| D2  | 0             | 0.125          | **0.125** |
+| D3  | 0.301         | 0.125          | **0.426** |
+| D4  | 0             | 0              | **0.000** |
+
 
 **Ranked list (Method 1):**
 
-| Rank | Document | Score |
-|------|----------|-------|
+
+| Rank   | Document                                        | Score |
+| ------ | ----------------------------------------------- | ----- |
 | **1=** | D1: "Russian oligarch evading sanctions energy" | 0.426 |
-| **1=** | D3: "Russian shell company sanctions evasion" | 0.426 |
-| **3** | D2: "North Korean vessel crude oil sanctions" | 0.125 |
-| **4** | D4: "Iranian vessel suspected arms smuggling" | 0.000 |
+| **1=** | D3: "Russian shell company sanctions evasion"   | 0.426 |
+| **3**  | D2: "North Korean vessel crude oil sanctions"   | 0.125 |
+| **4**  | D4: "Iranian vessel suspected arms smuggling"   | 0.000 |
+
 
 **Problem:** D1 and D3 are tied. Method 1 ignores all terms in the document that are *not* in the query, so it cannot distinguish a focused document from a verbose one.
 
@@ -533,12 +565,14 @@ $$\text{score}(q, D3) = \frac{0.1062}{0.326 \times 1.092} = \frac{0.1062}{0.356}
 
 ### Result: Side-by-Side Comparison
 
-| Doc | Method 1 (sum) | Rank | Method 2 (cosine) | Rank |
-|-----|----------------|------|-------------------|------|
-| D1 | 0.426 | **1=** | 0.357 | **1** |
-| D3 | 0.426 | **1=** | 0.298 | **2** |
-| D2 | 0.125 | **3** | 0.038 | **3** |
-| D4 | 0.000 | **4** | 0.000 | **4** |
+
+| Doc | Method 1 (sum) | Rank   | Method 2 (cosine) | Rank  |
+| --- | -------------- | ------ | ----------------- | ----- |
+| D1  | 0.426          | **1=** | 0.357             | **1** |
+| D3  | 0.426          | **1=** | 0.298             | **2** |
+| D2  | 0.125          | **3**  | 0.038             | **3** |
+| D4  | 0.000          | **4**  | 0.000             | **4** |
+
 
 ---
 
@@ -599,8 +633,7 @@ This ratio is what the **Binary Independence Model** attempts to estimate.
 
 The **Binary Independence Model** (Manning §11.3) makes two simplifying assumptions:
 
-1. **Binary representation:** documents are represented as binary vectors $\vec{x} \in \{0,1\}^{|V|}$ — only presence/absence of each term, not counts.
-
+1. **Binary representation:** documents are represented as binary vectors $\vec{x} \in 0,1^{|V|}$ — only presence/absence of each term, not counts.
 2. **Independence:** terms are conditionally independent of each other given relevance status.
 
 Under these assumptions, the likelihood ratio becomes:
@@ -608,6 +641,7 @@ Under these assumptions, the likelihood ratio becomes:
 $$\text{RSV}(d, q) = \sum_{t \in q \cap d} \log \frac{p_t(1 - u_t)}{u_t(1 - p_t)}$$
 
 where:
+
 - $p_t = P(x_t = 1 \mid R = 1)$ — probability term $t$ appears in a **relevant** document
 - $u_t = P(x_t = 1 \mid R = 0)$ — probability term $t$ appears in a **non-relevant** document
 
@@ -638,7 +672,6 @@ $$\text{RSV}_t = \log \frac{N - \text{df}_t + 0.5}{\text{df}_t + 0.5}$$
 The BIM+RSJ model has two remaining weaknesses:
 
 1. **Binary representation:** It ignores how many times a term appears (tf). A document mentioning "sanctions" 10 times scores the same as one mentioning it once.
-
 2. **No document length normalisation:** Long documents are unfairly advantaged (more chance of containing query terms).
 
 BM25 addresses both. It is the result of empirical experimentation at TREC (Text REtrieval Conference) in the early 1990s by Robertson, Walker, and colleagues.
@@ -672,17 +705,17 @@ where $K$ is related to the ratio of Poisson means. This gives the TF saturation
 
 Let $L_d = $ document length, $\bar{L} = $ average document length across the corpus. Define a **normalised term frequency**:
 
-$$\text{tf}_{\text{norm}} = \frac{tf_{t,d}}{(1 - b) + b \cdot \frac{L_d}{\bar{L}}}$$
+$$\text{tf}*{\text{norm}} = \frac{tf*{t,d}}{(1 - b) + b \cdot \frac{L_d}{\bar{L}}}$$
 
 where $b \in [0, 1]$ controls the degree of normalisation.
 
 Substituting $\text{tf}_{\text{norm}}$ for $tf$ in the 2-Poisson contribution and defining $k_1$ as the saturation parameter:
 
-$$\text{BM25\_TF}(t, d) = \frac{\text{tf}_{t,d} \cdot (k_1 + 1)}{\text{tf}_{t,d} + k_1 \cdot \left((1-b) + b \cdot \frac{L_d}{\bar{L}}\right)}$$
+$$\text{BM25TF}(t, d) = \frac{\text{tf}*{t,d} \cdot (k_1 + 1)}{\text{tf}*{t,d} + k_1 \cdot \left((1-b) + b \cdot \frac{L_d}{\bar{L}}\right)}$$
 
 Combining with the RSJ weight:
 
-$$\boxed{\text{BM25}(d, q) = \sum_{t \in q \cap d} \underbrace{\log\frac{N - \text{df}_t + 0.5}{\text{df}_t + 0.5}}_{\text{IDF}} \times \underbrace{\frac{\text{tf}_{t,d} \cdot (k_1+1)}{\text{tf}_{t,d} + k_1 \cdot \left(1 - b + b \cdot \frac{L_d}{\bar{L}}\right)}}_{\text{normalised TF with saturation}}}$$
+$$\boxed{\text{BM25}(d, q) = \sum_{t \in q \cap d} \underbrace{\log\frac{N - \text{df}*t + 0.5}{\text{df}t + 0.5}}{\text{IDF}} \times \underbrace{\frac{\text{tf}*{t,d} \cdot (k_1+1)}{\text{tf}*{t,d} + k_1 \cdot \left(1 - b + b \cdot \frac{L_d}{\bar{L}}\right)}}*{\text{normalised TF with saturation}}}$$
 
 This is the **complete BM25 formula** (Manning eq. 11.32).
 
@@ -690,24 +723,27 @@ This is the **complete BM25 formula** (Manning eq. 11.32).
 
 The normalised TF factor is:
 
-$$\text{BM25\_TF} = \frac{\text{tf} \cdot (k_1 + 1)}{\text{tf} + k_1 \cdot \text{norm\_factor}}$$
+$$\text{BM25TF} = \frac{\text{tf} \cdot (k_1 + 1)}{\text{tf} + k_1 \cdot \text{normfactor}}$$
 
-**Behaviour analysis** (holding document length fixed, so norm\_factor = 1):
+**Behaviour analysis** (holding document length fixed, so normfactor = 1):
 
-$$\lim_{\text{tf} \to 0} \text{BM25\_TF} = 0$$
-$$\lim_{\text{tf} \to \infty} \text{BM25\_TF} = k_1 + 1$$
+$$\lim_{\text{tf} \to 0} \text{BM25TF} = 0$$
+$$\lim_{\text{tf} \to \infty} \text{BM25TF} = k_1 + 1$$
 
 The function is **bounded above by** $k_1 + 1$. This is the saturation ceiling.
 
-| $k_1$ | At tf=1 | At tf=5 | At tf=10 | Ceiling |
-|--------|---------|---------|---------|---------|
-| 0.0 | 1.0 | 1.0 | 1.0 | 1.0 (binary) |
-| 0.5 | 1.33 | 1.45 | 1.48 | 1.5 |
-| 1.2 | 1.18 | 1.75 | 1.89 | 2.2 |
-| 2.0 | 1.0 | 1.67 | 1.91 | 3.0 |
-| ∞ | 1.0 | 5.0 | 10.0 | ∞ (linear) |
+
+| $k_1$ | At tf=1 | At tf=5 | At tf=10 | Ceiling      |
+| ----- | ------- | ------- | -------- | ------------ |
+| 0.0   | 1.0     | 1.0     | 1.0      | 1.0 (binary) |
+| 0.5   | 1.33    | 1.45    | 1.48     | 1.5          |
+| 1.2   | 1.18    | 1.75    | 1.89     | 2.2          |
+| 2.0   | 1.0     | 1.67    | 1.91     | 3.0          |
+| ∞     | 1.0     | 5.0     | 10.0     | ∞ (linear)   |
+
 
 **Extreme values:**
+
 - $k_1 = 0$: completely binary — tf is ignored, BM25 reduces to the RSJ model
 - $k_1 \to \infty$: linear TF — no saturation, equivalent to raw TF weighting
 - $k_1 \in [1.2, 2.0]$: typical range used in practice (TREC experiments)
@@ -729,12 +765,14 @@ $$\text{norm} = (1 - b) + b \cdot \frac{L_d}{\bar{L}}$$
 **Why not always use $b=1$ (full normalisation)?**
 
 Consider two documents:
+
 - **Short:** 50 words, mentions "vessel" once → $\text{tf/L} = 0.02$ (dense use)
 - **Long:** 500 words, mentions "vessel" 8 times → $\text{tf/L} = 0.016$ (slightly sparser)
 
 Full normalisation ($b=1$) would rank the short document higher. But the long document contains far more evidence about vessels — it just also covers other topics. Partial normalisation ($b=0.75$) correctly balances this.
 
 **Two reasons a document might be long:**
+
 1. **Verbose style:** Repeats content many times — should be penalised
 2. **More content:** Genuinely covers more topics — should not be penalised
 
@@ -752,23 +790,24 @@ $$\text{IDF}_{\text{classical}} = \log\frac{N}{\text{df}_t}$$
 
 The 0.5 additive smoothing prevents division by zero and dampens extreme values. The term $N - \text{df}_t$ in the numerator reflects the probabilistic origin: it estimates the number of non-relevant documents (recall $u_t \approx \text{df}_t/N$ from the BIM).
 
-**Important:** When $\text{df}_t > N/2$ (term appears in more than half of documents), $\text{IDF}_{\text{BM25}}$ becomes **negative**. This means the term is so common it is actually evidence **against** relevance. In practice, implementations often floor IDF at 0 to avoid subtracting from the score.
+**Important:** When $\text{df}*t > N/2$ (term appears in more than half of documents), $\text{IDF}*{\text{BM25}}$ becomes **negative**. This means the term is so common it is actually evidence **against** relevance. In practice, implementations often floor IDF at 0 to avoid subtracting from the score.
 
 ### 5.5 The Complete BM25 Formula
 
 Bringing together all components:
 
-$$\text{BM25}(d, q) = \sum_{t \in q \cap d} \log\frac{N - \text{df}_t + 0.5}{\text{df}_t + 0.5} \cdot \frac{\text{tf}_{t,d} \cdot (k_1+1)}{\text{tf}_{t,d} + k_1 \cdot \left(1 - b + b \cdot \frac{L_d}{\bar{L}}\right)}$$
+$$\text{BM25}(d, q) = \sum_{t \in q \cap d} \log\frac{N - \text{df}*t + 0.5}{\text{df}t + 0.5} \cdot \frac{\text{tf}{t,d} \cdot (k_1+1)}{\text{tf}*{t,d} + k_1 \cdot \left(1 - b + b \cdot \frac{L_d}{\bar{L}}\right)}$$
 
 **Optional query term frequency weighting:**
 
 If the query itself contains repeated terms (rare in practice but included in some formulations):
 
-$$\text{BM25}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \frac{\text{tf}_{t,d} \cdot (k_1+1)}{\text{tf}_{t,d} + k_1(\ldots)} \cdot \frac{\text{tf}_{t,q} \cdot (k_3+1)}{\text{tf}_{t,q} + k_3}$$
+$$\text{BM25}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \frac{\text{tf}*{t,d} \cdot (k_1+1)}{\text{tf}*{t,d} + k_1(\ldots)} \cdot \frac{\text{tf}*{t,q} \cdot (k_3+1)}{\text{tf}*{t,q} + k_3}$$
 
 where $k_3 \in [0, 1000]$ controls query TF saturation. Setting $k_3 = 0$ gives binary query term matching (standard usage).
 
 **Default parameters (from TREC experiments):**
+
 - $k_1 = 1.2$ to $2.0$
 - $b = 0.75$
 - $k_3 = 0$ (binary query term treatment)
@@ -781,13 +820,14 @@ A term that appears in a document gets **score 0** when $b=1$ and the document i
 
 **BM25+ adds a small additive term $\delta$ to prevent this:**
 
-$$\text{BM25+}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \left(\delta + \frac{\text{tf}_{t,d} \cdot (k_1+1)}{\text{tf}_{t,d} + k_1 \cdot \text{norm}}\right)$$
+$$\text{BM25+}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \left(\delta + \frac{\text{tf}*{t,d} \cdot (k_1+1)}{\text{tf}*{t,d} + k_1 \cdot \text{norm}}\right)$$
 
 Typical value: $\delta = 1.0$. This ensures every matching term always contributes a positive score.
 
 ### 5.7 Worked Example by Hand
 
 **Collection (3 documents):**
+
 - D1: "Russian oligarch evading OFAC sanctions linked to energy"  ($L=9$)
 - D2: "North Korean vessel transporting crude oil sanctions violation"  ($L=8$)
 - D3: "Russian shell company sanctions evasion money laundering"  ($L=7$)
@@ -797,6 +837,7 @@ $N=3$, $\bar{L} = 8$
 **Query:** `"russian sanctions"`
 
 **Step 1: Document frequencies**
+
 - $\text{df}(\text{russian}) = 2$ (D1, D3)
 - $\text{df}(\text{sanction}) = 3$ (D1, D2, D3)
 
@@ -816,13 +857,13 @@ For D1 and term "russian" ($\text{tf}=1$, $L=9$):
 
 $$\text{norm} = 1 - 0.75 + 0.75 \times \frac{9}{8} = 0.25 + 0.844 = 1.094$$
 
-$$\text{BM25\_TF} = \frac{1 \times (1.2 + 1)}{1 + 1.2 \times 1.094} = \frac{2.2}{1 + 1.313} = \frac{2.2}{2.313} = 0.951$$
+$$\text{BM25TF} = \frac{1 \times (1.2 + 1)}{1 + 1.2 \times 1.094} = \frac{2.2}{1 + 1.313} = \frac{2.2}{2.313} = 0.951$$
 
 For D3 and term "russian" ($\text{tf}=1$, $L=7$):
 
 $$\text{norm} = 0.25 + 0.75 \times \frac{7}{8} = 0.25 + 0.656 = 0.906$$
 
-$$\text{BM25\_TF} = \frac{2.2}{1 + 1.2 \times 0.906} = \frac{2.2}{2.087} = 1.054$$
+$$\text{BM25TF} = \frac{2.2}{1 + 1.2 \times 0.906} = \frac{2.2}{2.087} = 1.054$$
 
 D3 scores slightly higher for "russian" because it is shorter, meaning "russian" is relatively more prominent.
 
@@ -858,13 +899,14 @@ Additionally: a 500-token `notes` field with 1 mention of "sanctions" gets the s
 
 **BM25F** (Robertson et al., 2004) normalises each field **independently**, then combines:
 
-$$\text{BM25F}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \frac{\tilde{tf}_{t,d} \cdot (k_1 + 1)}{\tilde{tf}_{t,d} + k_1}$$
+$$\text{BM25F}(d, q) = \sum_{t \in q \cap d} \text{IDF}(t) \cdot \frac{\tilde{tf}*{t,d} \cdot (k_1 + 1)}{\tilde{tf}*{t,d} + k_1}$$
 
 where the **pseudo-TF** $\tilde{tf}$ is the weighted sum of per-field normalised TFs:
 
-$$\tilde{tf}_{t,d} = \sum_{f \in \text{fields}} w_f \cdot \frac{\text{tf}_{t,d,f}}{(1 - b_f) + b_f \cdot \frac{L_{d,f}}{\bar{L}_f}}$$
+$$\tilde{tf}*{t,d} = \sum*{f \in \text{fields}} w_f \cdot \frac{\text{tf}*{t,d,f}}{(1 - b_f) + b_f \cdot \frac{L*{d,f}}{\bar{L}_f}}$$
 
 Parameters:
+
 - $w_f$: weight of field $f$ (tunable: e.g. $w_{\text{name}} = 5$, $w_{\text{alias}} = 3$, $w_{\text{notes}} = 1$)
 - $b_f$: length normalisation for field $f$ (can differ per field)
 - $\bar{L}_f$: average length of field $f$ across all documents
@@ -874,6 +916,7 @@ Parameters:
 ### 6.4 BM25F in Elasticsearch
 
 Elasticsearch (Week 5 Lab) implements BM25F natively. The `request_body` in the lab configures:
+
 - `similarity.type = BM25`
 - `k1`, `b` parameters per index
 
@@ -911,7 +954,7 @@ $$P(t \mid \theta_d) = \frac{\text{tf}_{t,d}}{L_d}$$
 
 In log space:
 
-$$\log P(q \mid \theta_d) = \sum_{t \in q} \text{tf}_{t,q} \cdot \log\frac{\text{tf}_{t,d}}{L_d}$$
+$$\log P(q \mid \theta_d) = \sum_{t \in q} \text{tf}*{t,q} \cdot \log\frac{\text{tf}*{t,d}}{L_d}$$
 
 **Problem:** if any query term does not appear in $d$, then $P(t \mid \theta_d) = 0$ and the entire product is zero. This is the **zero-probability problem**.
 
@@ -921,7 +964,7 @@ The zero-probability problem is solved by **smoothing** — mixing the document 
 
 $$P_{\text{smooth}}(t \mid d) = (1-\lambda) \cdot \frac{\text{tf}_{t,d}}{L_d} + \lambda \cdot P(t \mid \mathcal{C})$$
 
-where $P(t \mid \mathcal{C}) = \frac{\text{cf}_t}{\sum_{t'} \text{cf}_{t'}}$ is the collection language model (term relative frequency across all documents).
+where $P(t \mid \mathcal{C}) = \frac{\text{cf}*t}{\sum*{t'} \text{cf}_{t'}}$ is the collection language model (term relative frequency across all documents).
 
 This guarantees $P(t \mid d) > 0$ for all $t$.
 
@@ -947,7 +990,7 @@ This is equivalent to adding $\mu$ "pseudo-documents" from the collection langua
 
 Expanding the log-likelihood:
 
-$$\log P(q \mid d) = \sum_{t \in q \cap d} \log\frac{\text{tf}_{t,d} + \mu \cdot P(t \mid \mathcal{C})}{L_d + \mu} + n_q \cdot \log\frac{\mu}{L_d + \mu} + \sum_{t \in q} \log P(t \mid \mathcal{C})$$
+$$\log P(q \mid d) = \sum_{t \in q \cap d} \log\frac{\text{tf}*{t,d} + \mu \cdot P(t \mid \mathcal{C})}{L_d + \mu} + n_q \cdot \log\frac{\mu}{L_d + \mu} + \sum*{t \in q} \log P(t \mid \mathcal{C})$$
 
 The last two terms are query-independent constants. The first term determines the ranking.
 
@@ -957,9 +1000,9 @@ Typical value: $\mu \in [500, 2000]$.
 
 Zhai & Lafferty (2004) showed that the log of Dirichlet smoothing can be approximated as:
 
-$$\log P_{\text{Dir}}(t \mid d) \approx \frac{\text{tf}_{t,d}}{\text{tf}_{t,d} + \mu} \cdot \log\frac{\text{tf}_{t,d}}{L_d \cdot P(t \mid \mathcal{C})}$$
+$$\log P_{\text{Dir}}(t \mid d) \approx \frac{\text{tf}*{t,d}}{\text{tf}*{t,d} + \mu} \cdot \log\frac{\text{tf}_{t,d}}{L_d \cdot P(t \mid \mathcal{C})}$$
 
-The factor $\frac{\text{tf}_{t,d}}{\text{tf}_{t,d} + \mu}$ is structurally identical to the BM25 TF saturation term $\frac{\text{tf}}{tf + k_1(\ldots)}$ when length normalisation is set to $b=0$.
+The factor $\frac{\text{tf}*{t,d}}{\text{tf}*{t,d} + \mu}$ is structurally identical to the BM25 TF saturation term $\frac{\text{tf}}{tf + k_1(\ldots)}$ when length normalisation is set to $b=0$.
 
 **Insight:** BM25 and language models with Dirichlet smoothing are mathematically related. BM25 can be viewed as an approximation to the Dirichlet-smoothed query likelihood model, with the advantage that it has tunable parameters.
 
@@ -969,46 +1012,53 @@ The factor $\frac{\text{tf}_{t,d}}{\text{tf}_{t,d} + \mu}$ is structurally ident
 
 ### 8.1 Summary: When to Use Which Model
 
-| Model | Score | Ranked? | TF? | Length norm? | When to use |
-|-------|-------|---------|-----|--------------|-------------|
-| Boolean | {0,1} set | No | No | No | Exact compliance filtering |
-| VSM + TF-IDF | cosine ∈ [0,1] | Yes | Log | Cosine | General text search, simple |
-| BIM / RSJ | log-likelihood | Yes | No | No | When only presence/absence matters |
-| BM25 | real-valued | Yes | Saturating | Partial | **Production default** |
-| BM25+ | real-valued | Yes | Saturating+δ | Partial | Long documents present |
-| BM25F | real-valued | Yes | Saturating | Per-field | Structured/multi-field docs |
-| Language Model (JM) | log P | Yes | Full | Implicit | Short queries |
-| Language Model (Dir) | log P | Yes | Full | Implicit | Varied length docs |
+
+| Model                | Score          | Ranked? | TF?          | Length norm? | When to use                        |
+| -------------------- | -------------- | ------- | ------------ | ------------ | ---------------------------------- |
+| Boolean              | {0,1} set      | No      | No           | No           | Exact compliance filtering         |
+| VSM + TF-IDF         | cosine ∈ [0,1] | Yes     | Log          | Cosine       | General text search, simple        |
+| BIM / RSJ            | log-likelihood | Yes     | No           | No           | When only presence/absence matters |
+| BM25                 | real-valued    | Yes     | Saturating   | Partial      | **Production default**             |
+| BM25+                | real-valued    | Yes     | Saturating+δ | Partial      | Long documents present             |
+| BM25F                | real-valued    | Yes     | Saturating   | Per-field    | Structured/multi-field docs        |
+| Language Model (JM)  | log P          | Yes     | Full         | Implicit     | Short queries                      |
+| Language Model (Dir) | log P          | Yes     | Full         | Implicit     | Varied length docs                 |
+
 
 **For the OpenSanctions project:** BM25 for the classical IR component (Phase 5), BM25F as an enhancement if multi-field scoring improves results.
 
 ### 8.2 What BM25 Parameters to Set
 
 **$k_1$ (TF saturation):**
+
 - Start with $k_1 = 1.2$
 - If your documents are short (like our OpenSanctions entities), decrease toward $k_1 = 0.5$
 - If documents are long and TF variation is meaningful, increase toward $k_1 = 2.0$
 
 **$b$ (length normalisation):**
+
 - Start with $b = 0.75$
 - If all documents are similar length, decrease toward $b = 0$ (normalisation doesn't help)
 - If document lengths vary wildly, increase toward $b = 1$
 
 **For OpenSanctions specifically:**
+
 - Entities have highly variable text_blob lengths (vessel records are very short; company records with sanctions history can be long)
 - Recommended starting point: $k_1 = 1.5$, $b = 0.75$
-- For Phase 5 experiment: tune $k_1 \in \{0.5, 1.0, 1.5, 2.0\}$ and $b \in \{0.5, 0.75, 1.0\}$
+- For Phase 5 experiment: tune $k_1 \in 0.5, 1.0, 1.5, 2.0$ and $b \in 0.5, 0.75, 1.0$
 
 ### 8.3 Connection to the OpenSanctions Project
 
-| Query Type | Best Model | Why |
-|------------|-----------|-----|
-| Type 1 (Exact Identifier) | Boolean / exact match | Identifier must match exactly |
-| Type 2 (Name/Alias) | BM25 or BM25F | Name field weighted higher |
-| Type 3 (Semantic) | BM25 on notes field + dense retrieval | Free-text description matching |
-| Type 5 (Cross-dataset) | BM25 + deduplication post-processing | Find all variants of same entity |
-| Type 6 (Jurisdiction/Filter) | Boolean pre-filter + BM25 re-rank | programId/country as hard filter |
-| Type 7 (RAG) | Dense retrieval → LLM generation | Need semantic understanding |
+
+| Query Type                   | Best Model                            | Why                              |
+| ---------------------------- | ------------------------------------- | -------------------------------- |
+| Type 1 (Exact Identifier)    | Boolean / exact match                 | Identifier must match exactly    |
+| Type 2 (Name/Alias)          | BM25 or BM25F                         | Name field weighted higher       |
+| Type 3 (Semantic)            | BM25 on notes field + dense retrieval | Free-text description matching   |
+| Type 5 (Cross-dataset)       | BM25 + deduplication post-processing  | Find all variants of same entity |
+| Type 6 (Jurisdiction/Filter) | Boolean pre-filter + BM25 re-rank     | programId/country as hard filter |
+| Type 7 (RAG)                 | Dense retrieval → LLM generation      | Need semantic understanding      |
+
 
 **Key insight for Phase 5:** BM25 handles Types 2, 3, 5, 6 well. Type 1 uses exact index lookup (not ranked retrieval at all). Types 3 and 7 will benefit from the dense retrieval module (Module 4) added to BM25 as a hybrid system.
 
@@ -1017,11 +1067,13 @@ The factor $\frac{\text{tf}_{t,d}}{\text{tf}_{t,d} + \mu}$ is structurally ident
 ## References and Further Reading
 
 **Primary (Manning et al.):**
+
 - Chapter 6, §6.1–6.4: TF-IDF and Vector Space Model
 - Chapter 11, §11.1–11.4: Probabilistic IR, BIM, BM25
 - Chapter 12: Language Models (optional)
 
 **Key Papers:**
+
 - Robertson, S.E. & Sparck Jones, K. (1976). Relevance weighting of search terms. *Journal of the American Society for Information Science.*
 - Robertson, S.E. & Walker, S. (1994). Some simple effective approximations to the 2-Poisson model for probabilistic weighted retrieval. *SIGIR.*
 - Robertson, S.E. & Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond. *Foundations and Trends in IR.*
@@ -1030,6 +1082,7 @@ The factor $\frac{\text{tf}_{t,d}}{\text{tf}_{t,d} + \mu}$ is structurally ident
 - Zhai, C. & Lafferty, J. (2004). A study of smoothing methods for language models. *ACM TOIS.*
 
 **Tools:**
+
 - `rank-bm25` (Python): lightweight BM25 implementation
 - Elasticsearch: production BM25/BM25F with full field control (Week 5 Lab)
 - scikit-learn `TfidfVectorizer`: VSM with SMART-style weighting
@@ -1043,26 +1096,18 @@ See `01_vsm_tfidf.ipynb` and `02_bm25.ipynb` for hands-on implementation.
 **Conceptual (do by hand before coding):**
 
 1. Given 3 documents and query "vessel sanctions", compute TF-IDF for all terms and rank the documents using cosine similarity. Show every arithmetic step.
-
 2. For the same 3 documents, compute BM25 with $k_1=1.2$, $b=0.75$. Compare the ranking to TF-IDF. Which is different? Why?
-
-3. Draw the TF saturation curve $f(\text{tf}) = \frac{\text{tf}(k_1+1)}{\text{tf}+k_1}$ for $k_1 \in \{0, 0.5, 1.2, 2.0, \infty\}$. What is the asymptote?
-
+3. Draw the TF saturation curve $f(\text{tf}) = \frac{\text{tf}(k_1+1)}{\text{tf}+k_1}$ for $k_1 \in 0, 0.5, 1.2, 2.0, \infty$. What is the asymptote?
 4. Explain in one sentence why cosine similarity is preferred over Euclidean distance in the VSM.
-
 5. In BM25 IDF, what happens when $\text{df}_t > N/2$? Show the calculation. Is this desirable?
-
 6. Derive the relationship between Dirichlet smoothing ($\mu=1000$) and BM25 ($k_1=1.2$, $b=0$) on a document of length 1000 tokens. At what TF value are the two models equivalent?
-
-7. For BM25F with `name^5` and `notes^1`, compute the pseudo-TF for the term "russian" in a document where: `name`=["Russian Federation"] (tf=1, len=2), `notes`=["Russian oligarch linked to energy sector"] (tf=1, len=7). Average lengths: $\bar{L}_{\text{name}}=3$, $\bar{L}_{\text{notes}}=15$. Use $b=0.75$ for both fields.
+7. For BM25F with `name^5` and `notes^1`, compute the pseudo-TF for the term "russian" in a document where: `name`=["Russian Federation"] (tf=1, len=2), `notes`=["Russian oligarch linked to energy sector"] (tf=1, len=7). Average lengths: $\bar{L}*{\text{name}}=3$, $\bar{L}*{\text{notes}}=15$. Use $b=0.75$ for both fields.
 
 **Deeper questions:**
 
-8. BM25 was derived empirically at TREC in the 1990s. What does it mean that TREC experiments converged on $k_1 \in [1.2, 2.0]$ and $b=0.75$? Are these universal or collection-specific?
-
-9. VSM treats all terms as independent. Give a concrete example from OpenSanctions where this assumption fails, and explain how it would affect ranking.
-
-10. Implement BM25 from scratch (no libraries). Verify your implementation against `rank-bm25` on the toy corpus.
+1. BM25 was derived empirically at TREC in the 1990s. What does it mean that TREC experiments converged on $k_1 \in [1.2, 2.0]$ and $b=0.75$? Are these universal or collection-specific?
+2. VSM treats all terms as independent. Give a concrete example from OpenSanctions where this assumption fails, and explain how it would affect ranking.
+3. Implement BM25 from scratch (no libraries). Verify your implementation against `rank-bm25` on the toy corpus.
 
 ---
 
