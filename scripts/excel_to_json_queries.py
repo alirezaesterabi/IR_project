@@ -22,7 +22,7 @@ Output format per file (data/queries/queries_type_N.json):
 Usage
 -----
   python scripts/excel_to_json_queries.py
-  python scripts/excel_to_json_queries.py --input data/evaluation/potential_queries/queries_type_3.xlsx
+  python scripts/excel_to_json_queries.py --input data/potential_queries/queries_type_3.xlsx
   python scripts/excel_to_json_queries.py --output-dir data/queries
 """
 
@@ -137,7 +137,7 @@ def main() -> None:
     if args.input:
         input_files = [Path(args.input)]
     else:
-        potential_dir = root / "data" / "evaluation" / "potential_queries"
+        potential_dir = root / "data" / "potential_queries"
         input_files = sorted(potential_dir.glob("queries_type_*.xlsx"))
         if not input_files:
             print(f"No queries_type_*.xlsx files found in {potential_dir}")
