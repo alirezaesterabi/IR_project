@@ -189,14 +189,16 @@ class TextProcessor:
     def build_sanctions_text(self, sanctions: list[dict]) -> str:
         """
         Flatten nested sanctions sub-objects into searchable text.
-        Extracts: authority, reason, programId from each sanction.
+        Extracts only free-text fields: authority, reason.
+        programId is excluded — it is a structured identifier routed to
+        metadata by document_builder.py (see Bug 5 in audit).
         """
         parts: list[str] = []
         for s in sanctions:
             if not isinstance(s, dict):
                 continue
             props = s.get("properties", {})
-            for field in ("authority", "reason", "programId"):
+            for field in ("authority", "reason"):
                 for val in props.get(field, []):
                     lemmatized = self.tokenize_and_lemmatize(str(val))
                     parts.extend(lemmatized)

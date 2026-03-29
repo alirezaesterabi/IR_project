@@ -147,9 +147,17 @@ def build_document(record: dict, processor: Optional[TextProcessor] = None) -> d
     # programId is intentionally metadata-only: it is used for structured
     # filtering (exact match on "US-GLOMAG", "EU-Syria", etc.) and must not
     # be normalised into text_blob where it would become "us glomag".
+    # Collect programId from both the entity's top-level properties AND
+    # from nested sanction sub-objects (which carry their own programId).
+    all_program_ids: list[str] = list(props.get("programId", []))
+    for s in sanctions_objects:
+        for pid in s.get("properties", {}).get("programId", []):
+            if pid and pid not in all_program_ids:
+                all_program_ids.append(pid)
+
     metadata: dict = {
         "country":   props.get("country", []),
-        "programId": props.get("programId", []),
+        "programId": all_program_ids,
         "datasets":  record.get("datasets", []),
     }
 
