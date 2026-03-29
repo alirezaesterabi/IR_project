@@ -3,2000 +3,2142 @@
     {
       "query_id": "Q1_001",
       "query_type": 1,
-      "query_text": "103919088",
-      "alt_query_1": "103919088",
-      "alt_query_2": "103919088",
-      "n_relevant": 1,
+      "query_texts": [
+        "103919088"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Myanmar Yatai International Holding Group Co., LTD. [Company]"
     },
     {
       "query_id": "Q1_002",
       "query_type": 1,
-      "query_text": "PW2XZT68KVW9",
-      "alt_query_1": "PW2XZT69KVW8",
-      "alt_query_2": "PW 2XZT68KVW9",
-      "n_relevant": 1,
+      "query_texts": [
+        "PW2XZT68KVW9",
+        "PW2XZT69KVW8",
+        "PW 2XZT68KVW9"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
     },
     {
       "query_id": "Q1_003",
       "query_type": 1,
-      "query_text": "PW3LMJ5YB3M3",
-      "alt_query_1": "PW3LMJ5YB3M3",
-      "alt_query_2": "PW 3LMJ5YB3M3",
-      "n_relevant": 1,
+      "query_texts": [
+        "PW3LMJ5YB3M3",
+        "PW 3LMJ5YB3M3"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
     },
     {
       "query_id": "Q1_004",
       "query_type": 1,
-      "query_text": "PW2USM6LNCJ9",
-      "alt_query_1": "PW2USM9LNCJ6",
-      "alt_query_2": "PW 2USM6LNCJ9",
-      "n_relevant": 1,
+      "query_texts": [
+        "PW2USM6LNCJ9",
+        "PW2USM9LNCJ6",
+        "PW 2USM6LNCJ9"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
     },
     {
       "query_id": "Q1_005",
       "query_type": 1,
-      "query_text": "GQBPAV1TFF41",
-      "alt_query_1": "GQBPAV1TFF14",
-      "alt_query_2": "GQBPAV 1TFF41",
-      "n_relevant": 1,
+      "query_texts": [
+        "GQBPAV1TFF41",
+        "GQBPAV1TFF14",
+        "GQBPAV 1TFF41"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
     },
     {
       "query_id": "Q1_006",
       "query_type": 1,
-      "query_text": "7725491052",
-      "alt_query_1": "7725491025",
-      "alt_query_2": "7725491052",
-      "n_relevant": 1,
+      "query_texts": [
+        "7725491052",
+        "7725491025"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
     },
     {
       "query_id": "Q1_007",
       "query_type": 1,
-      "query_text": "1187746408761",
-      "alt_query_1": "1187746408716",
-      "alt_query_2": "1187746408761",
-      "n_relevant": 1,
+      "query_texts": [
+        "1187746408761",
+        "1187746408716"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
     },
     {
       "query_id": "Q1_008",
       "query_type": 1,
-      "query_text": "772501001",
-      "alt_query_1": "772501010",
-      "alt_query_2": "772501001",
-      "n_relevant": 1,
+      "query_texts": [
+        "772501001",
+        "772501010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
     },
     {
       "query_id": "Q1_009",
       "query_type": 1,
-      "query_text": "1025007108390",
-      "alt_query_1": "1025007108309",
-      "alt_query_2": "1025007108390",
-      "n_relevant": 1,
+      "query_texts": [
+        "1025007108390",
+        "1025007108309"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
     },
     {
       "query_id": "Q1_010",
       "query_type": 1,
-      "query_text": "505301001",
-      "alt_query_1": "505301010",
-      "alt_query_2": "505301001",
-      "n_relevant": 1,
+      "query_texts": [
+        "505301001",
+        "505301010"
+      ],
       "filter_criteria": "",
       "notes": "idNumber | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
     },
     {
       "query_id": "Q1_011",
       "query_type": 1,
-      "query_text": "5053002307",
-      "alt_query_1": "5053002370",
-      "alt_query_2": "5053002307",
-      "n_relevant": 1,
+      "query_texts": [
+        "5053002307",
+        "5053002370"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
     },
     {
       "query_id": "Q1_012",
       "query_type": 1,
-      "query_text": "1025007108390",
-      "alt_query_1": "1025007108309",
-      "alt_query_2": "1025007108390",
-      "n_relevant": 1,
+      "query_texts": [
+        "1025007108390",
+        "1025007108309"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
     },
     {
       "query_id": "Q1_013",
       "query_type": 1,
-      "query_text": "505301001",
-      "alt_query_1": "505301010",
-      "alt_query_2": "505301001",
-      "n_relevant": 1,
+      "query_texts": [
+        "505301001",
+        "505301010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
     },
     {
       "query_id": "Q1_014",
       "query_type": 1,
-      "query_text": "42206417",
-      "alt_query_1": "42206471",
-      "alt_query_2": "42206417",
-      "n_relevant": 1,
+      "query_texts": [
+        "42206417",
+        "42206471"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Приватне підприємство \"Магістар-СГ\" [Company]"
     },
     {
       "query_id": "Q1_015",
       "query_type": 1,
-      "query_text": "5401103595",
-      "alt_query_1": "5401103559",
-      "alt_query_2": "5401103595",
-      "n_relevant": 1,
+      "query_texts": [
+        "5401103595",
+        "5401103559"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_016",
       "query_type": 1,
-      "query_text": "4631005223",
-      "alt_query_1": "4631005232",
-      "alt_query_2": "4631005223",
-      "n_relevant": 1,
+      "query_texts": [
+        "4631005223",
+        "4631005232"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_017",
       "query_type": 1,
-      "query_text": "1024600965531",
-      "alt_query_1": "1024600965513",
-      "alt_query_2": "1024600965531",
-      "n_relevant": 1,
+      "query_texts": [
+        "1024600965531",
+        "1024600965513"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_018",
       "query_type": 1,
-      "query_text": "1025400524313",
-      "alt_query_1": "1025400524331",
-      "alt_query_2": "1025400524313",
-      "n_relevant": 1,
+      "query_texts": [
+        "1025400524313",
+        "1025400524331"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_019",
       "query_type": 1,
-      "query_text": "463201001",
-      "alt_query_1": "463201010",
-      "alt_query_2": "463201001",
-      "n_relevant": 1,
+      "query_texts": [
+        "463201001",
+        "463201010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_020",
       "query_type": 1,
-      "query_text": "540101001",
-      "alt_query_1": "540101010",
-      "alt_query_2": "540101001",
-      "n_relevant": 1,
+      "query_texts": [
+        "540101001",
+        "540101010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Акціонерне товариство \"Електроагрегат\" [Company]"
     },
     {
       "query_id": "Q1_021",
       "query_type": 1,
-      "query_text": "1538404843",
-      "alt_query_1": "1538404834",
-      "alt_query_2": "1538404843",
-      "n_relevant": 1,
+      "query_texts": [
+        "1538404843",
+        "1538404834"
+      ],
       "filter_criteria": "",
       "notes": "npiCode | ARNITA LEFF [Person]"
     },
     {
       "query_id": "Q1_022",
       "query_type": 1,
-      "query_text": "IMO9553359",
-      "alt_query_1": "IMO9553395",
-      "alt_query_2": "IMO 9553359",
-      "n_relevant": 1,
+      "query_texts": [
+        "IMO9553359",
+        "IMO9553395",
+        "IMO 9553359"
+      ],
       "filter_criteria": "",
       "notes": "imoNumber | DONG CHANG [Vessel]"
     },
     {
       "query_id": "Q1_023",
       "query_type": 1,
-      "query_text": "1231600029825",
-      "alt_query_1": "1231600029852",
-      "alt_query_2": "1231600029825",
-      "n_relevant": 1,
+      "query_texts": [
+        "1231600029825",
+        "1231600029852"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_024",
       "query_type": 1,
-      "query_text": "52120883",
-      "alt_query_1": "52120838",
-      "alt_query_2": "52120883",
-      "n_relevant": 1,
+      "query_texts": [
+        "52120883",
+        "52120838"
+      ],
       "filter_criteria": "",
       "notes": "idNumber | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_025",
       "query_type": 1,
-      "query_text": "1674005078",
-      "alt_query_1": "1674005087",
-      "alt_query_2": "1674005078",
-      "n_relevant": 1,
+      "query_texts": [
+        "1674005078",
+        "1674005087"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_026",
       "query_type": 1,
-      "query_text": "1231600029825",
-      "alt_query_1": "1231600029852",
-      "alt_query_2": "1231600029825",
-      "n_relevant": 1,
+      "query_texts": [
+        "1231600029825",
+        "1231600029852"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_027",
       "query_type": 1,
-      "query_text": "167401001",
-      "alt_query_1": "167401010",
-      "alt_query_2": "167401001",
-      "n_relevant": 1,
+      "query_texts": [
+        "167401001",
+        "167401010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_028",
       "query_type": 1,
-      "query_text": "C526RHBSEVC3",
-      "alt_query_1": "C523RHBSEVC6",
-      "alt_query_2": "C 526RHBSEVC3",
-      "n_relevant": 1,
+      "query_texts": [
+        "C526RHBSEVC3",
+        "C523RHBSEVC6",
+        "C 526RHBSEVC3"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_029",
       "query_type": 1,
-      "query_text": "U1EZWUPPYNN3",
-      "alt_query_1": "U3EZWUPPYNN1",
-      "alt_query_2": "U 1EZWUPPYNN3",
-      "n_relevant": 1,
+      "query_texts": [
+        "U1EZWUPPYNN3",
+        "U3EZWUPPYNN1",
+        "U 1EZWUPPYNN3"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
     },
     {
       "query_id": "Q1_030",
       "query_type": 1,
-      "query_text": "1639231855",
-      "alt_query_1": "1639231855",
-      "alt_query_2": "1639231855",
-      "n_relevant": 1,
+      "query_texts": [
+        "1639231855"
+      ],
       "filter_criteria": "",
       "notes": "npiCode | KATHLEEN J KING [Person]"
     },
     {
       "query_id": "Q1_031",
       "query_type": 1,
-      "query_text": "12119212",
-      "alt_query_1": "12119221",
-      "alt_query_2": "12119212",
-      "n_relevant": 1,
+      "query_texts": [
+        "12119212",
+        "12119221"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Digital Marketing Awards FZ LLC [Company]"
     },
     {
       "query_id": "Q1_032",
       "query_type": 1,
-      "query_text": "17002525",
-      "alt_query_1": "17002552",
-      "alt_query_2": "17002525",
-      "n_relevant": 1,
+      "query_texts": [
+        "17002525",
+        "17002552"
+      ],
       "filter_criteria": "",
       "notes": "idNumber | Digital Marketing Awards FZ LLC [Company]"
     },
     {
       "query_id": "Q1_033",
       "query_type": 1,
-      "query_text": "PCEXVGTXWFB4",
-      "alt_query_1": "PCEXVGTXWFB40",
-      "alt_query_2": "PCEXVGTXWFB 4",
-      "n_relevant": 1,
+      "query_texts": [
+        "PCEXVGTXWFB4",
+        "PCEXVGTXWFB40",
+        "PCEXVGTXWFB 4"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Digital Marketing Awards FZ LLC [Company]"
     },
     {
       "query_id": "Q1_034",
       "query_type": 1,
-      "query_text": "EVSNP8SMGZF5",
-      "alt_query_1": "EVSNP5SMGZF8",
-      "alt_query_2": "EVSNP 8SMGZF5",
-      "n_relevant": 1,
+      "query_texts": [
+        "EVSNP8SMGZF5",
+        "EVSNP5SMGZF8",
+        "EVSNP 8SMGZF5"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Digital Marketing Awards FZ LLC [Company]"
     },
     {
       "query_id": "Q1_035",
       "query_type": 1,
-      "query_text": "TAL3H5JXC2B4",
-      "alt_query_1": "TAL3H5JXC4B2",
-      "alt_query_2": "TAL 3H5JXC2B4",
-      "n_relevant": 1,
+      "query_texts": [
+        "TAL3H5JXC2B4",
+        "TAL3H5JXC4B2",
+        "TAL 3H5JXC2B4"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | AROB KOLNYANG [Person]"
     },
     {
       "query_id": "Q1_036",
       "query_type": 1,
-      "query_text": "9707035100",
-      "alt_query_1": "9707035100",
-      "alt_query_2": "9707035100",
-      "n_relevant": 1,
+      "query_texts": [
+        "9707035100"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Акционерное общество \"Спорт-Центр\" [Company]"
     },
     {
       "query_id": "Q1_037",
       "query_type": 1,
-      "query_text": "1247700567135",
-      "alt_query_1": "1247700567153",
-      "alt_query_2": "1247700567135",
-      "n_relevant": 1,
+      "query_texts": [
+        "1247700567135",
+        "1247700567153"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Акционерное общество \"Спорт-Центр\" [Company]"
     },
     {
       "query_id": "Q1_038",
       "query_type": 1,
-      "query_text": "770701001",
-      "alt_query_1": "770701010",
-      "alt_query_2": "770701001",
-      "n_relevant": 1,
+      "query_texts": [
+        "770701001",
+        "770701010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Акционерное общество \"Спорт-Центр\" [Company]"
     },
     {
       "query_id": "Q1_039",
       "query_type": 1,
-      "query_text": "5004014839",
-      "alt_query_1": "5004014893",
-      "alt_query_2": "5004014839",
-      "n_relevant": 1,
+      "query_texts": [
+        "5004014839",
+        "5004014893"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
     },
     {
       "query_id": "Q1_040",
       "query_type": 1,
-      "query_text": "1025000844032",
-      "alt_query_1": "1025000844023",
-      "alt_query_2": "1025000844032",
-      "n_relevant": 1,
+      "query_texts": [
+        "1025000844032",
+        "1025000844023"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
     },
     {
       "query_id": "Q1_041",
       "query_type": 1,
-      "query_text": "500401001",
-      "alt_query_1": "500401010",
-      "alt_query_2": "500401001",
-      "n_relevant": 1,
+      "query_texts": [
+        "500401001",
+        "500401010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
     },
     {
       "query_id": "Q1_042",
       "query_type": 1,
-      "query_text": "701722661674",
-      "alt_query_1": "701722661647",
-      "alt_query_2": "701722661674",
-      "n_relevant": 1,
+      "query_texts": [
+        "701722661674",
+        "701722661647"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Starovoitov Stas [Person]"
     },
     {
       "query_id": "Q1_043",
       "query_type": 1,
-      "query_text": "1157746236966",
-      "alt_query_1": "1157746236966",
-      "alt_query_2": "1157746236966",
-      "n_relevant": 1,
+      "query_texts": [
+        "1157746236966"
+      ],
       "filter_criteria": "",
       "notes": "registrationNumber | Ekvik Limited Liability Company [Company]"
     },
     {
       "query_id": "Q1_044",
       "query_type": 1,
-      "query_text": "7722320806",
-      "alt_query_1": "7722320860",
-      "alt_query_2": "7722320806",
-      "n_relevant": 1,
+      "query_texts": [
+        "7722320806",
+        "7722320860"
+      ],
       "filter_criteria": "",
       "notes": "innCode | Ekvik Limited Liability Company [Company]"
     },
     {
       "query_id": "Q1_045",
       "query_type": 1,
-      "query_text": "1157746236966",
-      "alt_query_1": "1157746236966",
-      "alt_query_2": "1157746236966",
-      "n_relevant": 1,
+      "query_texts": [
+        "1157746236966"
+      ],
       "filter_criteria": "",
       "notes": "ogrnCode | Ekvik Limited Liability Company [Company]"
     },
     {
       "query_id": "Q1_046",
       "query_type": 1,
-      "query_text": "771501001",
-      "alt_query_1": "771501010",
-      "alt_query_2": "771501001",
-      "n_relevant": 1,
+      "query_texts": [
+        "771501001",
+        "771501010"
+      ],
       "filter_criteria": "",
       "notes": "kppCode | Ekvik Limited Liability Company [Company]"
     },
     {
       "query_id": "Q1_047",
       "query_type": 1,
-      "query_text": "Y6MSPLJPJ9J5",
-      "alt_query_1": "Y6MSPLJPJ5J9",
-      "alt_query_2": "Y 6MSPLJPJ9J5",
-      "n_relevant": 1,
+      "query_texts": [
+        "Y6MSPLJPJ9J5",
+        "Y6MSPLJPJ5J9",
+        "Y 6MSPLJPJ9J5"
+      ],
       "filter_criteria": "",
       "notes": "uniqueEntityId | Ekvik Limited Liability Company [Company]"
     },
     {
       "query_id": "Q1_048",
       "query_type": 1,
-      "query_text": "IMO9525493",
-      "alt_query_1": "IMO9525439",
-      "alt_query_2": "IMO 9525493",
-      "n_relevant": 1,
+      "query_texts": [
+        "IMO9525493",
+        "IMO9525439",
+        "IMO 9525493"
+      ],
       "filter_criteria": "",
       "notes": "imoNumber | MAERSK CABINDA [Vessel]"
     },
     {
       "query_id": "Q1_049",
       "query_type": 1,
-      "query_text": "1609986611",
-      "alt_query_1": "1609986611",
-      "alt_query_2": "1609986611",
-      "n_relevant": 1,
+      "query_texts": [
+        "1609986611"
+      ],
       "filter_criteria": "",
       "notes": "npiCode | Anthony Bamonte [Person]"
     },
     {
       "query_id": "Q1_050",
       "query_type": 1,
-      "query_text": "1063724599",
-      "alt_query_1": "1063724599",
-      "alt_query_2": "1063724599",
-      "n_relevant": 1,
+      "query_texts": [
+        "1063724599"
+      ],
       "filter_criteria": "",
       "notes": "npiCode | Anthony Bamonte [Person]"
     },
     {
       "query_id": "Q2_001",
       "query_type": 2,
-      "query_text": "Yatai Smart Industrial New City",
-      "alt_query_1": "City Yatai Smart Industrial New",
-      "alt_query_2": "Yatai Smart Indsutrial New City",
-      "n_relevant": 1,
+      "query_texts": [
+        "Yatai Smart Industrial New City",
+        "City Yatai Smart Industrial New",
+        "Yatai Smart Indsutrial New City"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Myanmar Yatai International Holding Group Co., LTD.\" [Company]"
     },
     {
       "query_id": "Q2_002",
       "query_type": 2,
-      "query_text": "Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi Hrupp\"",
-      "alt_query_1": "Hrupp\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi",
-      "alt_query_2": "Tovarystvo z obmezhenoiu vidpvoidalnistiu \"Zelinskyi Hrupp\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi Hrupp\"",
+        "Hrupp\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi",
+        "Tovarystvo z obmezhenoiu vidpvoidalnistiu \"Zelinskyi Hrupp\""
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Товариство з обмеженою відповідальністю \"Зелінський Групп\"\" [Company]"
     },
     {
       "query_id": "Q2_003",
       "query_type": 2,
-      "query_text": "Ny. D. Zelinszkij EHMZ Nyrt.",
-      "alt_query_1": "Nyrt. Ny. D. Zelinszkij EHMZ",
-      "alt_query_2": "Ny. D. Zelinszikj EHMZ Nyrt.",
-      "n_relevant": 1,
+      "query_texts": [
+        "Ny. D. Zelinszkij EHMZ Nyrt.",
+        "Nyrt. Ny. D. Zelinszkij EHMZ",
+        "Ny. D. Zelinszikj EHMZ Nyrt."
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky”\" [Company]"
     },
     {
       "query_id": "Q2_004",
       "query_type": 2,
-      "query_text": "Pryvatne pidpryiemstvo \"Mahistar-SH\"",
-      "alt_query_1": "\"Mahistar-SH\" Pryvatne pidpryiemstvo",
-      "alt_query_2": "Pryvatne pidpryiemtsvo \"Mahistar-SH\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "Pryvatne pidpryiemstvo \"Mahistar-SH\"",
+        "\"Mahistar-SH\" Pryvatne pidpryiemstvo",
+        "Pryvatne pidpryiemtsvo \"Mahistar-SH\""
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Приватне підприємство \"Магістар-СГ\"\" [Company]"
     },
     {
       "query_id": "Q2_005",
       "query_type": 2,
-      "query_text": "Aktsionerne tovarystvo \"Elektroahrehat\"",
-      "alt_query_1": "\"Elektroahrehat\" Aktsionerne tovarystvo",
-      "alt_query_2": "Aktsionerne tovarysvto \"Elektroahrehat\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "Aktsionerne tovarystvo \"Elektroahrehat\"",
+        "\"Elektroahrehat\" Aktsionerne tovarystvo",
+        "Aktsionerne tovarysvto \"Elektroahrehat\""
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Акціонерне товариство \"Електроагрегат\"\" [Company]"
     },
     {
       "query_id": "Q2_006",
       "query_type": 2,
-      "query_text": "Arnita Cowan Leff",
-      "alt_query_1": "Leff Arnita Cowan",
-      "alt_query_2": "Arnita Cwoan Leff",
-      "n_relevant": 1,
+      "query_texts": [
+        "Arnita Cowan Leff",
+        "Leff Arnita Cowan",
+        "Arnita Cwoan Leff"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"ARNITA LEFF\" [Person]"
     },
     {
       "query_id": "Q2_007",
       "query_type": 2,
-      "query_text": "Michael Kuajian",
-      "alt_query_1": "Kuajian Michael",
-      "alt_query_2": "MichaelK uajian",
-      "n_relevant": 1,
+      "query_texts": [
+        "Michael Kuajian",
+        "Kuajian Michael",
+        "MichaelK uajian"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Michael Kuajien\" [Person]"
     },
     {
       "query_id": "Q2_008",
       "query_type": 2,
-      "query_text": "Yasin M. Hussain",
-      "alt_query_1": "Hussain Yasin M.",
-      "alt_query_2": "Yasin M.H ussain",
-      "n_relevant": 1,
+      "query_texts": [
+        "Yasin M. Hussain",
+        "Hussain Yasin M.",
+        "Yasin M.H ussain"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"YASIN M HUSSAIN\" [Person]"
     },
     {
       "query_id": "Q2_009",
       "query_type": 2,
-      "query_text": "Xinjiang Xinmuwei Clothing Co., Ltd.",
-      "alt_query_1": "Ltd. Xinjiang Xinmuwei Clothing Co.",
-      "alt_query_2": "Xinjiang Xinmuwei lCothing Co., Ltd.",
-      "n_relevant": 1,
+      "query_texts": [
+        "Xinjiang Xinmuwei Clothing Co., Ltd.",
+        "Ltd. Xinjiang Xinmuwei Clothing Co.",
+        "Xinjiang Xinmuwei lCothing Co., Ltd."
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Xinjiang Xinmuwei Clothing Co., Ltd\" [Organization]"
     },
     {
       "query_id": "Q2_010",
       "query_type": 2,
-      "query_text": "Chanturiia Irakli",
-      "alt_query_1": "Irakli Chanturiia",
-      "alt_query_2": "Chanturiai Irakli",
-      "n_relevant": 1,
+      "query_texts": [
+        "Chanturiia Irakli",
+        "Irakli Chanturiia",
+        "Chanturiai Irakli"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Чантурія Іраклі\" [Person]"
     },
     {
       "query_id": "Q2_011",
       "query_type": 2,
-      "query_text": "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК",
-      "alt_query_1": "ПАРК OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ",
-      "alt_query_2": "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСРТОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК",
-      "n_relevant": 1,
+      "query_texts": [
+        "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК",
+        "ПАРК OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ",
+        "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСРТОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Limited Liability Company Specialized Developer Alabuga South Park\" [Company]"
     },
     {
       "query_id": "Q2_012",
       "query_type": 2,
-      "query_text": "SD DIGITAL MARKETING AWARDS",
-      "alt_query_1": "AWARDS SD DIGITAL MARKETING",
-      "alt_query_2": "SD DIGITAL MAKRETING AWARDS",
-      "n_relevant": 1,
+      "query_texts": [
+        "SD DIGITAL MARKETING AWARDS",
+        "AWARDS SD DIGITAL MARKETING",
+        "SD DIGITAL MAKRETING AWARDS"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Digital Marketing Awards FZ LLC\" [Company]"
     },
     {
       "query_id": "Q2_013",
       "query_type": 2,
-      "query_text": "Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi kombinat»",
-      "alt_query_1": "kombinat» Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi",
-      "alt_query_2": "Tovarystvo z obmezhenoiu vidpovidalnistiu «Syhcovskyi vyrobnycho-tekhnolohichnyi kombinat»",
-      "n_relevant": 1,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi kombinat»",
+        "kombinat» Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi",
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «Syhcovskyi vyrobnycho-tekhnolohichnyi kombinat»"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат»\" [Company]"
     },
     {
       "query_id": "Q2_014",
       "query_type": 2,
-      "query_text": "Starovoitov Stanislav Yuriiovych",
-      "alt_query_1": "Yuriiovych Starovoitov Stanislav",
-      "alt_query_2": "Starovoitov Stansilav Yuriiovych",
-      "n_relevant": 1,
+      "query_texts": [
+        "Starovoitov Stanislav Yuriiovych",
+        "Yuriiovych Starovoitov Stanislav",
+        "Starovoitov Stansilav Yuriiovych"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Starovoitov Stas\" [Person]"
     },
     {
       "query_id": "Q2_015",
       "query_type": 2,
-      "query_text": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКВИК\"",
-      "alt_query_1": "\"ЭКВИК\" ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
-      "alt_query_2": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ТОВЕТСТВЕННОСТЬЮ \"ЭКВИК\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКВИК\"",
+        "\"ЭКВИК\" ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ТОВЕТСТВЕННОСТЬЮ \"ЭКВИК\""
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Ekvik Limited Liability Company\" [Company]"
     },
     {
       "query_id": "Q2_016",
       "query_type": 2,
-      "query_text": "Маслов Алексей Викторович",
-      "alt_query_1": "Викторович Маслов Алексей",
-      "alt_query_2": "Маслов Алексйе Викторович",
-      "n_relevant": 1,
+      "query_texts": [
+        "Маслов Алексей Викторович",
+        "Викторович Маслов Алексей",
+        "Маслов Алексйе Викторович"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Maslov Alexey Viktorovich\" [Person]"
     },
     {
       "query_id": "Q2_017",
       "query_type": 2,
-      "query_text": "Renee M. Haas",
-      "alt_query_1": "Haas Renee M.",
-      "alt_query_2": "Renee .M Haas",
-      "n_relevant": 1,
+      "query_texts": [
+        "Renee M. Haas",
+        "Haas Renee M.",
+        "Renee .M Haas"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"RENEE MICHELE HAAS\" [Person]"
     },
     {
       "query_id": "Q2_018",
       "query_type": 2,
-      "query_text": "河北建设集团股份有限公司无极县分公司",
-      "alt_query_1": "河北建设集团股份有限公司无极县分公司",
-      "alt_query_2": "河北建设集团股份有公限司无极县分公司",
-      "n_relevant": 1,
+      "query_texts": [
+        "河北建设集团股份有限公司无极县分公司",
+        "河北建设集团股份有公限司无极县分公司"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Hebei Construction Group Corporation Limited Wuji County Branch\" [LegalEntity]"
     },
     {
       "query_id": "Q2_019",
       "query_type": 2,
-      "query_text": "Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I. Rosiia»",
-      "alt_query_1": "Rosiia» Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I.",
-      "alt_query_2": "Tovarystvo z obmezhenoiu vidpvoidalnistiu «DZh.T.I. Rosiia»",
-      "n_relevant": 1,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I. Rosiia»",
+        "Rosiia» Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I.",
+        "Tovarystvo z obmezhenoiu vidpvoidalnistiu «DZh.T.I. Rosiia»"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Товариство з обмеженою відповідальністю «ДЖ.Т.І. Росія»\" [Company]"
     },
     {
       "query_id": "Q2_020",
       "query_type": 2,
-      "query_text": "Labsource, LLC",
-      "alt_query_1": "LLC Labsource",
-      "alt_query_2": "Labsourec, LLC",
-      "n_relevant": 1,
+      "query_texts": [
+        "Labsource, LLC",
+        "LLC Labsource",
+        "Labsourec, LLC"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Labsource LLC\" [Company]"
     },
     {
       "query_id": "Q2_021",
       "query_type": 2,
-      "query_text": "Luzhbin Ihor Serhiiovych",
-      "alt_query_1": "Serhiiovych Luzhbin Ihor",
-      "alt_query_2": "Luzhbin IhorS erhiiovych",
-      "n_relevant": 1,
+      "query_texts": [
+        "Luzhbin Ihor Serhiiovych",
+        "Serhiiovych Luzhbin Ihor",
+        "Luzhbin IhorS erhiiovych"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Лужбін Ігор Сергійович\" [Person]"
     },
     {
       "query_id": "Q2_022",
       "query_type": 2,
-      "query_text": "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\"",
-      "alt_query_1": "Rosiyi\" Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony",
-      "alt_query_2": "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obidenannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\"",
+        "Rosiyi\" Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony",
+        "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obidenannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\""
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Федеральне казенне підприємство \"Національне випробувальне об'єднання \"Державні боєприпасні випробувальні полігони Росії\"\" [Company]"
     },
     {
       "query_id": "Q2_023",
       "query_type": 2,
-      "query_text": "星龍興業有限公司",
-      "alt_query_1": "星龍興業有限公司",
-      "alt_query_2": "星龍興業限有公司",
-      "n_relevant": 1,
+      "query_texts": [
+        "星龍興業有限公司",
+        "星龍興業限有公司"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Star Dragon Corporation Limited\" [Company]"
     },
     {
       "query_id": "Q2_024",
       "query_type": 2,
-      "query_text": "Kan Chen",
-      "alt_query_1": "Chen Kan",
-      "alt_query_2": "Kan hCen",
-      "n_relevant": 1,
+      "query_texts": [
+        "Kan Chen",
+        "Chen Kan",
+        "Kan hCen"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Chen, Kan\" [Person]"
     },
     {
       "query_id": "Q2_025",
       "query_type": 2,
-      "query_text": "CITADEL ECONOMIC DEVELOPMENT CORPORATION",
-      "alt_query_1": "CORPORATION CITADEL ECONOMIC DEVELOPMENT",
-      "alt_query_2": "CITADEL ECONOMIC DEVLEOPMENT CORPORATION",
-      "n_relevant": 1,
+      "query_texts": [
+        "CITADEL ECONOMIC DEVELOPMENT CORPORATION",
+        "CORPORATION CITADEL ECONOMIC DEVELOPMENT",
+        "CITADEL ECONOMIC DEVLEOPMENT CORPORATION"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"CITADEL COMMUNITY DEVELOPMENT CORPORATION\" [Company]"
     },
     {
       "query_id": "Q2_026",
       "query_type": 2,
-      "query_text": "JUST 4 TODAY TRANSPORTATION, INC",
-      "alt_query_1": "INC JUST 4 TODAY TRANSPORTATION",
-      "alt_query_2": "JUST 4 TODAY TRASNPORTATION, INC",
-      "n_relevant": 1,
+      "query_texts": [
+        "JUST 4 TODAY TRANSPORTATION, INC",
+        "INC JUST 4 TODAY TRANSPORTATION",
+        "JUST 4 TODAY TRASNPORTATION, INC"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Just 4 Today Transportation\" [Company]"
     },
     {
       "query_id": "Q2_027",
       "query_type": 2,
-      "query_text": "Baieva Kateryna Mykolayivna",
-      "alt_query_1": "Mykolayivna Baieva Kateryna",
-      "alt_query_2": "Baieva Kateryan Mykolayivna",
-      "n_relevant": 1,
+      "query_texts": [
+        "Baieva Kateryna Mykolayivna",
+        "Mykolayivna Baieva Kateryna",
+        "Baieva Kateryan Mykolayivna"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Баєва Катерина Миколаївна\" [Person]"
     },
     {
       "query_id": "Q2_028",
       "query_type": 2,
-      "query_text": "Holoborodko Pavlo Mykolaiovych",
-      "alt_query_1": "Mykolaiovych Holoborodko Pavlo",
-      "alt_query_2": "Holoborodko Pavol Mykolaiovych",
-      "n_relevant": 1,
+      "query_texts": [
+        "Holoborodko Pavlo Mykolaiovych",
+        "Mykolaiovych Holoborodko Pavlo",
+        "Holoborodko Pavol Mykolaiovych"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Голобородько Павло Миколайович\" [Person]"
     },
     {
       "query_id": "Q2_029",
       "query_type": 2,
-      "query_text": "赣州集达建筑工程有限公司",
-      "alt_query_1": "赣州集达建筑工程有限公司",
-      "alt_query_2": "赣州集达建筑程工有限公司",
-      "n_relevant": 1,
+      "query_texts": [
+        "赣州集达建筑工程有限公司",
+        "赣州集达建筑程工有限公司"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Ganzhou Jida Construction Engineering Co., Ltd.\" [LegalEntity]"
     },
     {
       "query_id": "Q2_030",
       "query_type": 2,
-      "query_text": "FASONU, AYODEJI",
-      "alt_query_1": "AYODEJI FASONU",
-      "alt_query_2": "FASONU,A YODEJI",
-      "n_relevant": 1,
+      "query_texts": [
+        "FASONU, AYODEJI",
+        "AYODEJI FASONU",
+        "FASONU,A YODEJI"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"AYODEJI D FASONU\" [Person]"
     },
     {
       "query_id": "Q2_031",
       "query_type": 2,
-      "query_text": "EDEDEM EKPENYONG EDEM",
-      "alt_query_1": "EDEM EDEDEM EKPENYONG",
-      "alt_query_2": "EDEDEM EKPNEYONG EDEM",
-      "n_relevant": 1,
+      "query_texts": [
+        "EDEDEM EKPENYONG EDEM",
+        "EDEM EDEDEM EKPENYONG",
+        "EDEDEM EKPNEYONG EDEM"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"EDEDEM EDEM\" [Person]"
     },
     {
       "query_id": "Q2_032",
       "query_type": 2,
-      "query_text": "Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS Avto\"",
-      "alt_query_1": "Avto\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS",
-      "alt_query_2": "Tovarystvo z obmezhenoiu vdipovidalnistiu \"MTS Avto\"",
-      "n_relevant": 1,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS Avto\"",
+        "Avto\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS",
+        "Tovarystvo z obmezhenoiu vdipovidalnistiu \"MTS Avto\""
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Товариство з обмеженою відповідальністю \"МТС Авто\"\" [Company]"
     },
     {
       "query_id": "Q2_033",
       "query_type": 2,
-      "query_text": "ООО 'ЭЛЕКТРА ПРО'",
-      "alt_query_1": "ПРО' ООО 'ЭЛЕКТРА",
-      "alt_query_2": "ООО 'ЭЛЕТКРА ПРО'",
-      "n_relevant": 1,
+      "query_texts": [
+        "ООО 'ЭЛЕКТРА ПРО'",
+        "ПРО' ООО 'ЭЛЕКТРА",
+        "ООО 'ЭЛЕТКРА ПРО'"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"ELECTRA PRO LLC\" [Organization]"
     },
     {
       "query_id": "Q2_034",
       "query_type": 2,
-      "query_text": "Sanhadzhy-Horiaiev Dzhanhar Baatrovych",
-      "alt_query_1": "Baatrovych Sanhadzhy-Horiaiev Dzhanhar",
-      "alt_query_2": "Sanhadzhy-Horiaiev zDhanhar Baatrovych",
-      "n_relevant": 1,
+      "query_texts": [
+        "Sanhadzhy-Horiaiev Dzhanhar Baatrovych",
+        "Baatrovych Sanhadzhy-Horiaiev Dzhanhar",
+        "Sanhadzhy-Horiaiev zDhanhar Baatrovych"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Сангаджи-Горяєв Джангар Баатрович\" [Person]"
     },
     {
       "query_id": "Q2_035",
       "query_type": 2,
-      "query_text": "Korsakova Tetiana Volodymyrivna",
-      "alt_query_1": "Volodymyrivna Korsakova Tetiana",
-      "alt_query_2": "Korsakova Tetiaan Volodymyrivna",
-      "n_relevant": 1,
+      "query_texts": [
+        "Korsakova Tetiana Volodymyrivna",
+        "Volodymyrivna Korsakova Tetiana",
+        "Korsakova Tetiaan Volodymyrivna"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Корсакова Тетяна Володимирівна\" [Person]"
     },
     {
       "query_id": "Q2_036",
       "query_type": 2,
-      "query_text": "Néstor Alfredo Domínguez Hernández, Mr. Dominguez",
-      "alt_query_1": "Mr. Dominguez Néstor Alfredo Domínguez Hernández",
-      "alt_query_2": "Néstor Alfredo DomínguezH ernández, Mr. Dominguez",
-      "n_relevant": 1,
+      "query_texts": [
+        "Néstor Alfredo Domínguez Hernández, Mr. Dominguez",
+        "Mr. Dominguez Néstor Alfredo Domínguez Hernández",
+        "Néstor Alfredo DomínguezH ernández, Mr. Dominguez"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Néstor Alfredo Domínguez Hernández\" [Person]"
     },
     {
       "query_id": "Q2_037",
       "query_type": 2,
-      "query_text": "Kostenko Iryna Anatoliyivna",
-      "alt_query_1": "Anatoliyivna Kostenko Iryna",
-      "alt_query_2": "Kostenko Iryn aAnatoliyivna",
-      "n_relevant": 1,
+      "query_texts": [
+        "Kostenko Iryna Anatoliyivna",
+        "Anatoliyivna Kostenko Iryna",
+        "Kostenko Iryn aAnatoliyivna"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Irina KOSTENKO\" [Person]"
     },
     {
       "query_id": "Q2_038",
       "query_type": 2,
-      "query_text": "TREGO-CAMPION, ANITA",
-      "alt_query_1": "ANITA TREGO-CAMPION",
-      "alt_query_2": "TREGO-CAMPOIN, ANITA",
-      "n_relevant": 1,
+      "query_texts": [
+        "TREGO-CAMPION, ANITA",
+        "ANITA TREGO-CAMPION",
+        "TREGO-CAMPOIN, ANITA"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"ANITA TREGO\" [Person]"
     },
     {
       "query_id": "Q2_039",
       "query_type": 2,
-      "query_text": "JAMES R. SIROIS",
-      "alt_query_1": "SIROIS JAMES R.",
-      "alt_query_2": "JAMES R .SIROIS",
-      "n_relevant": 1,
+      "query_texts": [
+        "JAMES R. SIROIS",
+        "SIROIS JAMES R.",
+        "JAMES R .SIROIS"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"JAMES R SIROIS\" [Person]"
     },
     {
       "query_id": "Q2_040",
       "query_type": 2,
-      "query_text": "Rekhviashvili Iraklii",
-      "alt_query_1": "Iraklii Rekhviashvili",
-      "alt_query_2": "Rekhviashvlii Iraklii",
-      "n_relevant": 1,
+      "query_texts": [
+        "Rekhviashvili Iraklii",
+        "Iraklii Rekhviashvili",
+        "Rekhviashvlii Iraklii"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Рехвіашвілі Іраклій\" [Person]"
     },
     {
       "query_id": "Q2_041",
       "query_type": 2,
-      "query_text": "Isaienko Viktoriia Viktorivna",
-      "alt_query_1": "Viktorivna Isaienko Viktoriia",
-      "alt_query_2": "Isaienko Viktoiria Viktorivna",
-      "n_relevant": 1,
+      "query_texts": [
+        "Isaienko Viktoriia Viktorivna",
+        "Viktorivna Isaienko Viktoriia",
+        "Isaienko Viktoiria Viktorivna"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Ісаєнко Вікторія Вікторівна\" [Person]"
     },
     {
       "query_id": "Q2_042",
       "query_type": 2,
-      "query_text": "Scientific and Production Association of Measuring Technology",
-      "alt_query_1": "Technology Scientific and Production Association of Measuring",
-      "alt_query_2": "Scientific and Production Assoication of Measuring Technology",
-      "n_relevant": 1,
+      "query_texts": [
+        "Scientific and Production Association of Measuring Technology",
+        "Technology Scientific and Production Association of Measuring",
+        "Scientific and Production Assoication of Measuring Technology"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Scientific and Production Association of Measuring Equipment JSC\" [Company]"
     },
     {
       "query_id": "Q2_043",
       "query_type": 2,
-      "query_text": "Bahrami Ali JADALI",
-      "alt_query_1": "JADALI Bahrami Ali",
-      "alt_query_2": "Bahrami Ail JADALI",
-      "n_relevant": 1,
+      "query_texts": [
+        "Bahrami Ali JADALI",
+        "JADALI Bahrami Ali",
+        "Bahrami Ail JADALI"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"BAHRAMI ALI SHAYESTEH\" [Person]"
     },
     {
       "query_id": "Q2_044",
       "query_type": 2,
-      "query_text": "Golden Luxury Jewellery Trading LLC",
-      "alt_query_1": "LLC Golden Luxury Jewellery Trading",
-      "alt_query_2": "Golden Luxury Jewlelery Trading LLC",
-      "n_relevant": 1,
+      "query_texts": [
+        "Golden Luxury Jewellery Trading LLC",
+        "LLC Golden Luxury Jewellery Trading",
+        "Golden Luxury Jewlelery Trading LLC"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Golden Luxury Jewellery Trading L.L.C\" [Company]"
     },
     {
       "query_id": "Q2_045",
       "query_type": 2,
-      "query_text": "Riakhovskyi Serhii Vasylovych",
-      "alt_query_1": "Vasylovych Riakhovskyi Serhii",
-      "alt_query_2": "Riakhovskyi Sehrii Vasylovych",
-      "n_relevant": 1,
+      "query_texts": [
+        "Riakhovskyi Serhii Vasylovych",
+        "Vasylovych Riakhovskyi Serhii",
+        "Riakhovskyi Sehrii Vasylovych"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Ряховський Сергій Васильович\" [Person]"
     },
     {
       "query_id": "Q2_046",
       "query_type": 2,
-      "query_text": "Japanese Red Army (JRA)",
-      "alt_query_1": "(JRA) Japanese Red Army",
-      "alt_query_2": "Japanese Re dArmy (JRA)",
-      "n_relevant": 1,
+      "query_texts": [
+        "Japanese Red Army (JRA)",
+        "(JRA) Japanese Red Army",
+        "Japanese Re dArmy (JRA)"
+      ],
       "filter_criteria": "",
       "notes": "name | caption: \"Japanese Red Army\" [Organization]"
     },
     {
       "query_id": "Q2_047",
       "query_type": 2,
-      "query_text": "Usama Abu-'Abd-al-Wahid AL-JAZA'IRI",
-      "alt_query_1": "AL-JAZA'IRI Usama Abu-'Abd-al-Wahid",
-      "alt_query_2": "Usama Abu-'Abd-alW-ahid AL-JAZA'IRI",
-      "n_relevant": 1,
+      "query_texts": [
+        "Usama Abu-'Abd-al-Wahid AL-JAZA'IRI",
+        "AL-JAZA'IRI Usama Abu-'Abd-al-Wahid",
+        "Usama Abu-'Abd-alW-ahid AL-JAZA'IRI"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"USAMAH 'ABD-AL-WAHID AL-JAZA'IRI BELKACEM\" [Person]"
     },
     {
       "query_id": "Q2_048",
       "query_type": 2,
-      "query_text": "Veber Mariia Yuriyivna",
-      "alt_query_1": "Yuriyivna Veber Mariia",
-      "alt_query_2": "Veber Marii aYuriyivna",
-      "n_relevant": 1,
+      "query_texts": [
+        "Veber Mariia Yuriyivna",
+        "Yuriyivna Veber Mariia",
+        "Veber Marii aYuriyivna"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Вебер Марія Юріївна\" [Person]"
     },
     {
       "query_id": "Q2_049",
       "query_type": 2,
-      "query_text": "Melia, Patricia",
-      "alt_query_1": "Patricia Melia",
-      "alt_query_2": "Melia, aPtricia",
-      "n_relevant": 1,
+      "query_texts": [
+        "Melia, Patricia",
+        "Patricia Melia",
+        "Melia, aPtricia"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Patricia Marie Melia\" [Person]"
     },
     {
       "query_id": "Q2_050",
       "query_type": 2,
-      "query_text": "SemiCore ZKX",
-      "alt_query_1": "ZKX SemiCore",
-      "alt_query_2": "SemiCoer ZKX",
-      "n_relevant": 1,
+      "query_texts": [
+        "SemiCore ZKX",
+        "ZKX SemiCore",
+        "SemiCoer ZKX"
+      ],
       "filter_criteria": "",
       "notes": "alias | caption: \"Бейцзін Семікор Зет-Кей-Екс Електронік Еквіпмент Ко., Лтд\" [Organization]"
     },
     {
       "query_id": "Q5_001",
       "query_type": 5,
-      "query_text": "Morten Austestad",
-      "alt_query_1": "morten austestad",
-      "alt_query_2": "Morten",
-      "n_relevant": 102,
+      "query_texts": [
+        "Morten Austestad",
+        "morten austestad",
+        "Morten"
+      ],
       "filter_criteria": "",
       "notes": "102 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_002",
       "query_type": 5,
-      "query_text": "Per Atle Tufte",
-      "alt_query_1": "per atle tufte",
-      "alt_query_2": "Per Atle",
-      "n_relevant": 74,
+      "query_texts": [
+        "Per Atle Tufte",
+        "per atle tufte",
+        "Per Atle"
+      ],
       "filter_criteria": "",
       "notes": "74 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_003",
       "query_type": 5,
-      "query_text": "Jørn Steinar Seljelid",
-      "alt_query_1": "jørn steinar seljelid",
-      "alt_query_2": "Jørn Steinar",
-      "n_relevant": 69,
+      "query_texts": [
+        "Jørn Steinar Seljelid",
+        "jørn steinar seljelid",
+        "Jørn Steinar"
+      ],
       "filter_criteria": "",
       "notes": "69 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_004",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии бо-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 63,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии бо-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "63 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_005",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии",
-      "n_relevant": 52,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
       "filter_criteria": "",
       "notes": "52 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_006",
       "query_type": 5,
-      "query_text": "Unni Hongseth",
-      "alt_query_1": "unni hongseth",
-      "alt_query_2": "Unni",
-      "n_relevant": 40,
+      "query_texts": [
+        "Unni Hongseth",
+        "unni hongseth",
+        "Unni"
+      ],
       "filter_criteria": "",
       "notes": "40 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_007",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 35,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "35 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_008",
       "query_type": 5,
-      "query_text": "Mahan Airways",
-      "alt_query_1": "mahan airways",
-      "alt_query_2": "Mahan",
-      "n_relevant": 35,
+      "query_texts": [
+        "Mahan Airways",
+        "mahan airways",
+        "Mahan"
+      ],
       "filter_criteria": "",
       "notes": "35 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_009",
       "query_type": 5,
-      "query_text": "Дисконтные государственные облигации Министерства Финансов Республики Молдова",
-      "alt_query_1": "дисконтные государственные облигации министерства финансов республики молдова",
-      "alt_query_2": "Дисконтные государственные облигации Министерства Финансов Республики",
-      "n_relevant": 33,
+      "query_texts": [
+        "Дисконтные государственные облигации Министерства Финансов Республики Молдова",
+        "дисконтные государственные облигации министерства финансов республики молдова",
+        "Дисконтные государственные облигации Министерства Финансов Республики"
+      ],
       "filter_criteria": "",
       "notes": "33 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_010",
       "query_type": 5,
-      "query_text": "Mahmoud Amini",
-      "alt_query_1": "mahmoud amini",
-      "alt_query_2": "Mahmoud",
-      "n_relevant": 32,
+      "query_texts": [
+        "Mahmoud Amini",
+        "mahmoud amini",
+        "Mahmoud"
+      ],
       "filter_criteria": "",
       "notes": "32 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_011",
       "query_type": 5,
-      "query_text": "Pejman Mahmood Kosarayanifard",
-      "alt_query_1": "pejman mahmood kosarayanifard",
-      "alt_query_2": "Pejman Mahmood",
-      "n_relevant": 32,
+      "query_texts": [
+        "Pejman Mahmood Kosarayanifard",
+        "pejman mahmood kosarayanifard",
+        "Pejman Mahmood"
+      ],
       "filter_criteria": "",
       "notes": "32 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_012",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии БО-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии бо-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии",
-      "n_relevant": 31,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии БО-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии бо-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
       "filter_criteria": "",
       "notes": "31 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_013",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-02",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-02",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии",
-      "n_relevant": 31,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
       "filter_criteria": "",
       "notes": "31 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_014",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-02",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-02",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 31,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "31 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_015",
       "query_type": 5,
-      "query_text": "Sirjanco Trading LLC",
-      "alt_query_1": "sirjanco trading llc",
-      "alt_query_2": "Sirjanco Trading",
-      "n_relevant": 31,
+      "query_texts": [
+        "Sirjanco Trading LLC",
+        "sirjanco trading llc",
+        "Sirjanco Trading"
+      ],
       "filter_criteria": "",
       "notes": "31 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_016",
       "query_type": 5,
-      "query_text": "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии КО-01",
-      "alt_query_1": "коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии ко-01",
-      "alt_query_2": "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии",
-      "n_relevant": 30,
+      "query_texts": [
+        "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии КО-01",
+        "коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии ко-01",
+        "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии"
+      ],
       "filter_criteria": "",
       "notes": "30 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_017",
       "query_type": 5,
-      "query_text": "Kerman Aviation",
-      "alt_query_1": "kerman aviation",
-      "alt_query_2": "Kerman",
-      "n_relevant": 30,
+      "query_texts": [
+        "Kerman Aviation",
+        "kerman aviation",
+        "Kerman"
+      ],
       "filter_criteria": "",
       "notes": "30 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_018",
       "query_type": 5,
-      "query_text": "Mahan Air General Trading LLC",
-      "alt_query_1": "mahan air general trading llc",
-      "alt_query_2": "Mahan Air General Trading",
-      "n_relevant": 28,
+      "query_texts": [
+        "Mahan Air General Trading LLC",
+        "mahan air general trading llc",
+        "Mahan Air General Trading"
+      ],
       "filter_criteria": "",
       "notes": "28 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_019",
       "query_type": 5,
-      "query_text": "First National Bank",
-      "alt_query_1": "first national bank",
-      "alt_query_2": "First National",
-      "n_relevant": 27,
+      "query_texts": [
+        "First National Bank",
+        "first national bank",
+        "First National"
+      ],
       "filter_criteria": "",
       "notes": "27 doc_ids for same caption [Company]"
     },
     {
       "query_id": "Q5_020",
       "query_type": 5,
-      "query_text": "Mehdi Bahrami",
-      "alt_query_1": "mehdi bahrami",
-      "alt_query_2": "Mehdi",
-      "n_relevant": 27,
+      "query_texts": [
+        "Mehdi Bahrami",
+        "mehdi bahrami",
+        "Mehdi"
+      ],
       "filter_criteria": "",
       "notes": "27 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_021",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-03",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-03",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии",
-      "n_relevant": 26,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-03",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-03",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
       "filter_criteria": "",
       "notes": "26 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_022",
       "query_type": 5,
-      "query_text": "Облигации федерального займа с постоянным купонным доходом",
-      "alt_query_1": "облигации федерального займа с постоянным купонным доходом",
-      "alt_query_2": "Облигации федерального займа с постоянным купонным",
-      "n_relevant": 25,
+      "query_texts": [
+        "Облигации федерального займа с постоянным купонным доходом",
+        "облигации федерального займа с постоянным купонным доходом",
+        "Облигации федерального займа с постоянным купонным"
+      ],
       "filter_criteria": "",
       "notes": "25 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_023",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-04",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-04",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 25,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-04",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-04",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "25 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_024",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-03",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-03",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 25,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-03",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-03",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "25 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_025",
       "query_type": 5,
-      "query_text": "Edvard Nervik",
-      "alt_query_1": "edvard nervik",
-      "alt_query_2": "Edvard",
-      "n_relevant": 25,
+      "query_texts": [
+        "Edvard Nervik",
+        "edvard nervik",
+        "Edvard"
+      ],
       "filter_criteria": "",
       "notes": "25 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_026",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001Р-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001р-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 24,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001Р-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001р-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "24 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_027",
       "query_type": 5,
-      "query_text": "VACANT",
-      "alt_query_1": "vacant",
-      "alt_query_2": "VACAN",
-      "n_relevant": 24,
+      "query_texts": [
+        "VACANT",
+        "vacant",
+        "VACAN"
+      ],
       "filter_criteria": "",
       "notes": "24 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_028",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001Р-01",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001р-01",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии",
-      "n_relevant": 22,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001Р-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001р-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
       "filter_criteria": "",
       "notes": "22 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_029",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-02",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии бо-02",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 22,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии бо-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "22 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_030",
       "query_type": 5,
-      "query_text": "Al Naser Airlines",
-      "alt_query_1": "al naser airlines",
-      "alt_query_2": "Al Naser",
-      "n_relevant": 22,
+      "query_texts": [
+        "Al Naser Airlines",
+        "al naser airlines",
+        "Al Naser"
+      ],
       "filter_criteria": "",
       "notes": "22 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_031",
       "query_type": 5,
-      "query_text": "Ali Abdullah Alhay",
-      "alt_query_1": "ali abdullah alhay",
-      "alt_query_2": "Ali Abdullah",
-      "n_relevant": 22,
+      "query_texts": [
+        "Ali Abdullah Alhay",
+        "ali abdullah alhay",
+        "Ali Abdullah"
+      ],
       "filter_criteria": "",
       "notes": "22 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_032",
       "query_type": 5,
-      "query_text": "Bahar Safwa General Trading",
-      "alt_query_1": "bahar safwa general trading",
-      "alt_query_2": "Bahar Safwa General",
-      "n_relevant": 22,
+      "query_texts": [
+        "Bahar Safwa General Trading",
+        "bahar safwa general trading",
+        "Bahar Safwa General"
+      ],
       "filter_criteria": "",
       "notes": "22 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_033",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-05",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-05",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 21,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-05",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-05",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "21 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_034",
       "query_type": 5,
-      "query_text": "Sky Blue Bird Group",
-      "alt_query_1": "sky blue bird group",
-      "alt_query_2": "Sky Blue Bird",
-      "n_relevant": 21,
+      "query_texts": [
+        "Sky Blue Bird Group",
+        "sky blue bird group",
+        "Sky Blue Bird"
+      ],
       "filter_criteria": "",
       "notes": "21 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_035",
       "query_type": 5,
-      "query_text": "Ivan Ivanov",
-      "alt_query_1": "ivan ivanov",
-      "alt_query_2": "Ivan",
-      "n_relevant": 19,
+      "query_texts": [
+        "Ivan Ivanov",
+        "ivan ivanov",
+        "Ivan"
+      ],
       "filter_criteria": "",
       "notes": "19 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_036",
       "query_type": 5,
-      "query_text": "Облигации федерального займа с переменным купонным доходом",
-      "alt_query_1": "облигации федерального займа с переменным купонным доходом",
-      "alt_query_2": "Облигации федерального займа с переменным купонным",
-      "n_relevant": 19,
+      "query_texts": [
+        "Облигации федерального займа с переменным купонным доходом",
+        "облигации федерального займа с переменным купонным доходом",
+        "Облигации федерального займа с переменным купонным"
+      ],
       "filter_criteria": "",
       "notes": "19 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_037",
       "query_type": 5,
-      "query_text": "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
-      "alt_query_1": "облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
-      "alt_query_2": "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии",
-      "n_relevant": 19,
+      "query_texts": [
+        "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
+        "облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
+        "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии"
+      ],
       "filter_criteria": "",
       "notes": "19 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_038",
       "query_type": 5,
-      "query_text": "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
-      "alt_query_1": "облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
-      "alt_query_2": "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии",
-      "n_relevant": 19,
+      "query_texts": [
+        "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
+        "облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
+        "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии"
+      ],
       "filter_criteria": "",
       "notes": "19 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_039",
       "query_type": 5,
-      "query_text": "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ ФЕДЕРАЦИИ",
-      "alt_query_1": "правительство российской федерации",
-      "alt_query_2": "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ",
-      "n_relevant": 19,
+      "query_texts": [
+        "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ ФЕДЕРАЦИИ",
+        "правительство российской федерации",
+        "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ"
+      ],
       "filter_criteria": "",
       "notes": "19 doc_ids for same caption [Organization]"
     },
     {
       "query_id": "Q5_040",
       "query_type": 5,
-      "query_text": "Бездокументарные облигации с централизованным учетом прав",
-      "alt_query_1": "бездокументарные облигации с централизованным учетом прав",
-      "alt_query_2": "Бездокументарные облигации с централизованным учетом",
-      "n_relevant": 18,
+      "query_texts": [
+        "Бездокументарные облигации с централизованным учетом прав",
+        "бездокументарные облигации с централизованным учетом прав",
+        "Бездокументарные облигации с централизованным учетом"
+      ],
       "filter_criteria": "",
       "notes": "18 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_041",
       "query_type": 5,
-      "query_text": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИОН\"",
-      "alt_query_1": "общество с ограниченной ответственностью \"орион\"",
-      "alt_query_2": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
-      "n_relevant": 17,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИОН\"",
+        "общество с ограниченной ответственностью \"орион\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
       "filter_criteria": "",
       "notes": "17 doc_ids for same caption [Company]"
     },
     {
       "query_id": "Q5_042",
       "query_type": 5,
-      "query_text": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД ЛІМІТЕД\"",
-      "alt_query_1": "товариство з обмеженою відповідальністю \"авант трейд лімітед\"",
-      "alt_query_2": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД",
-      "n_relevant": 17,
+      "query_texts": [
+        "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД ЛІМІТЕД\"",
+        "товариство з обмеженою відповідальністю \"авант трейд лімітед\"",
+        "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД"
+      ],
       "filter_criteria": "",
       "notes": "17 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_043",
       "query_type": 5,
-      "query_text": "Issam Shammout",
-      "alt_query_1": "issam shammout",
-      "alt_query_2": "Issam",
-      "n_relevant": 17,
+      "query_texts": [
+        "Issam Shammout",
+        "issam shammout",
+        "Issam"
+      ],
       "filter_criteria": "",
       "notes": "17 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_044",
       "query_type": 5,
-      "query_text": "SHAHRYAR SASANIAN",
-      "alt_query_1": "shahryar sasanian",
-      "alt_query_2": "SHAHRYAR",
-      "n_relevant": 16,
+      "query_texts": [
+        "SHAHRYAR SASANIAN",
+        "shahryar sasanian",
+        "SHAHRYAR"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_045",
       "query_type": 5,
-      "query_text": "Abdul Rehman",
-      "alt_query_1": "abdul rehman",
-      "alt_query_2": "Abdul",
-      "n_relevant": 16,
+      "query_texts": [
+        "Abdul Rehman",
+        "abdul rehman",
+        "Abdul"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [Person]"
     },
     {
       "query_id": "Q5_046",
       "query_type": 5,
-      "query_text": "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-06",
-      "alt_query_1": "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-06",
-      "alt_query_2": "Биржевые облигации процентные неконвертируемые бездокументарные серии",
-      "n_relevant": 16,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-06",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-06",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [Security]"
     },
     {
       "query_id": "Q5_047",
       "query_type": 5,
-      "query_text": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕКТОР\"",
-      "alt_query_1": "общество с ограниченной ответственностью \"вектор\"",
-      "alt_query_2": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
-      "n_relevant": 16,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕКТОР\"",
+        "общество с ограниченной ответственностью \"вектор\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [Company]"
     },
     {
       "query_id": "Q5_048",
       "query_type": 5,
-      "query_text": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРСПЕКТИВА\"",
-      "alt_query_1": "общество с ограниченной ответственностью \"перспектива\"",
-      "alt_query_2": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
-      "n_relevant": 16,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРСПЕКТИВА\"",
+        "общество с ограниченной ответственностью \"перспектива\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [Company]"
     },
     {
       "query_id": "Q5_049",
       "query_type": 5,
-      "query_text": "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира 159",
-      "alt_query_1": "28000, кіровоградська обл., олександрійський р-н, місто олександрія, пр.соборний, будинок 100, квартира 159",
-      "alt_query_2": "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира",
-      "n_relevant": 16,
+      "query_texts": [
+        "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира 159",
+        "28000, кіровоградська обл., олександрійський р-н, місто олександрія, пр.соборний, будинок 100, квартира 159",
+        "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира"
+      ],
       "filter_criteria": "",
       "notes": "16 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q5_050",
       "query_type": 5,
-      "query_text": "ΑΔΑΜΟΣ ΜΟΝΤΑΝΙΟΣ",
-      "alt_query_1": "αδαμος μοντανιος",
-      "alt_query_2": "ΑΔΑΜΟΣ",
-      "n_relevant": 15,
+      "query_texts": [
+        "ΑΔΑΜΟΣ ΜΟΝΤΑΝΙΟΣ",
+        "αδαμος μοντανιος",
+        "ΑΔΑΜΟΣ"
+      ],
       "filter_criteria": "",
       "notes": "15 doc_ids for same caption [LegalEntity]"
     },
     {
       "query_id": "Q6_001",
       "query_type": 6,
-      "query_text": "US HHS OIG person US",
-      "alt_query_1": "US HHS OIG individual US",
-      "alt_query_2": "US HHS OIG person US",
-      "n_relevant": 78312,
+      "query_texts": [
+        "US HHS OIG person US",
+        "US HHS OIG individual US"
+      ],
       "filter_criteria": "programId=US-HHS-OIG | schema=Person | country=us",
       "notes": "78312 matching docs"
     },
     {
       "query_id": "Q6_002",
       "query_type": 6,
-      "query_text": "BR CEIS company Brazil",
-      "alt_query_1": "BR CEIS entity Brazil",
-      "alt_query_2": "BR CEIS company BR",
-      "n_relevant": 9045,
+      "query_texts": [
+        "BR CEIS company Brazil",
+        "BR CEIS entity Brazil",
+        "BR CEIS company BR"
+      ],
       "filter_criteria": "programId=BR-CEIS | schema=Company | country=br",
       "notes": "9045 matching docs"
     },
     {
       "query_id": "Q6_003",
       "query_type": 6,
-      "query_text": "BR CEIS person Brazil",
-      "alt_query_1": "BR CEIS individual Brazil",
-      "alt_query_2": "BR CEIS person BR",
-      "n_relevant": 7231,
+      "query_texts": [
+        "BR CEIS person Brazil",
+        "BR CEIS individual Brazil",
+        "BR CEIS person BR"
+      ],
       "filter_criteria": "programId=BR-CEIS | schema=Person | country=br",
       "notes": "7231 matching docs"
     },
     {
       "query_id": "Q6_004",
       "query_type": 6,
-      "query_text": "UA SA1644 person Russia",
-      "alt_query_1": "UA SA1644 individual Russia",
-      "alt_query_2": "UA SA1644 person RU",
-      "n_relevant": 6165,
+      "query_texts": [
+        "UA SA1644 person Russia",
+        "UA SA1644 individual Russia",
+        "UA SA1644 person RU"
+      ],
       "filter_criteria": "programId=UA-SA1644 | schema=Person | country=ru",
       "notes": "6165 matching docs"
     },
     {
       "query_id": "Q6_005",
       "query_type": 6,
-      "query_text": "PK ATA1997 person Pakistan",
-      "alt_query_1": "PK ATA1997 individual Pakistan",
-      "alt_query_2": "PK ATA1997 person PK",
-      "n_relevant": 4206,
+      "query_texts": [
+        "PK ATA1997 person Pakistan",
+        "PK ATA1997 individual Pakistan",
+        "PK ATA1997 person PK"
+      ],
       "filter_criteria": "programId=PK-ATA1997 | schema=Person | country=pk",
       "notes": "4206 matching docs"
     },
     {
       "query_id": "Q6_006",
       "query_type": 6,
-      "query_text": "US HHS OIG company US",
-      "alt_query_1": "US HHS OIG entity US",
-      "alt_query_2": "US HHS OIG company US",
-      "n_relevant": 3280,
+      "query_texts": [
+        "US HHS OIG company US",
+        "US HHS OIG entity US"
+      ],
       "filter_criteria": "programId=US-HHS-OIG | schema=Company | country=us",
       "notes": "3280 matching docs"
     },
     {
       "query_id": "Q6_007",
       "query_type": 6,
-      "query_text": "US RUSHAR company Russia",
-      "alt_query_1": "US RUSHAR entity Russia",
-      "alt_query_2": "US RUSHAR company RU",
-      "n_relevant": 3050,
+      "query_texts": [
+        "US RUSHAR company Russia",
+        "US RUSHAR entity Russia",
+        "US RUSHAR company RU"
+      ],
       "filter_criteria": "programId=US-RUSHAR | schema=Company | country=ru",
       "notes": "3050 matching docs"
     },
     {
       "query_id": "Q6_008",
       "query_type": 6,
-      "query_text": "UA SA1644 company Russia",
-      "alt_query_1": "UA SA1644 entity Russia",
-      "alt_query_2": "UA SA1644 company RU",
-      "n_relevant": 2955,
+      "query_texts": [
+        "UA SA1644 company Russia",
+        "UA SA1644 entity Russia",
+        "UA SA1644 company RU"
+      ],
       "filter_criteria": "programId=UA-SA1644 | schema=Company | country=ru",
       "notes": "2955 matching docs"
     },
     {
       "query_id": "Q6_009",
       "query_type": 6,
-      "query_text": "INTERPOL RN person Russia",
-      "alt_query_1": "INTERPOL RN individual Russia",
-      "alt_query_2": "INTERPOL RN person RU",
-      "n_relevant": 2752,
+      "query_texts": [
+        "INTERPOL RN person Russia",
+        "INTERPOL RN individual Russia",
+        "INTERPOL RN person RU"
+      ],
       "filter_criteria": "programId=INTERPOL-RN | schema=Person | country=ru",
       "notes": "2752 matching docs"
     },
     {
       "query_id": "Q6_010",
       "query_type": 6,
-      "query_text": "CA SEMA person Russia",
-      "alt_query_1": "CA SEMA individual Russia",
-      "alt_query_2": "CA SEMA person RU",
-      "n_relevant": 1790,
+      "query_texts": [
+        "CA SEMA person Russia",
+        "CA SEMA individual Russia",
+        "CA SEMA person RU"
+      ],
       "filter_criteria": "programId=CA-SEMA | schema=Person | country=ru",
       "notes": "1790 matching docs"
     },
     {
       "query_id": "Q6_011",
       "query_type": 6,
-      "query_text": "US RUSHAR person Russia",
-      "alt_query_1": "US RUSHAR individual Russia",
-      "alt_query_2": "US RUSHAR person RU",
-      "n_relevant": 1485,
+      "query_texts": [
+        "US RUSHAR person Russia",
+        "US RUSHAR individual Russia",
+        "US RUSHAR person RU"
+      ],
       "filter_criteria": "programId=US-RUSHAR | schema=Person | country=ru",
       "notes": "1485 matching docs"
     },
     {
       "query_id": "Q6_012",
       "query_type": 6,
-      "query_text": "EU UKR person Russia",
-      "alt_query_1": "EU UKR individual Russia",
-      "alt_query_2": "EU UKR person RU",
-      "n_relevant": 1479,
+      "query_texts": [
+        "EU UKR person Russia",
+        "EU UKR individual Russia",
+        "EU UKR person RU"
+      ],
       "filter_criteria": "programId=EU-UKR | schema=Person | country=ru",
       "notes": "1479 matching docs"
     },
     {
       "query_id": "Q6_013",
       "query_type": 6,
-      "query_text": "SECO UKRAINE person Russia",
-      "alt_query_1": "SECO UKRAINE individual Russia",
-      "alt_query_2": "SECO UKRAINE person RU",
-      "n_relevant": 1467,
+      "query_texts": [
+        "SECO UKRAINE person Russia",
+        "SECO UKRAINE individual Russia",
+        "SECO UKRAINE person RU"
+      ],
       "filter_criteria": "programId=SECO-UKRAINE | schema=Person | country=ru",
       "notes": "1467 matching docs"
     },
     {
       "query_id": "Q6_014",
       "query_type": 6,
-      "query_text": "GB RUS person Russia",
-      "alt_query_1": "GB RUS individual Russia",
-      "alt_query_2": "GB RUS person RU",
-      "n_relevant": 1353,
+      "query_texts": [
+        "GB RUS person Russia",
+        "GB RUS individual Russia",
+        "GB RUS person RU"
+      ],
       "filter_criteria": "programId=GB-RUS | schema=Person | country=ru",
       "notes": "1353 matching docs"
     },
     {
       "query_id": "Q6_015",
       "query_type": 6,
-      "query_text": "NZ RSA2022 person Russia",
-      "alt_query_1": "NZ RSA2022 individual Russia",
-      "alt_query_2": "NZ RSA2022 person RU",
-      "n_relevant": 1145,
+      "query_texts": [
+        "NZ RSA2022 person Russia",
+        "NZ RSA2022 individual Russia",
+        "NZ RSA2022 person RU"
+      ],
       "filter_criteria": "programId=NZ-RSA2022 | schema=Person | country=ru",
       "notes": "1145 matching docs"
     },
     {
       "query_id": "Q6_016",
       "query_type": 6,
-      "query_text": "SECO UKRAINE company Russia",
-      "alt_query_1": "SECO UKRAINE entity Russia",
-      "alt_query_2": "SECO UKRAINE company RU",
-      "n_relevant": 1122,
+      "query_texts": [
+        "SECO UKRAINE company Russia",
+        "SECO UKRAINE entity Russia",
+        "SECO UKRAINE company RU"
+      ],
       "filter_criteria": "programId=SECO-UKRAINE | schema=Company | country=ru",
       "notes": "1122 matching docs"
     },
     {
       "query_id": "Q6_017",
       "query_type": 6,
-      "query_text": "US BIS EL organization China",
-      "alt_query_1": "US BIS EL entity China",
-      "alt_query_2": "US BIS EL organization CN",
-      "n_relevant": 867,
+      "query_texts": [
+        "US BIS EL organization China",
+        "US BIS EL entity China",
+        "US BIS EL organization CN"
+      ],
       "filter_criteria": "programId=US-BIS-EL | schema=LegalEntity | country=cn",
       "notes": "867 matching docs"
     },
     {
       "query_id": "Q6_018",
       "query_type": 6,
-      "query_text": "US BIS EL company Russia",
-      "alt_query_1": "US BIS EL entity Russia",
-      "alt_query_2": "US BIS EL company RU",
-      "n_relevant": 841,
+      "query_texts": [
+        "US BIS EL company Russia",
+        "US BIS EL entity Russia",
+        "US BIS EL company RU"
+      ],
       "filter_criteria": "programId=US-BIS-EL | schema=Company | country=ru",
       "notes": "841 matching docs"
     },
     {
       "query_id": "Q6_019",
       "query_type": 6,
-      "query_text": "CA SEMA company Russia",
-      "alt_query_1": "CA SEMA entity Russia",
-      "alt_query_2": "CA SEMA company RU",
-      "n_relevant": 685,
+      "query_texts": [
+        "CA SEMA company Russia",
+        "CA SEMA entity Russia",
+        "CA SEMA company RU"
+      ],
       "filter_criteria": "programId=CA-SEMA | schema=Company | country=ru",
       "notes": "685 matching docs"
     },
     {
       "query_id": "Q6_020",
       "query_type": 6,
-      "query_text": "AU UKRAINE person Russia",
-      "alt_query_1": "AU UKRAINE individual Russia",
-      "alt_query_2": "AU UKRAINE person RU",
-      "n_relevant": 683,
+      "query_texts": [
+        "AU UKRAINE person Russia",
+        "AU UKRAINE individual Russia",
+        "AU UKRAINE person RU"
+      ],
       "filter_criteria": "programId=AU-UKRAINE | schema=Person | country=ru",
       "notes": "683 matching docs"
     },
     {
       "query_id": "Q6_021",
       "query_type": 6,
-      "query_text": "US BIS DPL organization US",
-      "alt_query_1": "US BIS DPL entity US",
-      "alt_query_2": "US BIS DPL organization US",
-      "n_relevant": 681,
+      "query_texts": [
+        "US BIS DPL organization US",
+        "US BIS DPL entity US"
+      ],
       "filter_criteria": "programId=US-BIS-DPL | schema=LegalEntity | country=us",
       "notes": "681 matching docs"
     },
     {
       "query_id": "Q6_022",
       "query_type": 6,
-      "query_text": "UA WS MILIND company Russia",
-      "alt_query_1": "UA WS MILIND entity Russia",
-      "alt_query_2": "UA WS MILIND company RU",
-      "n_relevant": 611,
+      "query_texts": [
+        "UA WS MILIND company Russia",
+        "UA WS MILIND entity Russia",
+        "UA WS MILIND company RU"
+      ],
       "filter_criteria": "programId=UA-WS-MILIND | schema=Company | country=ru",
       "notes": "611 matching docs"
     },
     {
       "query_id": "Q6_023",
       "query_type": 6,
-      "query_text": "UA SA1644 person Ukraine",
-      "alt_query_1": "UA SA1644 individual Ukraine",
-      "alt_query_2": "UA SA1644 person UA",
-      "n_relevant": 565,
+      "query_texts": [
+        "UA SA1644 person Ukraine",
+        "UA SA1644 individual Ukraine",
+        "UA SA1644 person UA"
+      ],
       "filter_criteria": "programId=UA-SA1644 | schema=Person | country=ua",
       "notes": "565 matching docs"
     },
     {
       "query_id": "Q6_024",
       "query_type": 6,
-      "query_text": "EU UKR company Russia",
-      "alt_query_1": "EU UKR entity Russia",
-      "alt_query_2": "EU UKR company RU",
-      "n_relevant": 542,
+      "query_texts": [
+        "EU UKR company Russia",
+        "EU UKR entity Russia",
+        "EU UKR company RU"
+      ],
       "filter_criteria": "programId=EU-UKR | schema=Company | country=ru",
       "notes": "542 matching docs"
     },
     {
       "query_id": "Q6_025",
       "query_type": 6,
-      "query_text": "CA SEMA person Ukraine",
-      "alt_query_1": "CA SEMA individual Ukraine",
-      "alt_query_2": "CA SEMA person UA",
-      "n_relevant": 535,
+      "query_texts": [
+        "CA SEMA person Ukraine",
+        "CA SEMA individual Ukraine",
+        "CA SEMA person UA"
+      ],
       "filter_criteria": "programId=CA-SEMA | schema=Person | country=ua",
       "notes": "535 matching docs"
     },
     {
       "query_id": "Q6_026",
       "query_type": 6,
-      "query_text": "UA WS MARE vessel Russia",
-      "alt_query_1": "UA WS MARE ship Russia",
-      "alt_query_2": "UA WS MARE vessel RU",
-      "n_relevant": 512,
+      "query_texts": [
+        "UA WS MARE vessel Russia",
+        "UA WS MARE ship Russia",
+        "UA WS MARE vessel RU"
+      ],
       "filter_criteria": "programId=UA-WS-MARE | schema=Vessel | country=ru",
       "notes": "512 matching docs"
     },
     {
       "query_id": "Q6_027",
       "query_type": 6,
-      "query_text": "CA SEMA vessel Russia",
-      "alt_query_1": "CA SEMA ship Russia",
-      "alt_query_2": "CA SEMA vessel RU",
-      "n_relevant": 510,
+      "query_texts": [
+        "CA SEMA vessel Russia",
+        "CA SEMA ship Russia",
+        "CA SEMA vessel RU"
+      ],
       "filter_criteria": "programId=CA-SEMA | schema=Vessel | country=ru",
       "notes": "510 matching docs"
     },
     {
       "query_id": "Q6_028",
       "query_type": 6,
-      "query_text": "US IRAN person Iran",
-      "alt_query_1": "US IRAN individual Iran",
-      "alt_query_2": "US IRAN person IR",
-      "n_relevant": 506,
+      "query_texts": [
+        "US IRAN person Iran",
+        "US IRAN individual Iran",
+        "US IRAN person IR"
+      ],
       "filter_criteria": "programId=US-IRAN | schema=Person | country=ir",
       "notes": "506 matching docs"
     },
     {
       "query_id": "Q6_029",
       "query_type": 6,
-      "query_text": "GB RUS vessel Russia",
-      "alt_query_1": "GB RUS ship Russia",
-      "alt_query_2": "GB RUS vessel RU",
-      "n_relevant": 488,
+      "query_texts": [
+        "GB RUS vessel Russia",
+        "GB RUS ship Russia",
+        "GB RUS vessel RU"
+      ],
       "filter_criteria": "programId=GB-RUS | schema=Vessel | country=ru",
       "notes": "488 matching docs"
     },
     {
       "query_id": "Q6_030",
       "query_type": 6,
-      "query_text": "AU RUSSIA person Russia",
-      "alt_query_1": "AU RUSSIA individual Russia",
-      "alt_query_2": "AU RUSSIA person RU",
-      "n_relevant": 474,
+      "query_texts": [
+        "AU RUSSIA person Russia",
+        "AU RUSSIA individual Russia",
+        "AU RUSSIA person RU"
+      ],
       "filter_criteria": "programId=AU-RUSSIA | schema=Person | country=ru",
       "notes": "474 matching docs"
     },
     {
       "query_id": "Q6_031",
       "query_type": 6,
-      "query_text": "EU MARE vessel Russia",
-      "alt_query_1": "EU MARE ship Russia",
-      "alt_query_2": "EU MARE vessel RU",
-      "n_relevant": 460,
+      "query_texts": [
+        "EU MARE vessel Russia",
+        "EU MARE ship Russia",
+        "EU MARE vessel RU"
+      ],
       "filter_criteria": "programId=EU-MARE | schema=Vessel | country=ru",
       "notes": "460 matching docs"
     },
     {
       "query_id": "Q6_032",
       "query_type": 6,
-      "query_text": "SECO UKRAINE vessel Russia",
-      "alt_query_1": "SECO UKRAINE ship Russia",
-      "alt_query_2": "SECO UKRAINE vessel RU",
-      "n_relevant": 460,
+      "query_texts": [
+        "SECO UKRAINE vessel Russia",
+        "SECO UKRAINE ship Russia",
+        "SECO UKRAINE vessel RU"
+      ],
       "filter_criteria": "programId=SECO-UKRAINE | schema=Vessel | country=ru",
       "notes": "460 matching docs"
     },
     {
       "query_id": "Q6_033",
       "query_type": 6,
-      "query_text": "US AECA DEBARRED person US",
-      "alt_query_1": "US AECA DEBARRED individual US",
-      "alt_query_2": "US AECA DEBARRED person US",
-      "n_relevant": 455,
+      "query_texts": [
+        "US AECA DEBARRED person US",
+        "US AECA DEBARRED individual US"
+      ],
       "filter_criteria": "programId=US-AECA-DEBARRED | schema=Person | country=us",
       "notes": "455 matching docs"
     },
     {
       "query_id": "Q6_034",
       "query_type": 6,
-      "query_text": "US DDTC SD person US",
-      "alt_query_1": "US DDTC SD individual US",
-      "alt_query_2": "US DDTC SD person US",
-      "n_relevant": 455,
+      "query_texts": [
+        "US DDTC SD person US",
+        "US DDTC SD individual US"
+      ],
       "filter_criteria": "programId=US-DDTC-SD | schema=Person | country=us",
       "notes": "455 matching docs"
     },
     {
       "query_id": "Q6_035",
       "query_type": 6,
-      "query_text": "GB RUS company Russia",
-      "alt_query_1": "GB RUS entity Russia",
-      "alt_query_2": "GB RUS company RU",
-      "n_relevant": 415,
+      "query_texts": [
+        "GB RUS company Russia",
+        "GB RUS entity Russia",
+        "GB RUS company RU"
+      ],
       "filter_criteria": "programId=GB-RUS | schema=Company | country=ru",
       "notes": "415 matching docs"
     },
     {
       "query_id": "Q6_036",
       "query_type": 6,
-      "query_text": "EU UKR person Ukraine",
-      "alt_query_1": "EU UKR individual Ukraine",
-      "alt_query_2": "EU UKR person UA",
-      "n_relevant": 412,
+      "query_texts": [
+        "EU UKR person Ukraine",
+        "EU UKR individual Ukraine",
+        "EU UKR person UA"
+      ],
       "filter_criteria": "programId=EU-UKR | schema=Person | country=ua",
       "notes": "412 matching docs"
     },
     {
       "query_id": "Q6_037",
       "query_type": 6,
-      "query_text": "SECO UKRAINE person Ukraine",
-      "alt_query_1": "SECO UKRAINE individual Ukraine",
-      "alt_query_2": "SECO UKRAINE person UA",
-      "n_relevant": 410,
+      "query_texts": [
+        "SECO UKRAINE person Ukraine",
+        "SECO UKRAINE individual Ukraine",
+        "SECO UKRAINE person UA"
+      ],
       "filter_criteria": "programId=SECO-UKRAINE | schema=Person | country=ua",
       "notes": "410 matching docs"
     },
     {
       "query_id": "Q6_038",
       "query_type": 6,
-      "query_text": "NZ RSA2022 company Russia",
-      "alt_query_1": "NZ RSA2022 entity Russia",
-      "alt_query_2": "NZ RSA2022 company RU",
-      "n_relevant": 401,
+      "query_texts": [
+        "NZ RSA2022 company Russia",
+        "NZ RSA2022 entity Russia",
+        "NZ RSA2022 company RU"
+      ],
       "filter_criteria": "programId=NZ-RSA2022 | schema=Company | country=ru",
       "notes": "401 matching docs"
     },
     {
       "query_id": "Q6_039",
       "query_type": 6,
-      "query_text": "US FED ENF company US",
-      "alt_query_1": "US FED ENF entity US",
-      "alt_query_2": "US FED ENF company US",
-      "n_relevant": 386,
+      "query_texts": [
+        "US FED ENF company US",
+        "US FED ENF entity US"
+      ],
       "filter_criteria": "programId=US-FED-ENF | schema=Company | country=us",
       "notes": "386 matching docs"
     },
     {
       "query_id": "Q6_040",
       "query_type": 6,
-      "query_text": "US IRAN company Iran",
-      "alt_query_1": "US IRAN entity Iran",
-      "alt_query_2": "US IRAN company IR",
-      "n_relevant": 368,
+      "query_texts": [
+        "US IRAN company Iran",
+        "US IRAN entity Iran",
+        "US IRAN company IR"
+      ],
       "filter_criteria": "programId=US-IRAN | schema=Company | country=ir",
       "notes": "368 matching docs"
     },
     {
       "query_id": "Q6_041",
       "query_type": 6,
-      "query_text": "AU RUSSIA company Russia",
-      "alt_query_1": "AU RUSSIA entity Russia",
-      "alt_query_2": "AU RUSSIA company RU",
-      "n_relevant": 363,
+      "query_texts": [
+        "AU RUSSIA company Russia",
+        "AU RUSSIA entity Russia",
+        "AU RUSSIA company RU"
+      ],
       "filter_criteria": "programId=AU-RUSSIA | schema=Company | country=ru",
       "notes": "363 matching docs"
     },
     {
       "query_id": "Q6_042",
       "query_type": 6,
-      "query_text": "GB RUS person Ukraine",
-      "alt_query_1": "GB RUS individual Ukraine",
-      "alt_query_2": "GB RUS person UA",
-      "n_relevant": 360,
+      "query_texts": [
+        "GB RUS person Ukraine",
+        "GB RUS individual Ukraine",
+        "GB RUS person UA"
+      ],
       "filter_criteria": "programId=GB-RUS | schema=Person | country=ua",
       "notes": "360 matching docs"
     },
     {
       "query_id": "Q6_043",
       "query_type": 6,
-      "query_text": "US IRAN organization Iran",
-      "alt_query_1": "US IRAN entity Iran",
-      "alt_query_2": "US IRAN organization IR",
-      "n_relevant": 305,
+      "query_texts": [
+        "US IRAN organization Iran",
+        "US IRAN entity Iran",
+        "US IRAN organization IR"
+      ],
       "filter_criteria": "programId=US-IRAN | schema=Organization | country=ir",
       "notes": "305 matching docs"
     },
     {
       "query_id": "Q6_044",
       "query_type": 6,
-      "query_text": "US AECA DEBARRED organization US",
-      "alt_query_1": "US AECA DEBARRED entity US",
-      "alt_query_2": "US AECA DEBARRED organization US",
-      "n_relevant": 298,
+      "query_texts": [
+        "US AECA DEBARRED organization US",
+        "US AECA DEBARRED entity US"
+      ],
       "filter_criteria": "programId=US-AECA-DEBARRED | schema=LegalEntity | country=us",
       "notes": "298 matching docs"
     },
     {
       "query_id": "Q6_045",
       "query_type": 6,
-      "query_text": "US DDTC SD organization US",
-      "alt_query_1": "US DDTC SD entity US",
-      "alt_query_2": "US DDTC SD organization US",
-      "n_relevant": 283,
+      "query_texts": [
+        "US DDTC SD organization US",
+        "US DDTC SD entity US"
+      ],
       "filter_criteria": "programId=US-DDTC-SD | schema=LegalEntity | country=us",
       "notes": "283 matching docs"
     },
     {
       "query_id": "Q6_046",
       "query_type": 6,
-      "query_text": "UA WS MILIND organization Russia",
-      "alt_query_1": "UA WS MILIND entity Russia",
-      "alt_query_2": "UA WS MILIND organization RU",
-      "n_relevant": 274,
+      "query_texts": [
+        "UA WS MILIND organization Russia",
+        "UA WS MILIND entity Russia",
+        "UA WS MILIND organization RU"
+      ],
       "filter_criteria": "programId=UA-WS-MILIND | schema=LegalEntity | country=ru",
       "notes": "274 matching docs"
     },
     {
       "query_id": "Q6_047",
       "query_type": 6,
-      "query_text": "EU SYR person Syria",
-      "alt_query_1": "EU SYR individual Syria",
-      "alt_query_2": "EU SYR person SY",
-      "n_relevant": 274,
+      "query_texts": [
+        "EU SYR person Syria",
+        "EU SYR individual Syria",
+        "EU SYR person SY"
+      ],
       "filter_criteria": "programId=EU-SYR | schema=Person | country=sy",
       "notes": "274 matching docs"
     },
     {
       "query_id": "Q6_048",
       "query_type": 6,
-      "query_text": "SECO SYRIA person Syria",
-      "alt_query_1": "SECO SYRIA individual Syria",
-      "alt_query_2": "SECO SYRIA person SY",
-      "n_relevant": 273,
+      "query_texts": [
+        "SECO SYRIA person Syria",
+        "SECO SYRIA individual Syria",
+        "SECO SYRIA person SY"
+      ],
       "filter_criteria": "programId=SECO-SYRIA | schema=Person | country=sy",
       "notes": "273 matching docs"
     },
     {
       "query_id": "Q6_049",
       "query_type": 6,
-      "query_text": "US TERR person US",
-      "alt_query_1": "US TERR individual US",
-      "alt_query_2": "US TERR person US",
-      "n_relevant": 272,
+      "query_texts": [
+        "US TERR person US",
+        "US TERR individual US"
+      ],
       "filter_criteria": "programId=US-TERR | schema=Person | country=us",
       "notes": "272 matching docs"
     },
     {
       "query_id": "Q6_050",
       "query_type": 6,
-      "query_text": "EU IRN person Iran",
-      "alt_query_1": "EU IRN individual Iran",
-      "alt_query_2": "EU IRN person IR",
-      "n_relevant": 269,
+      "query_texts": [
+        "EU IRN person Iran",
+        "EU IRN individual Iran",
+        "EU IRN person IR"
+      ],
       "filter_criteria": "programId=EU-IRN | schema=Person | country=ir",
       "notes": "269 matching docs"
     }

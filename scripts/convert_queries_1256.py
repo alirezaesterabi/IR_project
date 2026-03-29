@@ -2,8 +2,7 @@
 Convert potential_queries_type_1_2_5_6.xlsx → data/evaluation/queries_1256.json
 
 Source columns:
-    query_id, query_type, query_text, alt_query_1, alt_query_2,
-    n_relevant, expected_doc_ids, filter_criteria, notes
+    query_id, query_type, query_texts (JSON array), filter_criteria, notes
 
 Usage:
     python scripts/convert_queries_1256.py
@@ -39,7 +38,7 @@ def convert(input_path: Path, output_path: Path) -> None:
     df = pd.read_excel(input_path, sheet_name="Queries", dtype=str)
     df = df.fillna("")
 
-    required = {"query_id", "query_type", "query_text"}
+    required = {"query_id", "query_type", "query_texts"}
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"Missing required columns: {missing}")
@@ -48,18 +47,25 @@ def convert(input_path: Path, output_path: Path) -> None:
     skipped = 0
 
     for _, row in df.iterrows():
-        query_text = row.get("query_text", "").strip()
-        if not query_text:
+        raw_texts = row.get("query_texts", "").strip()
+        if not raw_texts:
+            skipped += 1
+            continue
+
+        # Parse the JSON array from the cell
+        try:
+            query_texts = json.loads(raw_texts)
+            if not isinstance(query_texts, list) or not query_texts:
+                raise ValueError("empty or non-list")
+        except (json.JSONDecodeError, ValueError) as e:
+            print(f"  Warning: could not parse query_texts for {row['query_id']}: {e} — skipping")
             skipped += 1
             continue
 
         queries.append({
             "query_id":        row["query_id"].strip(),
             "query_type":      int(row["query_type"]),
-            "query_text":      query_text,
-            "alt_query_1":     row.get("alt_query_1", "").strip(),
-            "alt_query_2":     row.get("alt_query_2", "").strip(),
-            "n_relevant":      int(row["n_relevant"]) if row.get("n_relevant", "") else None,
+            "query_texts":     query_texts,
             "filter_criteria": row.get("filter_criteria", "").strip(),
             "notes":           row.get("notes", "").strip(),
         })
@@ -70,9 +76,8 @@ def convert(input_path: Path, output_path: Path) -> None:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
     print(f"Written  : {output_path}")
-    print(f"Queries  : {len(queries)} exported, {skipped} skipped (empty query_text)")
+    print(f"Queries  : {len(queries)} exported, {skipped} skipped")
 
-    # Summary by type
     from collections import Counter
     type_counts = Counter(q["query_type"] for q in queries)
     for qtype in sorted(type_counts):
