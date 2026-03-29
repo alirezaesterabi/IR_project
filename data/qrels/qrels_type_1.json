@@ -1,0 +1,156 @@
+{
+  "query_type": 1,
+  "n_queries": 50,
+  "qrels": {
+    "Q1_001": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q1_002": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q1_003": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q1_004": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q1_005": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q1_006": {
+      "NK-223yQP6hRaMuiALDCJ6xbY": 1
+    },
+    "Q1_007": {
+      "NK-223yQP6hRaMuiALDCJ6xbY": 1
+    },
+    "Q1_008": {
+      "NK-223yQP6hRaMuiALDCJ6xbY": 1
+    },
+    "Q1_009": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q1_010": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q1_011": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q1_012": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q1_013": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q1_014": {
+      "NK-228ZdYZVXaZBSBgVwapnks": 1
+    },
+    "Q1_015": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_016": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_017": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_018": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_019": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_020": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q1_021": {
+      "NK-22BiLDQqi5mhKfDeYuqs23": 1
+    },
+    "Q1_022": {
+      "NK-22C9zkXEo48ioJPccyPR4c": 1
+    },
+    "Q1_023": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_024": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_025": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_026": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_027": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_028": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_029": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q1_030": {
+      "NK-22SrWxmRnUfLKXFvtGuJVB": 1
+    },
+    "Q1_031": {
+      "NK-22T6dTsc6umYgEA33vME3t": 1
+    },
+    "Q1_032": {
+      "NK-22T6dTsc6umYgEA33vME3t": 1
+    },
+    "Q1_033": {
+      "NK-22T6dTsc6umYgEA33vME3t": 1
+    },
+    "Q1_034": {
+      "NK-22T6dTsc6umYgEA33vME3t": 1
+    },
+    "Q1_035": {
+      "NK-22Tion5LJoMAa2P9P7UwDL": 1
+    },
+    "Q1_036": {
+      "NK-22WmG9GWt6yirMLDHUEXMq": 1
+    },
+    "Q1_037": {
+      "NK-22WmG9GWt6yirMLDHUEXMq": 1
+    },
+    "Q1_038": {
+      "NK-22WmG9GWt6yirMLDHUEXMq": 1
+    },
+    "Q1_039": {
+      "NK-22YnEcmYTBXeCBBeZU5wCN": 1
+    },
+    "Q1_040": {
+      "NK-22YnEcmYTBXeCBBeZU5wCN": 1
+    },
+    "Q1_041": {
+      "NK-22YnEcmYTBXeCBBeZU5wCN": 1
+    },
+    "Q1_042": {
+      "NK-22c6upVtxbVMhbZb3Z6dn6": 1
+    },
+    "Q1_043": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q1_044": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q1_045": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q1_046": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q1_047": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q1_048": {
+      "NK-22cgEnSYbXQSyfkYnm7Hug": 1
+    },
+    "Q1_049": {
+      "NK-22j9bR6whUf6FPp6KcwzcW": 1
+    },
+    "Q1_050": {
+      "NK-22j9bR6whUf6FPp6KcwzcW": 1
+    }
+  }
+}

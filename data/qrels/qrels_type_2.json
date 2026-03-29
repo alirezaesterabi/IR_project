@@ -1,0 +1,156 @@
+{
+  "query_type": 2,
+  "n_queries": 50,
+  "qrels": {
+    "Q2_001": {
+      "NK-223CQDBzp8MRkdJMDiqXn3": 1
+    },
+    "Q2_002": {
+      "NK-223yQP6hRaMuiALDCJ6xbY": 1
+    },
+    "Q2_003": {
+      "NK-226GXBdQ5p6NjgrTpTQNVW": 1
+    },
+    "Q2_004": {
+      "NK-228ZdYZVXaZBSBgVwapnks": 1
+    },
+    "Q2_005": {
+      "NK-228jBYSTdUSvbZvsKsiHh6": 1
+    },
+    "Q2_006": {
+      "NK-22BiLDQqi5mhKfDeYuqs23": 1
+    },
+    "Q2_007": {
+      "NK-22HtK7WrxZ2sU3rmhz6PuZ": 1
+    },
+    "Q2_008": {
+      "NK-22JRrAHhpxzN8wN5pP6EGo": 1
+    },
+    "Q2_009": {
+      "NK-22JT8frx32YRjjYnnwxsyy": 1
+    },
+    "Q2_010": {
+      "NK-22KNpaKJL84d8wpFudvLjN": 1
+    },
+    "Q2_011": {
+      "NK-22MHXvQQufBgTjUWgUbWb8": 1
+    },
+    "Q2_012": {
+      "NK-22T6dTsc6umYgEA33vME3t": 1
+    },
+    "Q2_013": {
+      "NK-22YnEcmYTBXeCBBeZU5wCN": 1
+    },
+    "Q2_014": {
+      "NK-22c6upVtxbVMhbZb3Z6dn6": 1
+    },
+    "Q2_015": {
+      "NK-22cQD3a8GDRSuoW5mus3F3": 1
+    },
+    "Q2_016": {
+      "NK-22sRNHw9xqUbicAXF4i7BP": 1
+    },
+    "Q2_017": {
+      "NK-22sjj2aodJmDCmAeKSrjTN": 1
+    },
+    "Q2_018": {
+      "NK-22wTQUzAxxgEF2PmNsNoeQ": 1
+    },
+    "Q2_019": {
+      "NK-22xbFMnMDYA4FMDBQ5keE3": 1
+    },
+    "Q2_020": {
+      "NK-233T8qPscJE8bSmq7b35hE": 1
+    },
+    "Q2_021": {
+      "NK-235NUsjt6Rg6aKTiS5ZF4f": 1
+    },
+    "Q2_022": {
+      "NK-235hApQ4jp8oMsJmToKGdJ": 1
+    },
+    "Q2_023": {
+      "NK-2369Vca9iPnQoaUJDAHTaB": 1
+    },
+    "Q2_024": {
+      "NK-236GpFjsG9VS35R9GvKUeu": 1
+    },
+    "Q2_025": {
+      "NK-23975toCAxG4u8oZiYQmGH": 1
+    },
+    "Q2_026": {
+      "NK-23Ab6pm659oeZD2CBUsnma": 1
+    },
+    "Q2_027": {
+      "NK-23DqSYQpVuc6fEg9XZUpJn": 1
+    },
+    "Q2_028": {
+      "NK-23FwEXHaLXUPKYbQi5QvLZ": 1
+    },
+    "Q2_029": {
+      "NK-23KkjXHEZQdFPHMmJ5tWK7": 1
+    },
+    "Q2_030": {
+      "NK-23NRktrKQgBsSjM7DfUXR2": 1
+    },
+    "Q2_031": {
+      "NK-23QCKo3YFMJhqUQjBF9vKB": 1
+    },
+    "Q2_032": {
+      "NK-23RXrhNJnWVyxTbRZqMZwJ": 1
+    },
+    "Q2_033": {
+      "NK-23YwNuFcT5T34b3j5vXD8c": 1
+    },
+    "Q2_034": {
+      "NK-23ZpU5XrzmXbjQeeR4HSZn": 1
+    },
+    "Q2_035": {
+      "NK-23Zrac5TLVehPJmHPRqUjW": 1
+    },
+    "Q2_036": {
+      "NK-23b3kRvzCbHUvJuMdwZ2nw": 1
+    },
+    "Q2_037": {
+      "NK-23dinXRmxTu4sehASYNAGE": 1
+    },
+    "Q2_038": {
+      "NK-23ezoxpLv8HcfmqdmemyFo": 1
+    },
+    "Q2_039": {
+      "NK-23hJQLey537zKym6UpfngF": 1
+    },
+    "Q2_040": {
+      "NK-23hKbVT8cQoWsxXGPLW7NA": 1
+    },
+    "Q2_041": {
+      "NK-23iURbnx76fvhSi6LRELov": 1
+    },
+    "Q2_042": {
+      "NK-23p2d4vMT5sJtQ845GyzJt": 1
+    },
+    "Q2_043": {
+      "NK-23rgYEXa9AHtupZKgS8Tbc": 1
+    },
+    "Q2_044": {
+      "NK-23wEenKCkJ2dbXMy4qdiE7": 1
+    },
+    "Q2_045": {
+      "NK-242bm8PBFudavcSTYvLcDX": 1
+    },
+    "Q2_046": {
+      "NK-245arpDkLm74auKv2h9w3m": 1
+    },
+    "Q2_047": {
+      "NK-24D3iX76oPbjQLMjmK2ijd": 1
+    },
+    "Q2_048": {
+      "NK-24ESKZTe9qJMkQCumCJfjF": 1
+    },
+    "Q2_049": {
+      "NK-24HBT9wzJBLVNpLdCtBh7v": 1
+    },
+    "Q2_050": {
+      "NK-24JQtEuqWJbXJo5Wp5L8K7": 1
+    }
+  }
+}

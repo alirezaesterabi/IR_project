@@ -1,0 +1,168 @@
+{
+  "query_type": 3,
+  "n_queries": 18,
+  "queries": [
+    {
+      "query_id": "Q3_001",
+      "query_type": 3,
+      "query_texts": [
+        "Russian oil tankers in the shadow fleet sanctioned for circumventing the price cap"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q3_002",
+      "query_type": 3,
+      "query_texts": [
+        "North Korean state-sponsored hacking group that stole cryptocurrency from online gambling platforms"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q3_003",
+      "query_type": 3,
+      "query_texts": [
+        "UAE-based shipping management companies running previously Russian-operated tankers"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q3_004",
+      "query_type": 3,
+      "query_texts": [
+        "Sanctioned tankers that have been detained by port authorities for safety violations"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q3_005",
+      "query_type": 3,
+      "query_texts": [
+        "Russian state shipping company that is the largest transporter of crude oil and LNG"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q3_006",
+      "query_type": 3,
+      "query_texts": [
+        "Russian private military company responsible for deploying mercenaries in Ukraine, Syria, Libya, and Africa"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q3_007",
+      "query_type": 3,
+      "query_texts": [
+        "Russian state energy company's oil division sanctioned for exploration activities in Iran and involvement in Russian oil exports"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q3_008",
+      "query_type": 3,
+      "query_texts": [
+        "Sanctioned individual who led Wagner Group operations in Sudan and was involved in exploiting Sudanese gold for export to Russia"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q3_009",
+      "query_type": 3,
+      "query_texts": [
+        "Sanctioned subsidiary of a Russian energy conglomerate operating in Kyrgyzstan"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q3_010",
+      "query_type": 3,
+      "query_texts": [
+        "Russian paramilitary sabotage unit linked to a larger private military company, accused of atrocities against Ukrainian soldiers in the Donbas region"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q3_011",
+      "query_type": 3,
+      "query_texts": [
+        "Sanctioned Russian microelectronics manufacturer whose chips are used in Iskander ballistic missiles"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q3_012",
+      "query_type": 3,
+      "query_texts": [
+        "Iranian companies that designed and manufactured the one-way attack drones used by Russia against Ukraine, known in Russian service as Geran-2"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q3_013",
+      "query_type": 3,
+      "query_texts": [
+        "Sanctioned state airline used to secretly transfer drone components and UAV technology from Iran to Russia for use in the Ukraine war"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q3_014",
+      "query_type": 3,
+      "query_texts": [
+        "Cryptoaddresses linked to North Korean Hacker Group"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries"
+    },
+    {
+      "query_id": "Q3_015",
+      "query_type": 3,
+      "query_texts": [
+        "UAE-based companies subject to Syrian sanctions from a US perspective"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries"
+    },
+    {
+      "query_id": "Q3_016",
+      "query_type": 3,
+      "query_texts": [
+        "Kyrgyzstan companies subject to sanctions in the US, UK and EU"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries"
+    },
+    {
+      "query_id": "Q3_017",
+      "query_type": 3,
+      "query_texts": [
+        "Companies with nexus to Poland subject to US sanctions under OFAC"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries"
+    },
+    {
+      "query_id": "Q3_018",
+      "query_type": 3,
+      "query_texts": [
+        "Need a list of companies sanctioned under US transactionational criminal organizations sanctions program, specifically  connected to Mexico and Guatemala"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries"
+    }
+  ]
+}

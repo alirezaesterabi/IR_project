@@ -1,0 +1,556 @@
+{
+  "query_type": 5,
+  "n_queries": 50,
+  "queries": [
+    {
+      "query_id": "Q5_001",
+      "query_type": 5,
+      "query_texts": [
+        "Morten Austestad",
+        "morten austestad",
+        "Morten"
+      ],
+      "filter_criteria": "",
+      "notes": "102 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_002",
+      "query_type": 5,
+      "query_texts": [
+        "Per Atle Tufte",
+        "per atle tufte",
+        "Per Atle"
+      ],
+      "filter_criteria": "",
+      "notes": "74 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_003",
+      "query_type": 5,
+      "query_texts": [
+        "Jørn Steinar Seljelid",
+        "jørn steinar seljelid",
+        "Jørn Steinar"
+      ],
+      "filter_criteria": "",
+      "notes": "69 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_004",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии бо-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "63 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_005",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
+      "filter_criteria": "",
+      "notes": "52 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_006",
+      "query_type": 5,
+      "query_texts": [
+        "Unni Hongseth",
+        "unni hongseth",
+        "Unni"
+      ],
+      "filter_criteria": "",
+      "notes": "40 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_007",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "35 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_008",
+      "query_type": 5,
+      "query_texts": [
+        "Mahan Airways",
+        "mahan airways",
+        "Mahan"
+      ],
+      "filter_criteria": "",
+      "notes": "35 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_009",
+      "query_type": 5,
+      "query_texts": [
+        "Дисконтные государственные облигации Министерства Финансов Республики Молдова",
+        "дисконтные государственные облигации министерства финансов республики молдова",
+        "Дисконтные государственные облигации Министерства Финансов Республики"
+      ],
+      "filter_criteria": "",
+      "notes": "33 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_010",
+      "query_type": 5,
+      "query_texts": [
+        "Mahmoud Amini",
+        "mahmoud amini",
+        "Mahmoud"
+      ],
+      "filter_criteria": "",
+      "notes": "32 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_011",
+      "query_type": 5,
+      "query_texts": [
+        "Pejman Mahmood Kosarayanifard",
+        "pejman mahmood kosarayanifard",
+        "Pejman Mahmood"
+      ],
+      "filter_criteria": "",
+      "notes": "32 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_012",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии БО-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии бо-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
+      "filter_criteria": "",
+      "notes": "31 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_013",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
+      "filter_criteria": "",
+      "notes": "31 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_014",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "31 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_015",
+      "query_type": 5,
+      "query_texts": [
+        "Sirjanco Trading LLC",
+        "sirjanco trading llc",
+        "Sirjanco Trading"
+      ],
+      "filter_criteria": "",
+      "notes": "31 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_016",
+      "query_type": 5,
+      "query_texts": [
+        "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии КО-01",
+        "коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии ко-01",
+        "Коммерческие облигации бездокументарные с централизованным учетом прав неконвертируемые процентные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "30 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_017",
+      "query_type": 5,
+      "query_texts": [
+        "Kerman Aviation",
+        "kerman aviation",
+        "Kerman"
+      ],
+      "filter_criteria": "",
+      "notes": "30 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_018",
+      "query_type": 5,
+      "query_texts": [
+        "Mahan Air General Trading LLC",
+        "mahan air general trading llc",
+        "Mahan Air General Trading"
+      ],
+      "filter_criteria": "",
+      "notes": "28 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_019",
+      "query_type": 5,
+      "query_texts": [
+        "First National Bank",
+        "first national bank",
+        "First National"
+      ],
+      "filter_criteria": "",
+      "notes": "27 doc_ids for same caption [Company]"
+    },
+    {
+      "query_id": "Q5_020",
+      "query_type": 5,
+      "query_texts": [
+        "Mehdi Bahrami",
+        "mehdi bahrami",
+        "Mehdi"
+      ],
+      "filter_criteria": "",
+      "notes": "27 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_021",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001P-03",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001p-03",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
+      "filter_criteria": "",
+      "notes": "26 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_022",
+      "query_type": 5,
+      "query_texts": [
+        "Облигации федерального займа с постоянным купонным доходом",
+        "облигации федерального займа с постоянным купонным доходом",
+        "Облигации федерального займа с постоянным купонным"
+      ],
+      "filter_criteria": "",
+      "notes": "25 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_023",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-04",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-04",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "25 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_024",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-03",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-03",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "25 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_025",
+      "query_type": 5,
+      "query_texts": [
+        "Edvard Nervik",
+        "edvard nervik",
+        "Edvard"
+      ],
+      "filter_criteria": "",
+      "notes": "25 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_026",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001Р-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001р-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "24 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_027",
+      "query_type": 5,
+      "query_texts": [
+        "VACANT",
+        "vacant",
+        "VACAN"
+      ],
+      "filter_criteria": "",
+      "notes": "24 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_028",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001Р-01",
+        "биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии 001р-01",
+        "Биржевые облигации процентные неконвертируемые бездокументарные с централизованным учетом прав серии"
+      ],
+      "filter_criteria": "",
+      "notes": "22 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_029",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии БО-02",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии бо-02",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "22 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_030",
+      "query_type": 5,
+      "query_texts": [
+        "Al Naser Airlines",
+        "al naser airlines",
+        "Al Naser"
+      ],
+      "filter_criteria": "",
+      "notes": "22 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_031",
+      "query_type": 5,
+      "query_texts": [
+        "Ali Abdullah Alhay",
+        "ali abdullah alhay",
+        "Ali Abdullah"
+      ],
+      "filter_criteria": "",
+      "notes": "22 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_032",
+      "query_type": 5,
+      "query_texts": [
+        "Bahar Safwa General Trading",
+        "bahar safwa general trading",
+        "Bahar Safwa General"
+      ],
+      "filter_criteria": "",
+      "notes": "22 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_033",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-05",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-05",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "21 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_034",
+      "query_type": 5,
+      "query_texts": [
+        "Sky Blue Bird Group",
+        "sky blue bird group",
+        "Sky Blue Bird"
+      ],
+      "filter_criteria": "",
+      "notes": "21 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_035",
+      "query_type": 5,
+      "query_texts": [
+        "Ivan Ivanov",
+        "ivan ivanov",
+        "Ivan"
+      ],
+      "filter_criteria": "",
+      "notes": "19 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_036",
+      "query_type": 5,
+      "query_texts": [
+        "Облигации федерального займа с переменным купонным доходом",
+        "облигации федерального займа с переменным купонным доходом",
+        "Облигации федерального займа с переменным купонным"
+      ],
+      "filter_criteria": "",
+      "notes": "19 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_037",
+      "query_type": 5,
+      "query_texts": [
+        "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
+        "облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии 01",
+        "Облигации структурные неконвертируемые процентные бездокументарные с залоговым обеспечением серии"
+      ],
+      "filter_criteria": "",
+      "notes": "19 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_038",
+      "query_type": 5,
+      "query_texts": [
+        "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
+        "облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии 01",
+        "Облигации структурные процентные неконвертируемые бездокументарные с залоговым обеспечением серии"
+      ],
+      "filter_criteria": "",
+      "notes": "19 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_039",
+      "query_type": 5,
+      "query_texts": [
+        "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ ФЕДЕРАЦИИ",
+        "правительство российской федерации",
+        "ПРАВИТЕЛЬСТВО РОССИЙСКОЙ"
+      ],
+      "filter_criteria": "",
+      "notes": "19 doc_ids for same caption [Organization]"
+    },
+    {
+      "query_id": "Q5_040",
+      "query_type": 5,
+      "query_texts": [
+        "Бездокументарные облигации с централизованным учетом прав",
+        "бездокументарные облигации с централизованным учетом прав",
+        "Бездокументарные облигации с централизованным учетом"
+      ],
+      "filter_criteria": "",
+      "notes": "18 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_041",
+      "query_type": 5,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОРИОН\"",
+        "общество с ограниченной ответственностью \"орион\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
+      "filter_criteria": "",
+      "notes": "17 doc_ids for same caption [Company]"
+    },
+    {
+      "query_id": "Q5_042",
+      "query_type": 5,
+      "query_texts": [
+        "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД ЛІМІТЕД\"",
+        "товариство з обмеженою відповідальністю \"авант трейд лімітед\"",
+        "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"АВАНТ ТРЕЙД"
+      ],
+      "filter_criteria": "",
+      "notes": "17 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_043",
+      "query_type": 5,
+      "query_texts": [
+        "Issam Shammout",
+        "issam shammout",
+        "Issam"
+      ],
+      "filter_criteria": "",
+      "notes": "17 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_044",
+      "query_type": 5,
+      "query_texts": [
+        "SHAHRYAR SASANIAN",
+        "shahryar sasanian",
+        "SHAHRYAR"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_045",
+      "query_type": 5,
+      "query_texts": [
+        "Abdul Rehman",
+        "abdul rehman",
+        "Abdul"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [Person]"
+    },
+    {
+      "query_id": "Q5_046",
+      "query_type": 5,
+      "query_texts": [
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии 001P-06",
+        "биржевые облигации процентные неконвертируемые бездокументарные серии 001p-06",
+        "Биржевые облигации процентные неконвертируемые бездокументарные серии"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [Security]"
+    },
+    {
+      "query_id": "Q5_047",
+      "query_type": 5,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕКТОР\"",
+        "общество с ограниченной ответственностью \"вектор\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [Company]"
+    },
+    {
+      "query_id": "Q5_048",
+      "query_type": 5,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРСПЕКТИВА\"",
+        "общество с ограниченной ответственностью \"перспектива\"",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [Company]"
+    },
+    {
+      "query_id": "Q5_049",
+      "query_type": 5,
+      "query_texts": [
+        "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира 159",
+        "28000, кіровоградська обл., олександрійський р-н, місто олександрія, пр.соборний, будинок 100, квартира 159",
+        "28000, Кіровоградська обл., Олександрійський р-н, місто Олександрія, пр.Соборний, будинок 100, квартира"
+      ],
+      "filter_criteria": "",
+      "notes": "16 doc_ids for same caption [LegalEntity]"
+    },
+    {
+      "query_id": "Q5_050",
+      "query_type": 5,
+      "query_texts": [
+        "ΑΔΑΜΟΣ ΜΟΝΤΑΝΙΟΣ",
+        "αδαμος μοντανιος",
+        "ΑΔΑΜΟΣ"
+      ],
+      "filter_criteria": "",
+      "notes": "15 doc_ids for same caption [LegalEntity]"
+    }
+  ]
+}

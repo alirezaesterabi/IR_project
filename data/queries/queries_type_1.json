@@ -1,0 +1,510 @@
+{
+  "query_type": 1,
+  "n_queries": 50,
+  "queries": [
+    {
+      "query_id": "Q1_001",
+      "query_type": 1,
+      "query_texts": [
+        "103919088"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Myanmar Yatai International Holding Group Co., LTD. [Company]"
+    },
+    {
+      "query_id": "Q1_002",
+      "query_type": 1,
+      "query_texts": [
+        "PW2XZT68KVW9",
+        "PW2XZT69KVW8",
+        "PW 2XZT68KVW9"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
+    },
+    {
+      "query_id": "Q1_003",
+      "query_type": 1,
+      "query_texts": [
+        "PW3LMJ5YB3M3",
+        "PW 3LMJ5YB3M3"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
+    },
+    {
+      "query_id": "Q1_004",
+      "query_type": 1,
+      "query_texts": [
+        "PW2USM6LNCJ9",
+        "PW2USM9LNCJ6",
+        "PW 2USM6LNCJ9"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
+    },
+    {
+      "query_id": "Q1_005",
+      "query_type": 1,
+      "query_texts": [
+        "GQBPAV1TFF41",
+        "GQBPAV1TFF14",
+        "GQBPAV 1TFF41"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Myanmar Yatai International Holding Group Co., LTD. [Company]"
+    },
+    {
+      "query_id": "Q1_006",
+      "query_type": 1,
+      "query_texts": [
+        "7725491052",
+        "7725491025"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
+    },
+    {
+      "query_id": "Q1_007",
+      "query_type": 1,
+      "query_texts": [
+        "1187746408761",
+        "1187746408716"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
+    },
+    {
+      "query_id": "Q1_008",
+      "query_type": 1,
+      "query_texts": [
+        "772501001",
+        "772501010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Товариство з обмеженою відповідальністю \"Зелінський Групп\" [Company]"
+    },
+    {
+      "query_id": "Q1_009",
+      "query_type": 1,
+      "query_texts": [
+        "1025007108390",
+        "1025007108309"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
+    },
+    {
+      "query_id": "Q1_010",
+      "query_type": 1,
+      "query_texts": [
+        "505301001",
+        "505301010"
+      ],
+      "filter_criteria": "",
+      "notes": "idNumber | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
+    },
+    {
+      "query_id": "Q1_011",
+      "query_type": 1,
+      "query_texts": [
+        "5053002307",
+        "5053002370"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
+    },
+    {
+      "query_id": "Q1_012",
+      "query_type": 1,
+      "query_texts": [
+        "1025007108390",
+        "1025007108309"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
+    },
+    {
+      "query_id": "Q1_013",
+      "query_type": 1,
+      "query_texts": [
+        "505301001",
+        "505301010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky” [Company]"
+    },
+    {
+      "query_id": "Q1_014",
+      "query_type": 1,
+      "query_texts": [
+        "42206417",
+        "42206471"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Приватне підприємство \"Магістар-СГ\" [Company]"
+    },
+    {
+      "query_id": "Q1_015",
+      "query_type": 1,
+      "query_texts": [
+        "5401103595",
+        "5401103559"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_016",
+      "query_type": 1,
+      "query_texts": [
+        "4631005223",
+        "4631005232"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_017",
+      "query_type": 1,
+      "query_texts": [
+        "1024600965531",
+        "1024600965513"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_018",
+      "query_type": 1,
+      "query_texts": [
+        "1025400524313",
+        "1025400524331"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_019",
+      "query_type": 1,
+      "query_texts": [
+        "463201001",
+        "463201010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_020",
+      "query_type": 1,
+      "query_texts": [
+        "540101001",
+        "540101010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Акціонерне товариство \"Електроагрегат\" [Company]"
+    },
+    {
+      "query_id": "Q1_021",
+      "query_type": 1,
+      "query_texts": [
+        "1538404843",
+        "1538404834"
+      ],
+      "filter_criteria": "",
+      "notes": "npiCode | ARNITA LEFF [Person]"
+    },
+    {
+      "query_id": "Q1_022",
+      "query_type": 1,
+      "query_texts": [
+        "IMO9553359",
+        "IMO9553395",
+        "IMO 9553359"
+      ],
+      "filter_criteria": "",
+      "notes": "imoNumber | DONG CHANG [Vessel]"
+    },
+    {
+      "query_id": "Q1_023",
+      "query_type": 1,
+      "query_texts": [
+        "1231600029825",
+        "1231600029852"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_024",
+      "query_type": 1,
+      "query_texts": [
+        "52120883",
+        "52120838"
+      ],
+      "filter_criteria": "",
+      "notes": "idNumber | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_025",
+      "query_type": 1,
+      "query_texts": [
+        "1674005078",
+        "1674005087"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_026",
+      "query_type": 1,
+      "query_texts": [
+        "1231600029825",
+        "1231600029852"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_027",
+      "query_type": 1,
+      "query_texts": [
+        "167401001",
+        "167401010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_028",
+      "query_type": 1,
+      "query_texts": [
+        "C526RHBSEVC3",
+        "C523RHBSEVC6",
+        "C 526RHBSEVC3"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_029",
+      "query_type": 1,
+      "query_texts": [
+        "U1EZWUPPYNN3",
+        "U3EZWUPPYNN1",
+        "U 1EZWUPPYNN3"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Limited Liability Company Specialized Developer Alabuga South Park [Company]"
+    },
+    {
+      "query_id": "Q1_030",
+      "query_type": 1,
+      "query_texts": [
+        "1639231855"
+      ],
+      "filter_criteria": "",
+      "notes": "npiCode | KATHLEEN J KING [Person]"
+    },
+    {
+      "query_id": "Q1_031",
+      "query_type": 1,
+      "query_texts": [
+        "12119212",
+        "12119221"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Digital Marketing Awards FZ LLC [Company]"
+    },
+    {
+      "query_id": "Q1_032",
+      "query_type": 1,
+      "query_texts": [
+        "17002525",
+        "17002552"
+      ],
+      "filter_criteria": "",
+      "notes": "idNumber | Digital Marketing Awards FZ LLC [Company]"
+    },
+    {
+      "query_id": "Q1_033",
+      "query_type": 1,
+      "query_texts": [
+        "PCEXVGTXWFB4",
+        "PCEXVGTXWFB40",
+        "PCEXVGTXWFB 4"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Digital Marketing Awards FZ LLC [Company]"
+    },
+    {
+      "query_id": "Q1_034",
+      "query_type": 1,
+      "query_texts": [
+        "EVSNP8SMGZF5",
+        "EVSNP5SMGZF8",
+        "EVSNP 8SMGZF5"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Digital Marketing Awards FZ LLC [Company]"
+    },
+    {
+      "query_id": "Q1_035",
+      "query_type": 1,
+      "query_texts": [
+        "TAL3H5JXC2B4",
+        "TAL3H5JXC4B2",
+        "TAL 3H5JXC2B4"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | AROB KOLNYANG [Person]"
+    },
+    {
+      "query_id": "Q1_036",
+      "query_type": 1,
+      "query_texts": [
+        "9707035100"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Акционерное общество \"Спорт-Центр\" [Company]"
+    },
+    {
+      "query_id": "Q1_037",
+      "query_type": 1,
+      "query_texts": [
+        "1247700567135",
+        "1247700567153"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Акционерное общество \"Спорт-Центр\" [Company]"
+    },
+    {
+      "query_id": "Q1_038",
+      "query_type": 1,
+      "query_texts": [
+        "770701001",
+        "770701010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Акционерное общество \"Спорт-Центр\" [Company]"
+    },
+    {
+      "query_id": "Q1_039",
+      "query_type": 1,
+      "query_texts": [
+        "5004014839",
+        "5004014893"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
+    },
+    {
+      "query_id": "Q1_040",
+      "query_type": 1,
+      "query_texts": [
+        "1025000844032",
+        "1025000844023"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
+    },
+    {
+      "query_id": "Q1_041",
+      "query_type": 1,
+      "query_texts": [
+        "500401001",
+        "500401010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат» [Company]"
+    },
+    {
+      "query_id": "Q1_042",
+      "query_type": 1,
+      "query_texts": [
+        "701722661674",
+        "701722661647"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Starovoitov Stas [Person]"
+    },
+    {
+      "query_id": "Q1_043",
+      "query_type": 1,
+      "query_texts": [
+        "1157746236966"
+      ],
+      "filter_criteria": "",
+      "notes": "registrationNumber | Ekvik Limited Liability Company [Company]"
+    },
+    {
+      "query_id": "Q1_044",
+      "query_type": 1,
+      "query_texts": [
+        "7722320806",
+        "7722320860"
+      ],
+      "filter_criteria": "",
+      "notes": "innCode | Ekvik Limited Liability Company [Company]"
+    },
+    {
+      "query_id": "Q1_045",
+      "query_type": 1,
+      "query_texts": [
+        "1157746236966"
+      ],
+      "filter_criteria": "",
+      "notes": "ogrnCode | Ekvik Limited Liability Company [Company]"
+    },
+    {
+      "query_id": "Q1_046",
+      "query_type": 1,
+      "query_texts": [
+        "771501001",
+        "771501010"
+      ],
+      "filter_criteria": "",
+      "notes": "kppCode | Ekvik Limited Liability Company [Company]"
+    },
+    {
+      "query_id": "Q1_047",
+      "query_type": 1,
+      "query_texts": [
+        "Y6MSPLJPJ9J5",
+        "Y6MSPLJPJ5J9",
+        "Y 6MSPLJPJ9J5"
+      ],
+      "filter_criteria": "",
+      "notes": "uniqueEntityId | Ekvik Limited Liability Company [Company]"
+    },
+    {
+      "query_id": "Q1_048",
+      "query_type": 1,
+      "query_texts": [
+        "IMO9525493",
+        "IMO9525439",
+        "IMO 9525493"
+      ],
+      "filter_criteria": "",
+      "notes": "imoNumber | MAERSK CABINDA [Vessel]"
+    },
+    {
+      "query_id": "Q1_049",
+      "query_type": 1,
+      "query_texts": [
+        "1609986611"
+      ],
+      "filter_criteria": "",
+      "notes": "npiCode | Anthony Bamonte [Person]"
+    },
+    {
+      "query_id": "Q1_050",
+      "query_type": 1,
+      "query_texts": [
+        "1063724599"
+      ],
+      "filter_criteria": "",
+      "notes": "npiCode | Anthony Bamonte [Person]"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "query_type": 4,
+  "n_queries": 14,
+  "queries": [
+    {
+      "query_id": "Q4_001",
+      "query_type": 4,
+      "query_texts": [
+        "What vessels does Sovcomflot own or manage?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q4_002",
+      "query_type": 4,
+      "query_texts": [
+        "What entities are connected to the Lazarus Group through front companies or aliases?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q4_003",
+      "query_type": 4,
+      "query_texts": [
+        "What is the corporate structure around Sovcomflot including subsidiaries, managing entities, and linked persons?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q4_004",
+      "query_type": 4,
+      "query_texts": [
+        "Which companies are linked to both the Russian shadow fleet and sanctioned UAE ship management firms?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q4_005",
+      "query_type": 4,
+      "query_texts": [
+        "Who are the individuals personally connected to both Sovcomflot and the Russian government?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT"
+    },
+    {
+      "query_id": "Q4_006",
+      "query_type": 4,
+      "query_texts": [
+        "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q4_007",
+      "query_type": 4,
+      "query_texts": [
+        "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q4_008",
+      "query_type": 4,
+      "query_texts": [
+        "What companies, organizations, and associated persons are linked to Yevgeny Prigozhin?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q4_009",
+      "query_type": 4,
+      "query_texts": [
+        "What is the chain of command linking Task Force Rusich to its parent organization and key individuals?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q4_010",
+      "query_type": 4,
+      "query_texts": [
+        "Which sanctioned individuals are linked to Wagner Group operations specifically in Libya and Sudan?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY"
+    },
+    {
+      "query_id": "Q4_011",
+      "query_type": 4,
+      "query_texts": [
+        "What sanctioned entities are subsidiaries or controlled by Rostec in the dual-use technology and military export chain?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q4_012",
+      "query_type": 4,
+      "query_texts": [
+        "What entities are linked to Gruppa Kremny El in the Russian military microelectronics supply chain?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q4_013",
+      "query_type": 4,
+      "query_texts": [
+        "What is the full supply chain of entities involved in manufacturing, assembling, and delivering Shahed drones to Russia?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    },
+    {
+      "query_id": "Q4_014",
+      "query_type": 4,
+      "query_texts": [
+        "What companies and individuals are linked to the IRGC Aerospace Force's drone and missile programs?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES"
+    }
+  ]
+}

@@ -1,0 +1,547 @@
+{
+  "query_type": 6,
+  "n_queries": 50,
+  "queries": [
+    {
+      "query_id": "Q6_001",
+      "query_type": 6,
+      "query_texts": [
+        "US HHS OIG person US",
+        "US HHS OIG individual US"
+      ],
+      "filter_criteria": "programId=US-HHS-OIG | schema=Person | country=us",
+      "notes": "78312 matching docs"
+    },
+    {
+      "query_id": "Q6_002",
+      "query_type": 6,
+      "query_texts": [
+        "BR CEIS company Brazil",
+        "BR CEIS entity Brazil",
+        "BR CEIS company BR"
+      ],
+      "filter_criteria": "programId=BR-CEIS | schema=Company | country=br",
+      "notes": "9045 matching docs"
+    },
+    {
+      "query_id": "Q6_003",
+      "query_type": 6,
+      "query_texts": [
+        "BR CEIS person Brazil",
+        "BR CEIS individual Brazil",
+        "BR CEIS person BR"
+      ],
+      "filter_criteria": "programId=BR-CEIS | schema=Person | country=br",
+      "notes": "7231 matching docs"
+    },
+    {
+      "query_id": "Q6_004",
+      "query_type": 6,
+      "query_texts": [
+        "UA SA1644 person Russia",
+        "UA SA1644 individual Russia",
+        "UA SA1644 person RU"
+      ],
+      "filter_criteria": "programId=UA-SA1644 | schema=Person | country=ru",
+      "notes": "6165 matching docs"
+    },
+    {
+      "query_id": "Q6_005",
+      "query_type": 6,
+      "query_texts": [
+        "PK ATA1997 person Pakistan",
+        "PK ATA1997 individual Pakistan",
+        "PK ATA1997 person PK"
+      ],
+      "filter_criteria": "programId=PK-ATA1997 | schema=Person | country=pk",
+      "notes": "4206 matching docs"
+    },
+    {
+      "query_id": "Q6_006",
+      "query_type": 6,
+      "query_texts": [
+        "US HHS OIG company US",
+        "US HHS OIG entity US"
+      ],
+      "filter_criteria": "programId=US-HHS-OIG | schema=Company | country=us",
+      "notes": "3280 matching docs"
+    },
+    {
+      "query_id": "Q6_007",
+      "query_type": 6,
+      "query_texts": [
+        "US RUSHAR company Russia",
+        "US RUSHAR entity Russia",
+        "US RUSHAR company RU"
+      ],
+      "filter_criteria": "programId=US-RUSHAR | schema=Company | country=ru",
+      "notes": "3050 matching docs"
+    },
+    {
+      "query_id": "Q6_008",
+      "query_type": 6,
+      "query_texts": [
+        "UA SA1644 company Russia",
+        "UA SA1644 entity Russia",
+        "UA SA1644 company RU"
+      ],
+      "filter_criteria": "programId=UA-SA1644 | schema=Company | country=ru",
+      "notes": "2955 matching docs"
+    },
+    {
+      "query_id": "Q6_009",
+      "query_type": 6,
+      "query_texts": [
+        "INTERPOL RN person Russia",
+        "INTERPOL RN individual Russia",
+        "INTERPOL RN person RU"
+      ],
+      "filter_criteria": "programId=INTERPOL-RN | schema=Person | country=ru",
+      "notes": "2752 matching docs"
+    },
+    {
+      "query_id": "Q6_010",
+      "query_type": 6,
+      "query_texts": [
+        "CA SEMA person Russia",
+        "CA SEMA individual Russia",
+        "CA SEMA person RU"
+      ],
+      "filter_criteria": "programId=CA-SEMA | schema=Person | country=ru",
+      "notes": "1790 matching docs"
+    },
+    {
+      "query_id": "Q6_011",
+      "query_type": 6,
+      "query_texts": [
+        "US RUSHAR person Russia",
+        "US RUSHAR individual Russia",
+        "US RUSHAR person RU"
+      ],
+      "filter_criteria": "programId=US-RUSHAR | schema=Person | country=ru",
+      "notes": "1485 matching docs"
+    },
+    {
+      "query_id": "Q6_012",
+      "query_type": 6,
+      "query_texts": [
+        "EU UKR person Russia",
+        "EU UKR individual Russia",
+        "EU UKR person RU"
+      ],
+      "filter_criteria": "programId=EU-UKR | schema=Person | country=ru",
+      "notes": "1479 matching docs"
+    },
+    {
+      "query_id": "Q6_013",
+      "query_type": 6,
+      "query_texts": [
+        "SECO UKRAINE person Russia",
+        "SECO UKRAINE individual Russia",
+        "SECO UKRAINE person RU"
+      ],
+      "filter_criteria": "programId=SECO-UKRAINE | schema=Person | country=ru",
+      "notes": "1467 matching docs"
+    },
+    {
+      "query_id": "Q6_014",
+      "query_type": 6,
+      "query_texts": [
+        "GB RUS person Russia",
+        "GB RUS individual Russia",
+        "GB RUS person RU"
+      ],
+      "filter_criteria": "programId=GB-RUS | schema=Person | country=ru",
+      "notes": "1353 matching docs"
+    },
+    {
+      "query_id": "Q6_015",
+      "query_type": 6,
+      "query_texts": [
+        "NZ RSA2022 person Russia",
+        "NZ RSA2022 individual Russia",
+        "NZ RSA2022 person RU"
+      ],
+      "filter_criteria": "programId=NZ-RSA2022 | schema=Person | country=ru",
+      "notes": "1145 matching docs"
+    },
+    {
+      "query_id": "Q6_016",
+      "query_type": 6,
+      "query_texts": [
+        "SECO UKRAINE company Russia",
+        "SECO UKRAINE entity Russia",
+        "SECO UKRAINE company RU"
+      ],
+      "filter_criteria": "programId=SECO-UKRAINE | schema=Company | country=ru",
+      "notes": "1122 matching docs"
+    },
+    {
+      "query_id": "Q6_017",
+      "query_type": 6,
+      "query_texts": [
+        "US BIS EL organization China",
+        "US BIS EL entity China",
+        "US BIS EL organization CN"
+      ],
+      "filter_criteria": "programId=US-BIS-EL | schema=LegalEntity | country=cn",
+      "notes": "867 matching docs"
+    },
+    {
+      "query_id": "Q6_018",
+      "query_type": 6,
+      "query_texts": [
+        "US BIS EL company Russia",
+        "US BIS EL entity Russia",
+        "US BIS EL company RU"
+      ],
+      "filter_criteria": "programId=US-BIS-EL | schema=Company | country=ru",
+      "notes": "841 matching docs"
+    },
+    {
+      "query_id": "Q6_019",
+      "query_type": 6,
+      "query_texts": [
+        "CA SEMA company Russia",
+        "CA SEMA entity Russia",
+        "CA SEMA company RU"
+      ],
+      "filter_criteria": "programId=CA-SEMA | schema=Company | country=ru",
+      "notes": "685 matching docs"
+    },
+    {
+      "query_id": "Q6_020",
+      "query_type": 6,
+      "query_texts": [
+        "AU UKRAINE person Russia",
+        "AU UKRAINE individual Russia",
+        "AU UKRAINE person RU"
+      ],
+      "filter_criteria": "programId=AU-UKRAINE | schema=Person | country=ru",
+      "notes": "683 matching docs"
+    },
+    {
+      "query_id": "Q6_021",
+      "query_type": 6,
+      "query_texts": [
+        "US BIS DPL organization US",
+        "US BIS DPL entity US"
+      ],
+      "filter_criteria": "programId=US-BIS-DPL | schema=LegalEntity | country=us",
+      "notes": "681 matching docs"
+    },
+    {
+      "query_id": "Q6_022",
+      "query_type": 6,
+      "query_texts": [
+        "UA WS MILIND company Russia",
+        "UA WS MILIND entity Russia",
+        "UA WS MILIND company RU"
+      ],
+      "filter_criteria": "programId=UA-WS-MILIND | schema=Company | country=ru",
+      "notes": "611 matching docs"
+    },
+    {
+      "query_id": "Q6_023",
+      "query_type": 6,
+      "query_texts": [
+        "UA SA1644 person Ukraine",
+        "UA SA1644 individual Ukraine",
+        "UA SA1644 person UA"
+      ],
+      "filter_criteria": "programId=UA-SA1644 | schema=Person | country=ua",
+      "notes": "565 matching docs"
+    },
+    {
+      "query_id": "Q6_024",
+      "query_type": 6,
+      "query_texts": [
+        "EU UKR company Russia",
+        "EU UKR entity Russia",
+        "EU UKR company RU"
+      ],
+      "filter_criteria": "programId=EU-UKR | schema=Company | country=ru",
+      "notes": "542 matching docs"
+    },
+    {
+      "query_id": "Q6_025",
+      "query_type": 6,
+      "query_texts": [
+        "CA SEMA person Ukraine",
+        "CA SEMA individual Ukraine",
+        "CA SEMA person UA"
+      ],
+      "filter_criteria": "programId=CA-SEMA | schema=Person | country=ua",
+      "notes": "535 matching docs"
+    },
+    {
+      "query_id": "Q6_026",
+      "query_type": 6,
+      "query_texts": [
+        "UA WS MARE vessel Russia",
+        "UA WS MARE ship Russia",
+        "UA WS MARE vessel RU"
+      ],
+      "filter_criteria": "programId=UA-WS-MARE | schema=Vessel | country=ru",
+      "notes": "512 matching docs"
+    },
+    {
+      "query_id": "Q6_027",
+      "query_type": 6,
+      "query_texts": [
+        "CA SEMA vessel Russia",
+        "CA SEMA ship Russia",
+        "CA SEMA vessel RU"
+      ],
+      "filter_criteria": "programId=CA-SEMA | schema=Vessel | country=ru",
+      "notes": "510 matching docs"
+    },
+    {
+      "query_id": "Q6_028",
+      "query_type": 6,
+      "query_texts": [
+        "US IRAN person Iran",
+        "US IRAN individual Iran",
+        "US IRAN person IR"
+      ],
+      "filter_criteria": "programId=US-IRAN | schema=Person | country=ir",
+      "notes": "506 matching docs"
+    },
+    {
+      "query_id": "Q6_029",
+      "query_type": 6,
+      "query_texts": [
+        "GB RUS vessel Russia",
+        "GB RUS ship Russia",
+        "GB RUS vessel RU"
+      ],
+      "filter_criteria": "programId=GB-RUS | schema=Vessel | country=ru",
+      "notes": "488 matching docs"
+    },
+    {
+      "query_id": "Q6_030",
+      "query_type": 6,
+      "query_texts": [
+        "AU RUSSIA person Russia",
+        "AU RUSSIA individual Russia",
+        "AU RUSSIA person RU"
+      ],
+      "filter_criteria": "programId=AU-RUSSIA | schema=Person | country=ru",
+      "notes": "474 matching docs"
+    },
+    {
+      "query_id": "Q6_031",
+      "query_type": 6,
+      "query_texts": [
+        "SECO UKRAINE vessel Russia",
+        "SECO UKRAINE ship Russia",
+        "SECO UKRAINE vessel RU"
+      ],
+      "filter_criteria": "programId=SECO-UKRAINE | schema=Vessel | country=ru",
+      "notes": "460 matching docs"
+    },
+    {
+      "query_id": "Q6_032",
+      "query_type": 6,
+      "query_texts": [
+        "EU MARE vessel Russia",
+        "EU MARE ship Russia",
+        "EU MARE vessel RU"
+      ],
+      "filter_criteria": "programId=EU-MARE | schema=Vessel | country=ru",
+      "notes": "460 matching docs"
+    },
+    {
+      "query_id": "Q6_033",
+      "query_type": 6,
+      "query_texts": [
+        "US DDTC SD person US",
+        "US DDTC SD individual US"
+      ],
+      "filter_criteria": "programId=US-DDTC-SD | schema=Person | country=us",
+      "notes": "455 matching docs"
+    },
+    {
+      "query_id": "Q6_034",
+      "query_type": 6,
+      "query_texts": [
+        "US AECA DEBARRED person US",
+        "US AECA DEBARRED individual US"
+      ],
+      "filter_criteria": "programId=US-AECA-DEBARRED | schema=Person | country=us",
+      "notes": "455 matching docs"
+    },
+    {
+      "query_id": "Q6_035",
+      "query_type": 6,
+      "query_texts": [
+        "GB RUS company Russia",
+        "GB RUS entity Russia",
+        "GB RUS company RU"
+      ],
+      "filter_criteria": "programId=GB-RUS | schema=Company | country=ru",
+      "notes": "415 matching docs"
+    },
+    {
+      "query_id": "Q6_036",
+      "query_type": 6,
+      "query_texts": [
+        "EU UKR person Ukraine",
+        "EU UKR individual Ukraine",
+        "EU UKR person UA"
+      ],
+      "filter_criteria": "programId=EU-UKR | schema=Person | country=ua",
+      "notes": "412 matching docs"
+    },
+    {
+      "query_id": "Q6_037",
+      "query_type": 6,
+      "query_texts": [
+        "SECO UKRAINE person Ukraine",
+        "SECO UKRAINE individual Ukraine",
+        "SECO UKRAINE person UA"
+      ],
+      "filter_criteria": "programId=SECO-UKRAINE | schema=Person | country=ua",
+      "notes": "410 matching docs"
+    },
+    {
+      "query_id": "Q6_038",
+      "query_type": 6,
+      "query_texts": [
+        "NZ RSA2022 company Russia",
+        "NZ RSA2022 entity Russia",
+        "NZ RSA2022 company RU"
+      ],
+      "filter_criteria": "programId=NZ-RSA2022 | schema=Company | country=ru",
+      "notes": "401 matching docs"
+    },
+    {
+      "query_id": "Q6_039",
+      "query_type": 6,
+      "query_texts": [
+        "US FED ENF company US",
+        "US FED ENF entity US"
+      ],
+      "filter_criteria": "programId=US-FED-ENF | schema=Company | country=us",
+      "notes": "386 matching docs"
+    },
+    {
+      "query_id": "Q6_040",
+      "query_type": 6,
+      "query_texts": [
+        "US IRAN company Iran",
+        "US IRAN entity Iran",
+        "US IRAN company IR"
+      ],
+      "filter_criteria": "programId=US-IRAN | schema=Company | country=ir",
+      "notes": "368 matching docs"
+    },
+    {
+      "query_id": "Q6_041",
+      "query_type": 6,
+      "query_texts": [
+        "AU RUSSIA company Russia",
+        "AU RUSSIA entity Russia",
+        "AU RUSSIA company RU"
+      ],
+      "filter_criteria": "programId=AU-RUSSIA | schema=Company | country=ru",
+      "notes": "363 matching docs"
+    },
+    {
+      "query_id": "Q6_042",
+      "query_type": 6,
+      "query_texts": [
+        "GB RUS person Ukraine",
+        "GB RUS individual Ukraine",
+        "GB RUS person UA"
+      ],
+      "filter_criteria": "programId=GB-RUS | schema=Person | country=ua",
+      "notes": "360 matching docs"
+    },
+    {
+      "query_id": "Q6_043",
+      "query_type": 6,
+      "query_texts": [
+        "US IRAN organization Iran",
+        "US IRAN entity Iran",
+        "US IRAN organization IR"
+      ],
+      "filter_criteria": "programId=US-IRAN | schema=Organization | country=ir",
+      "notes": "305 matching docs"
+    },
+    {
+      "query_id": "Q6_044",
+      "query_type": 6,
+      "query_texts": [
+        "US AECA DEBARRED organization US",
+        "US AECA DEBARRED entity US"
+      ],
+      "filter_criteria": "programId=US-AECA-DEBARRED | schema=LegalEntity | country=us",
+      "notes": "298 matching docs"
+    },
+    {
+      "query_id": "Q6_045",
+      "query_type": 6,
+      "query_texts": [
+        "US DDTC SD organization US",
+        "US DDTC SD entity US"
+      ],
+      "filter_criteria": "programId=US-DDTC-SD | schema=LegalEntity | country=us",
+      "notes": "283 matching docs"
+    },
+    {
+      "query_id": "Q6_046",
+      "query_type": 6,
+      "query_texts": [
+        "UA WS MILIND organization Russia",
+        "UA WS MILIND entity Russia",
+        "UA WS MILIND organization RU"
+      ],
+      "filter_criteria": "programId=UA-WS-MILIND | schema=LegalEntity | country=ru",
+      "notes": "274 matching docs"
+    },
+    {
+      "query_id": "Q6_047",
+      "query_type": 6,
+      "query_texts": [
+        "EU SYR person Syria",
+        "EU SYR individual Syria",
+        "EU SYR person SY"
+      ],
+      "filter_criteria": "programId=EU-SYR | schema=Person | country=sy",
+      "notes": "274 matching docs"
+    },
+    {
+      "query_id": "Q6_048",
+      "query_type": 6,
+      "query_texts": [
+        "SECO SYRIA person Syria",
+        "SECO SYRIA individual Syria",
+        "SECO SYRIA person SY"
+      ],
+      "filter_criteria": "programId=SECO-SYRIA | schema=Person | country=sy",
+      "notes": "273 matching docs"
+    },
+    {
+      "query_id": "Q6_049",
+      "query_type": 6,
+      "query_texts": [
+        "US TERR person US",
+        "US TERR individual US"
+      ],
+      "filter_criteria": "programId=US-TERR | schema=Person | country=us",
+      "notes": "272 matching docs"
+    },
+    {
+      "query_id": "Q6_050",
+      "query_type": 6,
+      "query_texts": [
+        "EU IRN person Iran",
+        "EU IRN individual Iran",
+        "EU IRN person IR"
+      ],
+      "filter_criteria": "programId=EU-IRN | schema=Person | country=ir",
+      "notes": "269 matching docs"
+    }
+  ]
+}

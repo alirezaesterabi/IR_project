@@ -1,0 +1,553 @@
+{
+  "query_type": 2,
+  "n_queries": 50,
+  "queries": [
+    {
+      "query_id": "Q2_001",
+      "query_type": 2,
+      "query_texts": [
+        "Yatai Smart Industrial New City",
+        "City Yatai Smart Industrial New",
+        "Yatai Smart Indsutrial New City"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Myanmar Yatai International Holding Group Co., LTD.\" [Company]"
+    },
+    {
+      "query_id": "Q2_002",
+      "query_type": 2,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi Hrupp\"",
+        "Hrupp\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"Zelinskyi",
+        "Tovarystvo z obmezhenoiu vidpvoidalnistiu \"Zelinskyi Hrupp\""
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Товариство з обмеженою відповідальністю \"Зелінський Групп\"\" [Company]"
+    },
+    {
+      "query_id": "Q2_003",
+      "query_type": 2,
+      "query_texts": [
+        "Ny. D. Zelinszkij EHMZ Nyrt.",
+        "Nyrt. Ny. D. Zelinszkij EHMZ",
+        "Ny. D. Zelinszikj EHMZ Nyrt."
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky”\" [Company]"
+    },
+    {
+      "query_id": "Q2_004",
+      "query_type": 2,
+      "query_texts": [
+        "Pryvatne pidpryiemstvo \"Mahistar-SH\"",
+        "\"Mahistar-SH\" Pryvatne pidpryiemstvo",
+        "Pryvatne pidpryiemtsvo \"Mahistar-SH\""
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Приватне підприємство \"Магістар-СГ\"\" [Company]"
+    },
+    {
+      "query_id": "Q2_005",
+      "query_type": 2,
+      "query_texts": [
+        "Aktsionerne tovarystvo \"Elektroahrehat\"",
+        "\"Elektroahrehat\" Aktsionerne tovarystvo",
+        "Aktsionerne tovarysvto \"Elektroahrehat\""
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Акціонерне товариство \"Електроагрегат\"\" [Company]"
+    },
+    {
+      "query_id": "Q2_006",
+      "query_type": 2,
+      "query_texts": [
+        "Arnita Cowan Leff",
+        "Leff Arnita Cowan",
+        "Arnita Cwoan Leff"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"ARNITA LEFF\" [Person]"
+    },
+    {
+      "query_id": "Q2_007",
+      "query_type": 2,
+      "query_texts": [
+        "Michael Kuajian",
+        "Kuajian Michael",
+        "MichaelK uajian"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Michael Kuajien\" [Person]"
+    },
+    {
+      "query_id": "Q2_008",
+      "query_type": 2,
+      "query_texts": [
+        "Yasin M. Hussain",
+        "Hussain Yasin M.",
+        "Yasin M.H ussain"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"YASIN M HUSSAIN\" [Person]"
+    },
+    {
+      "query_id": "Q2_009",
+      "query_type": 2,
+      "query_texts": [
+        "Xinjiang Xinmuwei Clothing Co., Ltd.",
+        "Ltd. Xinjiang Xinmuwei Clothing Co.",
+        "Xinjiang Xinmuwei lCothing Co., Ltd."
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Xinjiang Xinmuwei Clothing Co., Ltd\" [Organization]"
+    },
+    {
+      "query_id": "Q2_010",
+      "query_type": 2,
+      "query_texts": [
+        "Chanturiia Irakli",
+        "Irakli Chanturiia",
+        "Chanturiai Irakli"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Чантурія Іраклі\" [Person]"
+    },
+    {
+      "query_id": "Q2_011",
+      "query_type": 2,
+      "query_texts": [
+        "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК",
+        "ПАРК OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК АЛАБУГА ЮЖНЫЙ",
+        "OOO СПЕЦИАЛИЗИРОВАННЫЙ ЗАСРТОЙЩИК АЛАБУГА ЮЖНЫЙ ПАРК"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Limited Liability Company Specialized Developer Alabuga South Park\" [Company]"
+    },
+    {
+      "query_id": "Q2_012",
+      "query_type": 2,
+      "query_texts": [
+        "SD DIGITAL MARKETING AWARDS",
+        "AWARDS SD DIGITAL MARKETING",
+        "SD DIGITAL MAKRETING AWARDS"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Digital Marketing Awards FZ LLC\" [Company]"
+    },
+    {
+      "query_id": "Q2_013",
+      "query_type": 2,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi kombinat»",
+        "kombinat» Tovarystvo z obmezhenoiu vidpovidalnistiu «Sychovskyi vyrobnycho-tekhnolohichnyi",
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «Syhcovskyi vyrobnycho-tekhnolohichnyi kombinat»"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат»\" [Company]"
+    },
+    {
+      "query_id": "Q2_014",
+      "query_type": 2,
+      "query_texts": [
+        "Starovoitov Stanislav Yuriiovych",
+        "Yuriiovych Starovoitov Stanislav",
+        "Starovoitov Stansilav Yuriiovych"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Starovoitov Stas\" [Person]"
+    },
+    {
+      "query_id": "Q2_015",
+      "query_type": 2,
+      "query_texts": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКВИК\"",
+        "\"ЭКВИК\" ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ТОВЕТСТВЕННОСТЬЮ \"ЭКВИК\""
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Ekvik Limited Liability Company\" [Company]"
+    },
+    {
+      "query_id": "Q2_016",
+      "query_type": 2,
+      "query_texts": [
+        "Маслов Алексей Викторович",
+        "Викторович Маслов Алексей",
+        "Маслов Алексйе Викторович"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Maslov Alexey Viktorovich\" [Person]"
+    },
+    {
+      "query_id": "Q2_017",
+      "query_type": 2,
+      "query_texts": [
+        "Renee M. Haas",
+        "Haas Renee M.",
+        "Renee .M Haas"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"RENEE MICHELE HAAS\" [Person]"
+    },
+    {
+      "query_id": "Q2_018",
+      "query_type": 2,
+      "query_texts": [
+        "河北建设集团股份有限公司无极县分公司",
+        "河北建设集团股份有公限司无极县分公司"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Hebei Construction Group Corporation Limited Wuji County Branch\" [LegalEntity]"
+    },
+    {
+      "query_id": "Q2_019",
+      "query_type": 2,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I. Rosiia»",
+        "Rosiia» Tovarystvo z obmezhenoiu vidpovidalnistiu «DZh.T.I.",
+        "Tovarystvo z obmezhenoiu vidpvoidalnistiu «DZh.T.I. Rosiia»"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Товариство з обмеженою відповідальністю «ДЖ.Т.І. Росія»\" [Company]"
+    },
+    {
+      "query_id": "Q2_020",
+      "query_type": 2,
+      "query_texts": [
+        "Labsource, LLC",
+        "LLC Labsource",
+        "Labsourec, LLC"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Labsource LLC\" [Company]"
+    },
+    {
+      "query_id": "Q2_021",
+      "query_type": 2,
+      "query_texts": [
+        "Luzhbin Ihor Serhiiovych",
+        "Serhiiovych Luzhbin Ihor",
+        "Luzhbin IhorS erhiiovych"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Лужбін Ігор Сергійович\" [Person]"
+    },
+    {
+      "query_id": "Q2_022",
+      "query_type": 2,
+      "query_texts": [
+        "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\"",
+        "Rosiyi\" Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obiednannia \"Derzhavni boieprypasni vyprobuvalni polihony",
+        "Federalne kazenne pidpryiemstvo \"Natsionalne vyprobuvalne obidenannia \"Derzhavni boieprypasni vyprobuvalni polihony Rosiyi\""
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Федеральне казенне підприємство \"Національне випробувальне об'єднання \"Державні боєприпасні випробувальні полігони Росії\"\" [Company]"
+    },
+    {
+      "query_id": "Q2_023",
+      "query_type": 2,
+      "query_texts": [
+        "星龍興業有限公司",
+        "星龍興業限有公司"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Star Dragon Corporation Limited\" [Company]"
+    },
+    {
+      "query_id": "Q2_024",
+      "query_type": 2,
+      "query_texts": [
+        "Kan Chen",
+        "Chen Kan",
+        "Kan hCen"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Chen, Kan\" [Person]"
+    },
+    {
+      "query_id": "Q2_025",
+      "query_type": 2,
+      "query_texts": [
+        "CITADEL ECONOMIC DEVELOPMENT CORPORATION",
+        "CORPORATION CITADEL ECONOMIC DEVELOPMENT",
+        "CITADEL ECONOMIC DEVLEOPMENT CORPORATION"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"CITADEL COMMUNITY DEVELOPMENT CORPORATION\" [Company]"
+    },
+    {
+      "query_id": "Q2_026",
+      "query_type": 2,
+      "query_texts": [
+        "JUST 4 TODAY TRANSPORTATION, INC",
+        "INC JUST 4 TODAY TRANSPORTATION",
+        "JUST 4 TODAY TRASNPORTATION, INC"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Just 4 Today Transportation\" [Company]"
+    },
+    {
+      "query_id": "Q2_027",
+      "query_type": 2,
+      "query_texts": [
+        "Baieva Kateryna Mykolayivna",
+        "Mykolayivna Baieva Kateryna",
+        "Baieva Kateryan Mykolayivna"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Баєва Катерина Миколаївна\" [Person]"
+    },
+    {
+      "query_id": "Q2_028",
+      "query_type": 2,
+      "query_texts": [
+        "Holoborodko Pavlo Mykolaiovych",
+        "Mykolaiovych Holoborodko Pavlo",
+        "Holoborodko Pavol Mykolaiovych"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Голобородько Павло Миколайович\" [Person]"
+    },
+    {
+      "query_id": "Q2_029",
+      "query_type": 2,
+      "query_texts": [
+        "赣州集达建筑工程有限公司",
+        "赣州集达建筑程工有限公司"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Ganzhou Jida Construction Engineering Co., Ltd.\" [LegalEntity]"
+    },
+    {
+      "query_id": "Q2_030",
+      "query_type": 2,
+      "query_texts": [
+        "FASONU, AYODEJI",
+        "AYODEJI FASONU",
+        "FASONU,A YODEJI"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"AYODEJI D FASONU\" [Person]"
+    },
+    {
+      "query_id": "Q2_031",
+      "query_type": 2,
+      "query_texts": [
+        "EDEDEM EKPENYONG EDEM",
+        "EDEM EDEDEM EKPENYONG",
+        "EDEDEM EKPNEYONG EDEM"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"EDEDEM EDEM\" [Person]"
+    },
+    {
+      "query_id": "Q2_032",
+      "query_type": 2,
+      "query_texts": [
+        "Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS Avto\"",
+        "Avto\" Tovarystvo z obmezhenoiu vidpovidalnistiu \"MTS",
+        "Tovarystvo z obmezhenoiu vdipovidalnistiu \"MTS Avto\""
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Товариство з обмеженою відповідальністю \"МТС Авто\"\" [Company]"
+    },
+    {
+      "query_id": "Q2_033",
+      "query_type": 2,
+      "query_texts": [
+        "ООО 'ЭЛЕКТРА ПРО'",
+        "ПРО' ООО 'ЭЛЕКТРА",
+        "ООО 'ЭЛЕТКРА ПРО'"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"ELECTRA PRO LLC\" [Organization]"
+    },
+    {
+      "query_id": "Q2_034",
+      "query_type": 2,
+      "query_texts": [
+        "Sanhadzhy-Horiaiev Dzhanhar Baatrovych",
+        "Baatrovych Sanhadzhy-Horiaiev Dzhanhar",
+        "Sanhadzhy-Horiaiev zDhanhar Baatrovych"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Сангаджи-Горяєв Джангар Баатрович\" [Person]"
+    },
+    {
+      "query_id": "Q2_035",
+      "query_type": 2,
+      "query_texts": [
+        "Korsakova Tetiana Volodymyrivna",
+        "Volodymyrivna Korsakova Tetiana",
+        "Korsakova Tetiaan Volodymyrivna"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Корсакова Тетяна Володимирівна\" [Person]"
+    },
+    {
+      "query_id": "Q2_036",
+      "query_type": 2,
+      "query_texts": [
+        "Néstor Alfredo Domínguez Hernández, Mr. Dominguez",
+        "Mr. Dominguez Néstor Alfredo Domínguez Hernández",
+        "Néstor Alfredo DomínguezH ernández, Mr. Dominguez"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Néstor Alfredo Domínguez Hernández\" [Person]"
+    },
+    {
+      "query_id": "Q2_037",
+      "query_type": 2,
+      "query_texts": [
+        "Kostenko Iryna Anatoliyivna",
+        "Anatoliyivna Kostenko Iryna",
+        "Kostenko Iryn aAnatoliyivna"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Irina KOSTENKO\" [Person]"
+    },
+    {
+      "query_id": "Q2_038",
+      "query_type": 2,
+      "query_texts": [
+        "TREGO-CAMPION, ANITA",
+        "ANITA TREGO-CAMPION",
+        "TREGO-CAMPOIN, ANITA"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"ANITA TREGO\" [Person]"
+    },
+    {
+      "query_id": "Q2_039",
+      "query_type": 2,
+      "query_texts": [
+        "JAMES R. SIROIS",
+        "SIROIS JAMES R.",
+        "JAMES R .SIROIS"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"JAMES R SIROIS\" [Person]"
+    },
+    {
+      "query_id": "Q2_040",
+      "query_type": 2,
+      "query_texts": [
+        "Rekhviashvili Iraklii",
+        "Iraklii Rekhviashvili",
+        "Rekhviashvlii Iraklii"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Рехвіашвілі Іраклій\" [Person]"
+    },
+    {
+      "query_id": "Q2_041",
+      "query_type": 2,
+      "query_texts": [
+        "Isaienko Viktoriia Viktorivna",
+        "Viktorivna Isaienko Viktoriia",
+        "Isaienko Viktoiria Viktorivna"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Ісаєнко Вікторія Вікторівна\" [Person]"
+    },
+    {
+      "query_id": "Q2_042",
+      "query_type": 2,
+      "query_texts": [
+        "Scientific and Production Association of Measuring Technology",
+        "Technology Scientific and Production Association of Measuring",
+        "Scientific and Production Assoication of Measuring Technology"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Scientific and Production Association of Measuring Equipment JSC\" [Company]"
+    },
+    {
+      "query_id": "Q2_043",
+      "query_type": 2,
+      "query_texts": [
+        "Bahrami Ali JADALI",
+        "JADALI Bahrami Ali",
+        "Bahrami Ail JADALI"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"BAHRAMI ALI SHAYESTEH\" [Person]"
+    },
+    {
+      "query_id": "Q2_044",
+      "query_type": 2,
+      "query_texts": [
+        "Golden Luxury Jewellery Trading LLC",
+        "LLC Golden Luxury Jewellery Trading",
+        "Golden Luxury Jewlelery Trading LLC"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Golden Luxury Jewellery Trading L.L.C\" [Company]"
+    },
+    {
+      "query_id": "Q2_045",
+      "query_type": 2,
+      "query_texts": [
+        "Riakhovskyi Serhii Vasylovych",
+        "Vasylovych Riakhovskyi Serhii",
+        "Riakhovskyi Sehrii Vasylovych"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Ряховський Сергій Васильович\" [Person]"
+    },
+    {
+      "query_id": "Q2_046",
+      "query_type": 2,
+      "query_texts": [
+        "Japanese Red Army (JRA)",
+        "(JRA) Japanese Red Army",
+        "Japanese Re dArmy (JRA)"
+      ],
+      "filter_criteria": "",
+      "notes": "name | caption: \"Japanese Red Army\" [Organization]"
+    },
+    {
+      "query_id": "Q2_047",
+      "query_type": 2,
+      "query_texts": [
+        "Usama Abu-'Abd-al-Wahid AL-JAZA'IRI",
+        "AL-JAZA'IRI Usama Abu-'Abd-al-Wahid",
+        "Usama Abu-'Abd-alW-ahid AL-JAZA'IRI"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"USAMAH 'ABD-AL-WAHID AL-JAZA'IRI BELKACEM\" [Person]"
+    },
+    {
+      "query_id": "Q2_048",
+      "query_type": 2,
+      "query_texts": [
+        "Veber Mariia Yuriyivna",
+        "Yuriyivna Veber Mariia",
+        "Veber Marii aYuriyivna"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Вебер Марія Юріївна\" [Person]"
+    },
+    {
+      "query_id": "Q2_049",
+      "query_type": 2,
+      "query_texts": [
+        "Melia, Patricia",
+        "Patricia Melia",
+        "Melia, aPtricia"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Patricia Marie Melia\" [Person]"
+    },
+    {
+      "query_id": "Q2_050",
+      "query_type": 2,
+      "query_texts": [
+        "SemiCore ZKX",
+        "ZKX SemiCore",
+        "SemiCoer ZKX"
+      ],
+      "filter_criteria": "",
+      "notes": "alias | caption: \"Бейцзін Семікор Зет-Кей-Екс Електронік Еквіпмент Ко., Лтд\" [Organization]"
+    }
+  ]
+}
