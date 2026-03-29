@@ -1115,4 +1115,4 @@ See `01_ranked_retrieval.ipynb` for hands-on implementation (Boolean through BM2
 
 **End of Module 2 Theory**
 
-Next: `01_vsm_tfidf.ipynb` → `02_bm25.ipynb`
+Next: **Module 3 — Evaluation** → [../03_evaluation/theory.md](../03_evaluation/theory.md) · Hands-on: Week 4 [Lab 3 — Evaluation](../../raw_materials/week_4/Lab3_Evaluation%20and%20Interface.ipynb) · Practice: `01_ranked_retrieval.ipynb` (this module).

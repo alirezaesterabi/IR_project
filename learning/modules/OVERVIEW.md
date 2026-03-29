@@ -84,6 +84,8 @@ learning_modules/
 ---
 
 ### **Module 3: Evaluation**
+**Theory:** [03_evaluation/theory.md](03_evaluation/theory.md)
+
 **Duration:** 4-5 days
 **Manning Book:** Chapter 8
 **Focus:**

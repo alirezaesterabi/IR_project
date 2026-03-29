@@ -1068,6 +1068,8 @@ Master IR evaluation - how to measure if your system is good.
 
 ## **Duration:** 4-5 days of focused study
 
+**Structured theory write-up (this repo):** [03_evaluation/theory.md](03_evaluation/theory.md) — IIR Chapter 8 outline, pooling, ranx / project qrels, and **recommended metrics by OpenSanctions query type** (aligned with [documents/assignment_1.pdf](../../documents/assignment_1.pdf) §3.4).
+
 ---
 
 ## **Part 1: Relevance & Test Collections** (Day 1)
