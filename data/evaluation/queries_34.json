@@ -3,9 +3,11 @@
     {
       "query_id": "Deep_Query_1",
       "query_type": 3,
-      "query_text": "Russian oil tankers in the shadow fleet sanctioned for circumventing the price cap",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/search/?schema=Vessel&topics=sanction&q=shadow+fleet",
+      "query_texts": [
+        "Russian oil tankers in the shadow fleet sanctioned for circumventing the price cap"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-ntNa6xcjdwGRXzxV6wpxfd",
         "NK-cfWFCgJ7etMfnZSJx4xSsb",
@@ -23,9 +25,11 @@
     {
       "query_id": "Deep_Query_2",
       "query_type": 3,
-      "query_text": "North Korean state-sponsored hacking group that stole cryptocurrency from online gambling platforms",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-MYHWYA7zLoQoGrPfVPUcYt/",
+      "query_texts": [
+        "North Korean state-sponsored hacking group that stole cryptocurrency from online gambling platforms"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-MYHWYA7zLoQoGrPfVPUcYt",
         "NK-MVtCt6RAzxf245XiueFWJp",
@@ -38,9 +42,11 @@
     {
       "query_id": "Deep_Query_3",
       "query_type": 3,
-      "query_text": "UAE-based shipping management companies running previously Russian-operated tankers",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-fjaabCsg83J67wd2T3LXoP/",
+      "query_texts": [
+        "UAE-based shipping management companies running previously Russian-operated tankers"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-fjaabCsg83J67wd2T3LXoP",
         "NK-EL5cFqL5pRrFRBSUjny38g",
@@ -52,9 +58,11 @@
     {
       "query_id": "Deep_Query_4",
       "query_type": 3,
-      "query_text": "Sanctioned tankers that have been detained by port authorities for safety violations",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/search/?schema=Vessel&topics=sanction",
+      "query_texts": [
+        "Sanctioned tankers that have been detained by port authorities for safety violations"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-Wv2e4rkvjjKptipYph5nv7",
         "NK-ZHdpKQLko7n8ZSsM2RS37N",
@@ -65,9 +73,11 @@
     {
       "query_id": "Deep_Query_5",
       "query_type": 3,
-      "query_text": "Russian state shipping company that is the largest transporter of crude oil and LNG",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-EL5cFqL5pRrFRBSUjny38g/",
+      "query_texts": [
+        "Russian state shipping company that is the largest transporter of crude oil and LNG"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-EL5cFqL5pRrFRBSUjny38g",
         "NK-B95TF42hNDRBtmaRrW4wwp",
@@ -79,9 +89,11 @@
     {
       "query_id": "Deep_Query_6",
       "query_type": 4,
-      "query_text": "What vessels does Sovcomflot own or manage?",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-EL5cFqL5pRrFRBSUjny38g/adjacent/ownershipOwner/",
+      "query_texts": [
+        "What vessels does Sovcomflot own or manage?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-EL5cFqL5pRrFRBSUjny38g",
         "NK-FoHPKahRH6oYTxbT7Tycjk",
@@ -94,9 +106,11 @@
     {
       "query_id": "Deep_Query_7",
       "query_type": 4,
-      "query_text": "What entities are connected to the Lazarus Group through front companies or aliases?",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-MYHWYA7zLoQoGrPfVPUcYt/",
+      "query_texts": [
+        "What entities are connected to the Lazarus Group through front companies or aliases?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-MYHWYA7zLoQoGrPfVPUcYt",
         "NK-MVtCt6RAzxf245XiueFWJp",
@@ -109,9 +123,11 @@
     {
       "query_id": "Deep_Query_8",
       "query_type": 4,
-      "query_text": "What is the corporate structure around Sovcomflot including subsidiaries, managing entities, and linked persons?",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-EL5cFqL5pRrFRBSUjny38g/",
+      "query_texts": [
+        "What is the corporate structure around Sovcomflot including subsidiaries, managing entities, and linked persons?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-EL5cFqL5pRrFRBSUjny38g",
         "NK-B95TF42hNDRBtmaRrW4wwp",
@@ -126,9 +142,11 @@
     {
       "query_id": "Deep_Query_9",
       "query_type": 4,
-      "query_text": "Which companies are linked to both the Russian shadow fleet and sanctioned UAE ship management firms?",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-fjaabCsg83J67wd2T3LXoP/",
+      "query_texts": [
+        "Which companies are linked to both the Russian shadow fleet and sanctioned UAE ship management firms?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-fjaabCsg83J67wd2T3LXoP",
         "NK-EL5cFqL5pRrFRBSUjny38g",
@@ -140,9 +158,11 @@
     {
       "query_id": "Deep_Query_10",
       "query_type": 4,
-      "query_text": "Who are the individuals personally connected to both Sovcomflot and the Russian government?",
-      "theme": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
-      "reference_url": "https://www.opensanctions.org/entities/NK-EL5cFqL5pRrFRBSUjny38g/",
+      "query_texts": [
+        "Who are the individuals personally connected to both Sovcomflot and the Russian government?"
+      ],
+      "filter_criteria": "",
+      "notes": "SHADOW FLEET / DPRK CYBER / UAE SHELL MGMT",
       "expected_doc_ids": [
         "NK-EL5cFqL5pRrFRBSUjny38g",
         "Q112041861",
@@ -153,9 +173,11 @@
     {
       "query_id": "Deep_Query_11",
       "query_type": 3,
-      "query_text": "Russian private military company responsible for deploying mercenaries in Ukraine, Syria, Libya, and Africa",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q36597284/",
+      "query_texts": [
+        "Russian private military company responsible for deploying mercenaries in Ukraine, Syria, Libya, and Africa"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q36597284",
         "NK-Z9oNBzxf4NzcB6GKXwgPUL",
@@ -168,9 +190,11 @@
     {
       "query_id": "Deep_Query_12",
       "query_type": 3,
-      "query_text": "Russian state energy company's oil division sanctioned for exploration activities in Iran and involvement in Russian oil exports",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/NK-TsnsTYDD5QeZ9gDbFB2WbU/",
+      "query_texts": [
+        "Russian state energy company's oil division sanctioned for exploration activities in Iran and involvement in Russian oil exports"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "NK-cuVFsKgk3rPqzM4pWTexzc",
         "NK-N7dfJjNtqB9hibmDaoviPf",
@@ -181,9 +205,11 @@
     {
       "query_id": "Deep_Query_13",
       "query_type": 3,
-      "query_text": "Sanctioned individual who led Wagner Group operations in Sudan and was involved in exploiting Sudanese gold for export to Russia",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q120852793/",
+      "query_texts": [
+        "Sanctioned individual who led Wagner Group operations in Sudan and was involved in exploiting Sudanese gold for export to Russia"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q120852793",
         "Q36597284",
@@ -194,9 +220,11 @@
     {
       "query_id": "Deep_Query_14",
       "query_type": 3,
-      "query_text": "Sanctioned subsidiary of a Russian energy conglomerate operating in Kyrgyzstan",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/NK-mFuJH7pUGnr7fegsQYbRWp/",
+      "query_texts": [
+        "Sanctioned subsidiary of a Russian energy conglomerate operating in Kyrgyzstan"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "NK-mFuJH7pUGnr7fegsQYbRWp",
         "NK-TsnsTYDD5QeZ9gDbFB2WbU",
@@ -207,9 +235,11 @@
     {
       "query_id": "Deep_Query_15",
       "query_type": 3,
-      "query_text": "Russian paramilitary sabotage unit linked to a larger private military company, accused of atrocities against Ukrainian soldiers in the Donbas region",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/NK-SGoKLj97jDeyJGnSyRhJJN/",
+      "query_texts": [
+        "Russian paramilitary sabotage unit linked to a larger private military company, accused of atrocities against Ukrainian soldiers in the Donbas region"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "NK-SGoKLj97jDeyJGnSyRhJJN",
         "Q107586452",
@@ -220,9 +250,11 @@
     {
       "query_id": "Deep_Query_16",
       "query_type": 4,
-      "query_text": "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q36597284/",
+      "query_texts": [
+        "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q36597284",
         "NK-Z9oNBzxf4NzcB6GKXwgPUL",
@@ -237,9 +269,11 @@
     {
       "query_id": "Deep_Query_17",
       "query_type": 4,
-      "query_text": "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q36597284/",
+      "query_texts": [
+        "What entities, sub-units, commercial ventures, and individuals are connected to PMC Wagner?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q120852793",
         "NK-N7dfJjNtqB9hibmDaoviPf",
@@ -256,9 +290,11 @@
     {
       "query_id": "Deep_Query_18",
       "query_type": 4,
-      "query_text": "What companies, organizations, and associated persons are linked to Yevgeny Prigozhin?",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q20850503/",
+      "query_texts": [
+        "What companies, organizations, and associated persons are linked to Yevgeny Prigozhin?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q20850503",
         "Q36597284",
@@ -270,9 +306,11 @@
     {
       "query_id": "Deep_Query_19",
       "query_type": 4,
-      "query_text": "What is the chain of command linking Task Force Rusich to its parent organization and key individuals?",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/NK-SGoKLj97jDeyJGnSyRhJJN/",
+      "query_texts": [
+        "What is the chain of command linking Task Force Rusich to its parent organization and key individuals?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "NK-SGoKLj97jDeyJGnSyRhJJN",
         "Q107586452",
@@ -284,9 +322,11 @@
     {
       "query_id": "Deep_Query_20",
       "query_type": 4,
-      "query_text": "Which sanctioned individuals are linked to Wagner Group operations specifically in Libya and Sudan?",
-      "theme": "WAGNER PMC / GAZPROM ENERGY",
-      "reference_url": "https://www.opensanctions.org/entities/Q36597284/",
+      "query_texts": [
+        "Which sanctioned individuals are linked to Wagner Group operations specifically in Libya and Sudan?"
+      ],
+      "filter_criteria": "",
+      "notes": "WAGNER PMC / GAZPROM ENERGY",
       "expected_doc_ids": [
         "Q36597284",
         "Q120853746",
@@ -298,9 +338,11 @@
     {
       "query_id": "Deep_Query_21",
       "query_type": 3,
-      "query_text": "Sanctioned Russian microelectronics manufacturer whose chips are used in Iskander ballistic missiles",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-mZimbPviBCZ8d7BeGeK5nQ/",
+      "query_texts": [
+        "Sanctioned Russian microelectronics manufacturer whose chips are used in Iskander ballistic missiles"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-mZimbPviBCZ8d7BeGeK5nQ",
         "NK-nxAfGhdZUyo6cQJ6vVibxz",
@@ -317,9 +359,11 @@
     {
       "query_id": "Deep_Query_22",
       "query_type": 4,
-      "query_text": "What sanctioned entities are subsidiaries or controlled by Rostec in the dual-use technology and military export chain?",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-kNULoiM7XfTYeWLtTZ4UHg/",
+      "query_texts": [
+        "What sanctioned entities are subsidiaries or controlled by Rostec in the dual-use technology and military export chain?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-kNULoiM7XfTYeWLtTZ4UHg",
         "NK-jLcvcAFxBd2aYNeqUvit3a",
@@ -331,9 +375,11 @@
     {
       "query_id": "Deep_Query_23",
       "query_type": 4,
-      "query_text": "What entities are linked to Gruppa Kremny El in the Russian military microelectronics supply chain?",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-mZimbPviBCZ8d7BeGeK5nQ/",
+      "query_texts": [
+        "What entities are linked to Gruppa Kremny El in the Russian military microelectronics supply chain?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-mZimbPviBCZ8d7BeGeK5nQ",
         "NK-nxAfGhdZUyo6cQJ6vVibxz",
@@ -346,9 +392,11 @@
     {
       "query_id": "Deep_Query_24",
       "query_type": 3,
-      "query_text": "Iranian companies that designed and manufactured the one-way attack drones used by Russia against Ukraine, known in Russian service as Geran-2",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-Nz46UHrXiSCEWLkEQTdoPb/",
+      "query_texts": [
+        "Iranian companies that designed and manufactured the one-way attack drones used by Russia against Ukraine, known in Russian service as Geran-2"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-Nz46UHrXiSCEWLkEQTdoPb",
         "NK-f8wa3QmkpZDMtjiA6AkMns",
@@ -361,9 +409,11 @@
     {
       "query_id": "Deep_Query_25",
       "query_type": 3,
-      "query_text": "Sanctioned state airline used to secretly transfer drone components and UAV technology from Iran to Russia for use in the Ukraine war",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/Q461631/",
+      "query_texts": [
+        "Sanctioned state airline used to secretly transfer drone components and UAV technology from Iran to Russia for use in the Ukraine war"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "Q461631",
         "NK-Nz46UHrXiSCEWLkEQTdoPb",
@@ -374,9 +424,11 @@
     {
       "query_id": "Deep_Query_26",
       "query_type": 4,
-      "query_text": "What is the full supply chain of entities involved in manufacturing, assembling, and delivering Shahed drones to Russia?",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-Nz46UHrXiSCEWLkEQTdoPb/",
+      "query_texts": [
+        "What is the full supply chain of entities involved in manufacturing, assembling, and delivering Shahed drones to Russia?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-Nz46UHrXiSCEWLkEQTdoPb",
         "NK-f8wa3QmkpZDMtjiA6AkMns",
@@ -391,9 +443,11 @@
     {
       "query_id": "Deep_Query_27",
       "query_type": 4,
-      "query_text": "What companies and individuals are linked to the IRGC Aerospace Force's drone and missile programs?",
-      "theme": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
-      "reference_url": "https://www.opensanctions.org/entities/NK-jF6xZDZzsiGDtJtGcBqoLi/",
+      "query_texts": [
+        "What companies and individuals are linked to the IRGC Aerospace Force's drone and missile programs?"
+      ],
+      "filter_criteria": "",
+      "notes": "DUAL-USE TECHNOLOGY / IRANIAN DRONES",
       "expected_doc_ids": [
         "NK-jF6xZDZzsiGDtJtGcBqoLi",
         "NK-Nz46UHrXiSCEWLkEQTdoPb",
@@ -407,9 +461,11 @@
     {
       "query_id": "Deep_Query_28",
       "query_type": 3,
-      "query_text": "Cryptoaddresses linked to North Korean Hacker Group",
-      "theme": "Other_misc_queries",
-      "reference_url": "https://www.opensanctions.org/entities/NK-Xv8CnM8sgddxx7QenotGtb/",
+      "query_texts": [
+        "Cryptoaddresses linked to North Korean Hacker Group"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries",
       "expected_doc_ids": [
         "NK-Xv8CnM8sgddxx7QenotGtb",
         "fbi-lazarus-2876490857c62ddcf8bf089eebd691ed739074dc",
@@ -428,9 +484,11 @@
     {
       "query_id": "Deep_Query_29",
       "query_type": 3,
-      "query_text": "UAE-based companies subject to Syrian sanctions from a US perspective",
-      "theme": "Other_misc_queries",
-      "reference_url": "https://www.opensanctions.org/search/?countries=ae&filter=properties.programId%3AUS-SYR-REL&schema=Company",
+      "query_texts": [
+        "UAE-based companies subject to Syrian sanctions from a US perspective"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries",
       "expected_doc_ids": [
         "NK-YZDkBfVz9siwsep35GFbiF",
         "NK-5W6hj6czEXYyFJwTQ7g9ux",
@@ -441,9 +499,11 @@
     {
       "query_id": "Deep_Query_30",
       "query_type": 3,
-      "query_text": "Kyrgyzstan companies subject to sanctions in the US, UK and EU",
-      "theme": "Other_misc_queries",
-      "reference_url": "https://www.opensanctions.org/search/?countries=kg&datasets=gb_fcdo_sanctions&datasets=us_ofac_sdn&datasets=eu_fsf&q=&topics=sanction",
+      "query_texts": [
+        "Kyrgyzstan companies subject to sanctions in the US, UK and EU"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries",
       "expected_doc_ids": [
         "NK-BWSfTq3iX7YzFrwPyiszKh",
         "NK-nCCRCEZeb4t4Rz8QxUji3C",
@@ -454,9 +514,11 @@
     {
       "query_id": "Deep_Query_31",
       "query_type": 3,
-      "query_text": "Companies with nexus to Poland subject to US sanctions under OFAC",
-      "theme": "Other_misc_queries",
-      "reference_url": "https://www.opensanctions.org/search/?countries=pl&datasets=us_ofac_sdn&q=&topics=sanction",
+      "query_texts": [
+        "Companies with nexus to Poland subject to US sanctions under OFAC"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries",
       "expected_doc_ids": [
         "NK-3JmgoFcWsskLYxazEtcLe2",
         "NK-YofLoM3xwC3KVyAAVdBukG",
@@ -471,9 +533,11 @@
     {
       "query_id": "Deep_Query_32",
       "query_type": 3,
-      "query_text": "Need a list of companies sanctioned under US transactionational criminal organizations sanctions program, specifically  connected to Mexico and Guatemala",
-      "theme": "Other_misc_queries",
-      "reference_url": "https://www.opensanctions.org/search/?countries=mx&countries=gt&filter=properties.programId%3AUS-TCO&schema=Company",
+      "query_texts": [
+        "Need a list of companies sanctioned under US transactionational criminal organizations sanctions program, specifically  connected to Mexico and Guatemala"
+      ],
+      "filter_criteria": "",
+      "notes": "Other_misc_queries",
       "expected_doc_ids": [
         "NK-DTsY5n5CASmFd4Kd8FE7Ho",
         "NK-6wX7MJ9Aza8DYDu2EQ4Ztm",
