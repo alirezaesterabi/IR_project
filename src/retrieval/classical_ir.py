@@ -1,15 +1,21 @@
 """
-Classical IR retrievers: BM25 and TF-IDF.
+Classical IR retrievers: BM25, TF-IDF, and Identifier.
 
-Both classes follow the same interface:
+BM25 and TF-IDF follow the same interface:
     .build(docs_path, save_dir)   — fit on documents.jsonl and persist to disk
     .load(save_dir)               — restore from disk
     .search(query, k)             — return top-k [(doc_id, score), ...]
 
+IdentifierRetriever provides exact-match lookup on identifier fields:
+    .build_index(documents)       — build inverted index from document dicts
+    .save(path) / .load(path)     — persist / restore index
+    .search(query)                — return [(doc_id, 1.0), ...] for exact match
+
 Input fields used from documents.jsonl:
-    doc_id     — unique document identifier
-    tokens     — pre-tokenised list → used by BM25 directly
-    text_blob  — space-joined lemmatised string → used by TF-IDF
+    doc_id      — unique document identifier
+    tokens      — pre-tokenised list → used by BM25 directly
+    text_blob   — space-joined lemmatised string → used by TF-IDF
+    identifiers — dict of identifier fields → used by IdentifierRetriever
 
 Saved artefacts
 ---------------
@@ -21,13 +27,17 @@ models/tfidf/
     vectorizer.pkl — fitted TfidfVectorizer
     matrix.npz     — sparse TF-IDF matrix (scipy CSR)
     doc_ids.json   — ordered list mapping row → doc_id
+
+models/identifier/
+    index.pkl      — normalised_value → [doc_id, ...] inverted index
 """
 
 import json
 import pickle
+import re
 import time
 from pathlib import Path
-from typing import List, Tuple, Optional
+from typing import Dict, Iterable, List, Tuple, Optional
 
 import numpy as np
 import scipy.sparse
@@ -283,3 +293,107 @@ class TFIDFRetriever:
     @property
     def is_loaded(self) -> bool:
         return self._vectorizer is not None
+
+
+# ── Identifier (exact match) ───────────────────────────────────────────────
+
+class IdentifierRetriever:
+    """
+    Exact-match retriever for structured identifiers (IMO, MMSI, LEI, etc.).
+
+    Builds an inverted index from the ``identifiers`` dict in each document.
+    Both keys and values are normalised (strip + uppercase) so lookups are
+    case-insensitive.  Every match scores 1.0.
+    """
+
+    # Patterns for looks_like_identifier (compiled once)
+    _IMO_RE    = re.compile(r"^IMO\d{7}$", re.IGNORECASE)
+    _MMSI_RE   = re.compile(r"^\d{9}$")
+    _LEI_RE    = re.compile(r"^[A-Z0-9]{20}$", re.IGNORECASE)
+    _EMAIL_RE  = re.compile(r"@")
+    _CRYPTO_RE = re.compile(r"^[0-9a-f]{26,}$", re.IGNORECASE)
+    _GENERIC_RE = re.compile(r"^[A-Za-z0-9]{6,20}$")
+
+    def __init__(self):
+        self._index: Dict[str, List[str]] = {}
+
+    # ------------------------------------------------------------------
+    @staticmethod
+    def _normalise(value: str) -> str:
+        """Strip whitespace and uppercase."""
+        return value.strip().upper()
+
+    # ------------------------------------------------------------------
+    def build_index(self, documents: Iterable[dict]) -> None:
+        """
+        Build the inverted lookup from an iterable of document dicts.
+
+        Each document must have at least ``doc_id`` (str) and
+        ``identifiers`` (dict mapping field name → list of values).
+        """
+        index: Dict[str, List[str]] = {}
+
+        for doc in documents:
+            doc_id = doc["doc_id"]
+            identifiers = doc.get("identifiers", {})
+
+            for _field, values in identifiers.items():
+                for raw_val in values:
+                    key = self._normalise(str(raw_val))
+                    if key:
+                        index.setdefault(key, []).append(doc_id)
+
+        self._index = index
+
+    # ------------------------------------------------------------------
+    def search(self, query: str) -> List[Tuple[str, float]]:
+        """
+        Exact-match lookup.  Returns ``[(doc_id, 1.0), ...]`` or ``[]``.
+        """
+        key = self._normalise(query)
+        doc_ids = self._index.get(key, [])
+        return [(doc_id, 1.0) for doc_id in doc_ids]
+
+    # ------------------------------------------------------------------
+    @staticmethod
+    def looks_like_identifier(query: str) -> bool:
+        """
+        Heuristic: return True if *query* resembles a structured identifier.
+        """
+        q = query.strip()
+        if IdentifierRetriever._IMO_RE.match(q):
+            return True
+        if IdentifierRetriever._MMSI_RE.match(q):
+            return True
+        if IdentifierRetriever._LEI_RE.match(q):
+            return True
+        if IdentifierRetriever._EMAIL_RE.search(q):
+            return True
+        if IdentifierRetriever._CRYPTO_RE.match(q):
+            return True
+        if IdentifierRetriever._GENERIC_RE.match(q):
+            return True
+        return False
+
+    # ------------------------------------------------------------------
+    def save(self, path: Path) -> None:
+        """Persist the inverted index to *path* (pickle)."""
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, "wb") as f:
+            pickle.dump(self._index, f, protocol=pickle.HIGHEST_PROTOCOL)
+        print(f"[Identifier] Saved → {path}  "
+              f"({len(self._index):,} keys, {path.stat().st_size/1e6:.1f} MB)")
+
+    # ------------------------------------------------------------------
+    def load(self, path: Path) -> None:
+        """Restore the inverted index from *path*."""
+        path = Path(path)
+        with open(path, "rb") as f:
+            self._index = pickle.load(f)
+        print(f"[Identifier] Loaded index with {len(self._index):,} keys")
+
+    # ------------------------------------------------------------------
+    @property
+    def is_loaded(self) -> bool:
+        return len(self._index) > 0
