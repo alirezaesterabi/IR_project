@@ -68,21 +68,48 @@ class TextProcessor:
     # ------------------------------------------------------------------
 
     @staticmethod
+    def _is_latin_base(char: str) -> bool:
+        """Return True if *char* is a Latin-script base character."""
+        try:
+            return "LATIN" in unicodedata.name(char, "")
+        except ValueError:
+            return False
+
+    @staticmethod
     def normalize(text: str) -> str:
         """
         Canonical normalization applied to ALL text:
-          1. Unicode NFC compose
-          2. Lowercase
-          3. Strip diacritics (NFD → drop Mn category)
-          4. Remove punctuation, keep alphanumeric + spaces
-          5. Collapse whitespace
+          1. NFC compose (ensure consistent starting form)
+          2. NFD decompose (separate base characters from combining marks)
+          3. Selectively strip combining marks (category Mn) that follow a
+             Latin base character — this removes accents from é, ñ, ü etc.
+             Combining marks on non-Latin bases (Cyrillic й = и + breve,
+             ё = е + diaeresis) are preserved.
+          4. NFC recompose (restore precomposed forms, e.g. и + breve → й)
+          5. Lowercase
+          6. Remove punctuation, keep alphanumeric + spaces
+          7. Collapse whitespace
         """
         if not text:
             return ""
         text = unicodedata.normalize("NFC", text)
-        text = text.lower()
         text = unicodedata.normalize("NFD", text)
-        text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+        # Walk the decomposed characters, tracking the most recent base
+        out: list[str] = []
+        last_base_is_latin = False
+        for c in text:
+            cat = unicodedata.category(c)
+            if cat == "Mn":
+                # Only strip combining marks following a Latin base character
+                if last_base_is_latin:
+                    continue
+            else:
+                # Update base-script tracker for non-combining characters
+                last_base_is_latin = TextProcessor._is_latin_base(c)
+            out.append(c)
+        text = "".join(out)
+        text = unicodedata.normalize("NFC", text)
+        text = text.lower()
         text = re.sub(r"[^\w\s]", " ", text)
         text = re.sub(r"\s+", " ", text).strip()
         return text
@@ -102,7 +129,7 @@ class TextProcessor:
         """
         Normalize a name string and split into tokens.
         No lemmatization — entity name integrity must be preserved.
-        Stop words ARE removed (articles, prepositions add noise).
+        No stopword removal — only filtered by minimum token length.
         """
         normalized = self.normalize(text)
         return [t for t in normalized.split() if len(t) >= self._min_len]
@@ -162,14 +189,16 @@ class TextProcessor:
     def build_sanctions_text(self, sanctions: list[dict]) -> str:
         """
         Flatten nested sanctions sub-objects into searchable text.
-        Extracts: authority, reason, programId from each sanction.
+        Extracts only free-text fields: authority, reason.
+        programId is excluded — it is a structured identifier routed to
+        metadata by document_builder.py (see Bug 5 in audit).
         """
         parts: list[str] = []
         for s in sanctions:
             if not isinstance(s, dict):
                 continue
             props = s.get("properties", {})
-            for field in ("authority", "reason", "programId"):
+            for field in ("authority", "reason"):
                 for val in props.get(field, []):
                     lemmatized = self.tokenize_and_lemmatize(str(val))
                     parts.extend(lemmatized)
@@ -230,3 +259,11 @@ if __name__ == "__main__":
         else:
             out = tp.build_keyword_text([text])
         print(f"{mode:<6} {text:<55} {out}")
+
+    # --- Inline Cyrillic normalization test (not executed) ---
+    # result = tp.normalize("Электростальский")
+    # assert "й" in result, f"FAIL: й was stripped -> got '{result}'"
+    # assert result == "электростальский", f"FAIL: got '{result}'"
+    # # Before fix: "Электростальский" -> "электростальскии" (й corrupted to и)
+    # # After fix:  "Электростальский" -> "электростальский" (й preserved)
+    # print(f"Cyrillic test PASSED: й preserved in '{result}'")

@@ -13,7 +13,7 @@ Each output document has:
 text_blob assembly order (importance-ranked, mirrors plan):
   1. name values            — normalized, not lemmatized
   2. alias, previousName    — normalized, not lemmatized
-  3. position, sector, legalForm — keyword normalized
+  3. position, sector, legalForm, keywords, birthPlace — keyword normalized
   4. notes, description     — lemmatized free text
   5. topics                 — keyword normalized
   6. sanctions[*].authority + reason — lemmatized
@@ -25,8 +25,10 @@ from .text_processing import TextProcessor
 
 
 # Fields whose values are lists of strings (flat, no nesting)
-_NAME_FIELDS = ("name", "alias", "previousName")
-_KEYWORD_FIELDS = ("position", "sector", "legalForm", "topics", "programId")
+_NAME_FIELDS = ("name", "alias", "previousName", "weakAlias", "middleName",
+                 "fatherName", "motherName")
+_KEYWORD_FIELDS = ("position", "sector", "legalForm", "topics", "keywords",
+                    "birthPlace")
 _DESC_FIELDS = ("notes", "description", "summary")
 
 # Identifiers for exact-match retrieval — stored raw, never tokenized
@@ -41,6 +43,13 @@ _IDENTIFIER_FIELDS = (
     "kppCode",
     "npiCode",
     "uniqueEntityId",
+    "taxNumber",
+    "passportNumber",
+    "leiCode",
+    "vatCode",
+    "email",
+    "phone",
+    "cryptoWalletAddress",
 )
 
 
@@ -135,9 +144,20 @@ def build_document(record: dict, processor: Optional[TextProcessor] = None) -> d
     # ------------------------------------------------------------------
     # Metadata: for filtering and faceted search
     # ------------------------------------------------------------------
+    # programId is intentionally metadata-only: it is used for structured
+    # filtering (exact match on "US-GLOMAG", "EU-Syria", etc.) and must not
+    # be normalised into text_blob where it would become "us glomag".
+    # Collect programId from both the entity's top-level properties AND
+    # from nested sanction sub-objects (which carry their own programId).
+    all_program_ids: list[str] = list(props.get("programId", []))
+    for s in sanctions_objects:
+        for pid in s.get("properties", {}).get("programId", []):
+            if pid and pid not in all_program_ids:
+                all_program_ids.append(pid)
+
     metadata: dict = {
         "country":   props.get("country", []),
-        "programId": props.get("programId", []),
+        "programId": all_program_ids,
         "datasets":  record.get("datasets", []),
     }
 

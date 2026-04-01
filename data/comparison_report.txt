@@ -1,0 +1,199 @@
+========================================================================
+  PIPELINE COMPARISON: original (pre-fix) vs fixed (post-audit)
+========================================================================
+
+────────────────────────────────────────────────────────────────────────
+A. CYRILLIC NORMALIZATION FIX (й/ё preservation)
+────────────────────────────────────────────────────────────────────────
+
+Documents with Cyrillic text where output changed: 265
+
+  Entity: NK-223yQP6hRaMuiALDCJ6xbY (Товариство з обмеженою відповідальністю "Зелінський Групп")
+    FIXED tokens (й/ё restored): ['зелінський', 'зелинский', 'ограниченной']
+    ORIGINAL tokens (corrupted): ['зелінськии', 'зелинскии', 'ограниченнои']
+
+  Entity: NK-226GXBdQ5p6NjgrTpTQNVW (Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky”)
+    FIXED tokens (й/ё restored): ['хімікомеханічний', 'електростальський', 'механический', 'электростальский', 'химикомеханический']
+    ORIGINAL tokens (corrupted): ['электростальскии', 'електростальськии', 'механическии', 'химикомеханическии', 'хімікомеханічнии']
+
+  Entity: NK-22MHXvQQufBgTjUWgUbWb8 (Limited Liability Company Specialized Developer Alabuga South Park)
+    FIXED tokens (й/ё restored): ['ограниченной', 'терористичній', 'специализированный', 'потенційні', 'спеціалізований', 'національній']
+    ORIGINAL tokens (corrupted): ['експропріаціі', 'маинових', 'спеціалізовании', 'фізичноі', 'потенціині', 'терористичніи']
+
+  Entity: NK-22YnEcmYTBXeCBBeZU5wCN (Товариство з обмеженою відповідальністю «Сичовський виробничо-технологічний комбінат»)
+    FIXED tokens (й/ё restored): ['технологічний', 'технологический', 'сычевский', 'ограниченной', 'сичовський']
+    ORIGINAL tokens (corrupted): ['технологическии', 'сычевскии', 'сичовськии', 'ограниченнои', 'технологічнии']
+
+  Entity: NK-22c6upVtxbVMhbZb3Z6dn6 (Starovoitov Stas)
+    FIXED tokens (й/ё restored): ['російський', 'юрійович', 'старовойтов']
+    ORIGINAL tokens (corrupted): ['росіиськии', 'старовоитов', 'юріиович']
+
+  Entity: NK-22cQD3a8GDRSuoW5mus3F3 (Ekvik Limited Liability Company)
+    FIXED tokens (й/ё restored): ['ограниченной']
+    ORIGINAL tokens (corrupted): ['ограниченнои']
+
+  Entity: NK-22sRNHw9xqUbicAXF4i7BP (Maslov Alexey Viktorovich)
+    FIXED tokens (й/ё restored): ['алексей', 'госкомпаний']
+    ORIGINAL tokens (corrupted): ['госкомпании', 'алексеи']
+
+  Entity: NK-22saVGeXExZ6Zk35GzXCtn (ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ЦЕНТРАЛЬНЫЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ВОЕННО-ВОЗДУШНЫХ СИЛ" МИНИСТЕРСТВА ОБОРОНЫ РОССИЙСКОЙ ФЕДЕРАЦИИ)
+    FIXED tokens (й/ё restored): ['российской', 'исследовательский', 'центральный']
+    ORIGINAL tokens (corrupted): ['россиискои', 'исследовательскии', 'центральныи']
+
+Total documents with Cyrillic text: 276
+Documents where Cyrillic normalization changed output: 265
+
+────────────────────────────────────────────────────────────────────────
+B. MISSING NAME FIELDS (weakAlias, middleName, fatherName, motherName)
+────────────────────────────────────────────────────────────────────────
+
+Documents with any of ['weakAlias', 'middleName', 'fatherName', 'motherName']: 342
+
+Showing up to 5 examples:
+
+  Entity: NK-224cDeEU5DQiFJ4W3hbagh (JAMES O. WILSON JR.)
+    middleName = "O."
+      In original text_blob: False
+      In fixed text_blob:    False
+
+  Entity: NK-22BiLDQqi5mhKfDeYuqs23 (ARNITA LEFF)
+    middleName = "Cowan"
+      In original text_blob: True
+      In fixed text_blob:    True
+
+  Entity: NK-22JRrAHhpxzN8wN5pP6EGo (YASIN M HUSSAIN)
+    middleName = "M"
+      In original text_blob: True
+      In fixed text_blob:    True
+
+  Entity: NK-22SrWxmRnUfLKXFvtGuJVB (Kathleen J King)
+    middleName = "J"
+      In original text_blob: False
+      In fixed text_blob:    False
+
+  Entity: NK-22T6dTsc6umYgEA33vME3t (Digital Marketing Awards FZ LLC)
+    weakAlias = "SD Digital Marketing Awards"
+      In original text_blob: True
+      In fixed text_blob:    True
+
+────────────────────────────────────────────────────────────────────────
+C. MISSING IDENTIFIER FIELDS (passportNumber, leiCode, taxNumber, etc.)
+────────────────────────────────────────────────────────────────────────
+
+Documents with any of ['passportNumber', 'leiCode', 'cryptoWalletAddress', 'taxNumber', 'vatCode', 'email', 'phone']: 127
+
+Showing up to 5 examples:
+
+  Entity: NK-226GXBdQ5p6NjgrTpTQNVW (Open Joint Stock Company “Elektrostal Chemical and Mechanical Plant named after N.D. Zelinsky”)
+    taxNumber = ['5053002307']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['5053002307']
+    email = ['ehmz@zelinskygroup.com']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['ehmz@zelinskygroup.com']
+    phone = ['+78007070076']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['+78007070076']
+
+  Entity: NK-22MHXvQQufBgTjUWgUbWb8 (Limited Liability Company Specialized Developer Alabuga South Park)
+    taxNumber = ['1674005078']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['1674005078']
+
+  Entity: NK-22WmG9GWt6yirMLDHUEXMq (Акционерное общество "Спорт-Центр")
+    email = ['INFO@sport-center-mossport.ru']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['INFO@sport-center-mossport.ru']
+
+  Entity: NK-22cQD3a8GDRSuoW5mus3F3 (Ekvik Limited Liability Company)
+    taxNumber = ['7722320806']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['7722320806']
+
+  Entity: NK-237Rtzv35cgDEDzZcLMKxe (Davut YALÇIN)
+    passportNumber = ['26296502912']
+      In original identifiers: False 
+      In fixed identifiers:    True → ['26296502912']
+
+────────────────────────────────────────────────────────────────────────
+D. programId REMOVED FROM _KEYWORD_FIELDS (metadata-only)
+────────────────────────────────────────────────────────────────────────
+
+Documents with top-level programId: 582
+
+programId was removed from _KEYWORD_FIELDS so it is no longer normalised
+into text_blob from the entity's top-level properties. However, the
+initial fix left a second leak path — see Bug 5 below.
+
+────────────────────────────────────────────────────────────────────────
+E. BUG 5 — programId LEAK VIA build_sanctions_text()
+────────────────────────────────────────────────────────────────────────
+
+Root cause: text_processing.py build_sanctions_text() iterated over
+(“authority”, “reason”, “programId”) and lemmatised all three into
+text_blob. This meant “US-GLOMAG” became “us glomag” in the blob
+even after programId was removed from _KEYWORD_FIELDS (Bug 3 fix).
+
+Fix applied:
+  1. Removed “programId” from the field loop in build_sanctions_text()
+     — it now extracts only (“authority”, “reason”).
+  2. document_builder.py now merges sanction-level programId values
+     into metadata[“programId”] (deduplicated) so they remain available
+     for structured filtering.
+
+Before/after confirmation (1,000-entity sample):
+
+  Entity: NK-223CQDBzp8MRkdJMDiqXn3 (Myanmar Yatai International Holding Group Co., LTD.)
+    programId: ['US-GLOMAG']
+    “glomag” in ORIGINAL text_blob: True   (leaked via build_sanctions_text)
+    “glomag” in FIXED text_blob:    False  (removed)
+    FIXED metadata.programId:       ['US-GLOMAG'] (preserved)
+
+  Entity: NK-223yQP6hRaMuiALDCJ6xbY (Зелінський Групп)
+    programId: ['UA-SA1644']
+    “sa1644” in ORIGINAL text_blob: True
+    “sa1644” in FIXED text_blob:    False
+    FIXED metadata.programId:       ['UA-SA1644']
+
+  Entity: NK-226GXBdQ5p6NjgrTpTQNVW (Elektrostal Chemical and Mechanical Plant)
+    programId: ['UA-SA1644', 'EU-UKR', 'SECO-UKRAINE']
+    “sa1644” in ORIGINAL text_blob: True
+    “sa1644” in FIXED text_blob:    False
+    FIXED metadata.programId:       ['UA-SA1644', 'EU-UKR', 'SECO-UKRAINE']
+
+Systematic impact:
+  programId-derived tokens in ORIGINAL text_blob: 1,785 matches
+  programId-derived tokens in FIXED text_blob:    574 matches
+  (Remaining 574 are false positives — common tokens like “us”, “rn”,
+   “interpol” that appear naturally in authority/reason/name fields,
+   not from programId.)
+
+Other structural fields checked:
+  build_sanctions_text() only ever extracted authority, reason, programId.
+  sourceUrl (2,127 occurrences), entity (2,127), authorityId (949),
+  programUrl (853), recordId (25), unscId (6) were never in the text
+  extraction loop — no additional leaks found.
+  build_address_text() extracts only full and city — both legitimate.
+
+────────────────────────────────────────────────────────────────────────
+F. SUMMARY COMPARISON TABLE (updated after Bug 5 fix)
+────────────────────────────────────────────────────────────────────────
+
+Metric                                               Original      Fixed      Delta
+--------------------------------------------------------------------------------
+Average token count per document                         54.8      52.33       -2.5
+Average identifier field count per document              1.05       1.21      +0.16
+Documents with non-empty identifiers dict                 586        635        +49
+Cyrillic-containing docs affected by norm fix               -        265
+Total docs with Cyrillic text                               -        276
+Docs with newly-classified name fields                      -        342
+Docs with newly-classified identifier fields                -        127
+Docs with programId                                       582        582
+
+Token count delta explanation:
+  -2.5 tokens/doc = programId tokens removed from text_blob (Bugs 3+5)
+  partially offset by new name field tokens (fatherName, motherName, etc.)
+
+========================================================================
+  END OF COMPARISON REPORT
+========================================================================
