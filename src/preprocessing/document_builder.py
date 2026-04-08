@@ -10,6 +10,9 @@ Each output document has:
   identifiers — raw identifier values for exact-match queries (Type 1)
   metadata    — country, programId, datasets, timestamps for filtering
 
+run_pipeline() adds embedding_text — natural-language string for dense retrieval
+(build_embedding_text), after build_document().
+
 text_blob assembly order (importance-ranked, mirrors plan):
   1. name values            — normalized, not lemmatized
   2. alias, previousName    — normalized, not lemmatized

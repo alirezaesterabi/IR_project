@@ -24,13 +24,14 @@ Or from a notebook/script:
 import json
 import time
 import os
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 from typing import Optional
 
 from .parser import stream_records, _find_project_root
 from .text_processing import TextProcessor
 from .document_builder import build_document
+from .embedding_text import build_embedding_text
 
 
 def run_pipeline(
@@ -64,7 +65,8 @@ def run_pipeline(
 
     Output files
     ------------
-    output_dir/documents.jsonl  — one processed document per line
+    output_dir/documents.jsonl  — one processed document per line (includes
+                                  embedding_text for dense retrieval)
     output_dir/stats.json       — processing statistics
     """
     root = _find_project_root()
@@ -100,6 +102,8 @@ def run_pipeline(
         "schema_counts":  {},
         "avg_token_count": 0.0,
         "empty_blob_count": 0,
+        "empty_embedding_text_count": 0,
+        "avg_embedding_text_chars": 0.0,
         "has_identifiers": 0,
         "elapsed_seconds": 0.0,
     }
@@ -108,6 +112,8 @@ def run_pipeline(
     total_tokens = 0
     empty_blobs = 0
     has_identifiers = 0
+    embedding_text_chars = 0
+    empty_embedding_text = 0
 
     start = time.time()
     processed = 0
@@ -119,6 +125,7 @@ def run_pipeline(
         for record in stream_records(input_path, max_records=max_records,
                                      show_progress=show_progress):
             doc = build_document(record, processor)
+            doc["embedding_text"] = build_embedding_text(doc)
 
             out_f.write(json.dumps(doc, ensure_ascii=False) + "\n")
 
@@ -127,6 +134,10 @@ def run_pipeline(
             total_tokens += len(doc["tokens"])
             if not doc["text_blob"]:
                 empty_blobs += 1
+            et = doc["embedding_text"]
+            if not et:
+                empty_embedding_text += 1
+            embedding_text_chars += len(et)
             if doc["identifiers"]:
                 has_identifiers += 1
 
@@ -148,6 +159,10 @@ def run_pipeline(
     stats["schema_counts"]    = dict(schema_counts.most_common())
     stats["avg_token_count"]  = round(total_tokens / processed, 2) if processed else 0
     stats["empty_blob_count"] = empty_blobs
+    stats["empty_embedding_text_count"] = empty_embedding_text
+    stats["avg_embedding_text_chars"] = (
+        round(embedding_text_chars / processed, 2) if processed else 0.0
+    )
     stats["has_identifiers"]  = has_identifiers
     stats["elapsed_seconds"]  = round(elapsed, 2)
     stats["records_per_second"] = round(processed / elapsed, 1) if elapsed > 0 else 0
@@ -163,6 +178,8 @@ def run_pipeline(
     print(f"  Elapsed           : {elapsed:.1f}s  ({stats['records_per_second']:,.0f} rec/s)")
     print(f"  Avg tokens/doc    : {stats['avg_token_count']}")
     print(f"  Empty text_blobs  : {empty_blobs}")
+    print(f"  Empty embedding_text: {empty_embedding_text}")
+    print(f"  Avg embedding_text chars: {stats['avg_embedding_text_chars']}")
     print(f"  With identifiers  : {has_identifiers:,}")
     print(f"  Schema breakdown  :")
     for schema, count in schema_counts.most_common():

@@ -1,0 +1,10 @@
+# Dense embedding pipeline on Google Colab — use AFTER installing CUDA PyTorch
+# (see notebooks/colab_dense_embeddings.ipynb). Do NOT include torch here: PyPI
+# defaults to CPU-only and would replace Colab's GPU build.
+
+sentence-transformers>=2.2.2
+chromadb>=0.4.18
+transformers>=4.35.0
+numpy>=1.24.0
+tqdm>=4.66.0
+pycountry>=23.12.11
