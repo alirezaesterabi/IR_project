@@ -16,7 +16,7 @@ class RAGPipeline:
             text_blob = doc.get("text_blob", "") or ""
             tokens = text_blob.split()
 
-            name = metadata.get("name")
+            name = doc.get("caption")
             if not name:
                 name = tokens[0] if tokens else ""
 
@@ -24,7 +24,7 @@ class RAGPipeline:
             if name:
                 lines.append(f"Entity: {name}")
 
-            schema = metadata.get("schema")
+            schema = doc.get("schema", "")
             if schema:
                 lines.append(f"Type: {schema}")
 

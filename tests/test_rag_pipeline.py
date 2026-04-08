@@ -9,21 +9,25 @@ from src.rag.rag_pipeline import RAGPipeline
 
 def make_doc(
     doc_id="doc1",
-    name="Acme Corp",
+    caption="Acme Corp",
     text_blob="Acme Corp is a sanctioned entity based in Russia involved in arms trafficking",
     schema="Company",
     country="RU",
     program_id="EU-RU-2022",
     sanctions=None,
     ownership=None,
+    include_caption=True,
 ):
-    metadata = {"schema": schema, "country": country, "programId": program_id, "name": name}
+    metadata = {"country": country, "programId": program_id, "datasets": []}
     doc = {
         "doc_id": doc_id,
+        "schema": schema,
         "text_blob": text_blob,
         "identifiers": {},
         "metadata": metadata,
     }
+    if include_caption:
+        doc["caption"] = caption
     if sanctions is not None:
         doc["sanctions"] = sanctions
     if ownership is not None:
@@ -43,9 +47,28 @@ def rag():
 
 
 def test_build_context_contains_entity_name(rag):
-    doc = make_doc(name="Acme Corp")
+    doc = make_doc(caption="Acme Corp")
     context = rag.build_context([doc])
     assert "Acme Corp" in context
+
+
+def test_build_context_uses_caption_for_entity_name(rag):
+    doc = make_doc(
+        caption="Globex Industries",
+        text_blob="something else entirely as the first token",
+    )
+    context = rag.build_context([doc])
+    assert "Entity: Globex Industries" in context
+
+
+def test_build_context_falls_back_to_first_token_when_caption_absent(rag):
+    doc = make_doc(
+        include_caption=False,
+        text_blob="Initech other words here",
+    )
+    assert "caption" not in doc
+    context = rag.build_context([doc])
+    assert "Entity: Initech" in context
 
 
 def test_build_context_truncates_text_blob(rag):
@@ -72,8 +95,8 @@ def test_build_context_omits_ownership_when_absent(rag):
 
 
 def test_build_context_separates_documents_with_dashes(rag):
-    doc1 = make_doc(doc_id="d1", name="First Co")
-    doc2 = make_doc(doc_id="d2", name="Second Co")
+    doc1 = make_doc(doc_id="d1", caption="First Co")
+    doc2 = make_doc(doc_id="d2", caption="Second Co")
     context = rag.build_context([doc1, doc2])
     assert "---" in context
     assert "First Co" in context
@@ -119,7 +142,7 @@ def test_generate_passes_truncation_true(rag):
 
 def test_generate_respects_k(rag):
     rag.k = 2
-    docs = [make_doc(doc_id=f"d{i}", name=f"Entity{i}") for i in range(5)]
+    docs = [make_doc(doc_id=f"d{i}", caption=f"Entity{i}") for i in range(5)]
     with patch.object(rag, "build_context", wraps=rag.build_context) as spy:
         rag.generate("q", docs)
         passed = spy.call_args[0][0]
