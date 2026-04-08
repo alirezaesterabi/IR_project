@@ -4,9 +4,20 @@ from transformers import pipeline
 
 
 class RAGPipeline:
-    def __init__(self, k=3, max_tokens_per_doc=100, model_name="google/flan-t5-base"):
+    def __init__(
+        self,
+        k=3,
+        max_tokens_per_doc=100,
+        model_name="google/flan-t5-base",
+        repetition_penalty=2.0,
+        no_repeat_ngram_size=3,
+        num_beams=4,
+    ):
         self.k = k
         self.max_tokens_per_doc = max_tokens_per_doc
+        self.repetition_penalty = repetition_penalty
+        self.no_repeat_ngram_size = no_repeat_ngram_size
+        self.num_beams = num_beams
         self.pipeline = pipeline("text2text-generation", model=model_name)
 
     def build_context(self, documents: list[dict]) -> str:
@@ -28,12 +39,16 @@ class RAGPipeline:
             if schema:
                 lines.append(f"Type: {schema}")
 
-            country = metadata.get("country")
+            country = metadata.get("country", [])
             if country:
+                if isinstance(country, list):
+                    country = ", ".join(country)
                 lines.append(f"Country: {country}")
 
-            program_id = metadata.get("programId")
+            program_id = metadata.get("programId", [])
             if program_id:
+                if isinstance(program_id, list):
+                    program_id = ", ".join(program_id)
                 lines.append(f"Programme: {program_id}")
 
             sanctions = doc.get("sanctions")
@@ -77,7 +92,14 @@ class RAGPipeline:
         truncated_docs = documents[: self.k]
         context = self.build_context(truncated_docs)
         prompt = self.build_prompt(query, context)
-        output = self.pipeline(prompt, max_new_tokens=200, truncation=True)
+        output = self.pipeline(
+            prompt,
+            max_new_tokens=200,
+            truncation=True,
+            repetition_penalty=self.repetition_penalty,
+            no_repeat_ngram_size=self.no_repeat_ngram_size,
+            num_beams=self.num_beams,
+        )
         summary = output[0]["generated_text"]
         return {
             "summary": summary,

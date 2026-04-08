@@ -12,13 +12,17 @@ def make_doc(
     caption="Acme Corp",
     text_blob="Acme Corp is a sanctioned entity based in Russia involved in arms trafficking",
     schema="Company",
-    country="RU",
-    program_id="EU-RU-2022",
+    country=("RU",),
+    program_id=("EU-RU-2022",),
     sanctions=None,
     ownership=None,
     include_caption=True,
 ):
-    metadata = {"country": country, "programId": program_id, "datasets": []}
+    metadata = {
+        "country": list(country),
+        "programId": list(program_id),
+        "datasets": [],
+    }
     doc = {
         "doc_id": doc_id,
         "schema": schema,
@@ -138,6 +142,27 @@ def test_generate_passes_truncation_true(rag):
     _, kwargs = rag._mock_hf.call_args
     assert kwargs.get("truncation") is True
     assert kwargs.get("max_new_tokens") == 200
+
+
+def test_generate_passes_repetition_penalty(rag):
+    doc = make_doc()
+    rag.generate("q", [doc])
+    _, kwargs = rag._mock_hf.call_args
+    assert kwargs.get("repetition_penalty") == 2.0
+
+
+def test_generate_passes_no_repeat_ngram_size(rag):
+    doc = make_doc()
+    rag.generate("q", [doc])
+    _, kwargs = rag._mock_hf.call_args
+    assert kwargs.get("no_repeat_ngram_size") == 3
+
+
+def test_build_context_renders_country_as_joined_string(rag):
+    doc = make_doc(country=("RU", "BY", "IR"))
+    context = rag.build_context([doc])
+    assert "Country: RU, BY, IR" in context
+    assert "['RU'" not in context
 
 
 def test_generate_respects_k(rag):
