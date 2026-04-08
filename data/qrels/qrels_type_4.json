@@ -3,106 +3,117 @@
   "n_queries": 14,
   "qrels": {
     "Q4_001": {
-      "NK-EL5cFqL5pRrFRBSUjny38g": 1,
-      "NK-FoHPKahRH6oYTxbT7Tycjk": 1,
-      "NK-AJdA3Gt5CuYSxKVuUAfQfy": 1,
-      "NK-B95TF42hNDRBtmaRrW4wwp": 1,
-      "NK-fjaabCsg83J67wd2T3LXoP": 1
+      "NK-B95TF42hNDRBtmaRrW4wwp": 2,
+      "NK-5TRJmJdGoAUdqQSsi7Lz6a": 2,
+      "acf-546965f1bd6c7683598d13184cbc66c7f6074558": 1,
+      "NK-6toncnZiQbuPzaAudSP6tw": 1
     },
     "Q4_002": {
-      "NK-MYHWYA7zLoQoGrPfVPUcYt": 1,
-      "NK-MVtCt6RAzxf245XiueFWJp": 1,
-      "NK-EQ3dGe5XJhvdMYtQfvKVsP": 1,
-      "kprusi-6bf4f6bf84f9b42a737a9bdf27e84bae9f396585": 1,
-      "NK-Xv8CnM8sgddxx7QenotGtb": 1
+      "NK-EQ3dGe5XJhvdMYtQfvKVsP": 2
     },
     "Q4_003": {
-      "NK-EL5cFqL5pRrFRBSUjny38g": 1,
-      "NK-B95TF42hNDRBtmaRrW4wwp": 1,
-      "NK-FoHPKahRH6oYTxbT7Tycjk": 1,
-      "NK-AJdA3Gt5CuYSxKVuUAfQfy": 1,
-      "NK-eXzFarXNX73XPhYRp9xM33": 1,
-      "Q112041861": 1,
-      "NK-fjaabCsg83J67wd2T3LXoP": 1
+      "NK-B95TF42hNDRBtmaRrW4wwp": 2
     },
     "Q4_004": {
-      "NK-fjaabCsg83J67wd2T3LXoP": 1,
-      "NK-EL5cFqL5pRrFRBSUjny38g": 1,
-      "NK-FoHPKahRH6oYTxbT7Tycjk": 1,
-      "NK-AJdA3Gt5CuYSxKVuUAfQfy": 1
+      "NK-hyKMzKozPsV2LaNZtDqqoC": 2,
+      "NK-L2aciRRmEVreWptGzTA5MQ": 2,
+      "NK-AHmLBXShgacRH3Doimkdv7": 2,
+      "NK-bCjPZb28YG549GoacB5PvD": 2,
+      "NK-hL3Xv56XN3YqB5QYVcCa22": 2,
+      "NK-RNLrSTsR2ixTEVWMeJprzC": 2,
+      "NK-n5Bf2hEsizAPpz4cvjkuTT": 2,
+      "NK-T99fVT6rNS6tGYTK3mRfGN": 2,
+      "NK-EgaDHFsaqRWDPrZHnNGvnC": 2,
+      "NK-euCcvPeH3UduiJAFhgdYQh": 2,
+      "NK-e5V58AvucQkT5E3H6EMd2C": 2,
+      "NK-Z9eXoXqGmXo75eJ6CQCXaV": 2,
+      "NK-CFYtLmQ52VmAVQZwyTNHKY": 2,
+      "NK-h5ym5GPdFihTrS3PzR8ipB": 2,
+      "NK-QrE26F2CD8REmkVWj2btmJ": 2,
+      "NK-MGT5v2PXdU8VNueqqkKkLZ": 2,
+      "ua-ws-vessel-1486": 1,
+      "ua-ws-vessel-613": 1,
+      "ua-ws-vessel-617": 1,
+      "NK-3fhQTLcmgr6GCEN7ZgkPjt": 1,
+      "NK-HoHtMLF9BQuRJmAdicR4cQ": 1,
+      "NK-kKmdPdAXaFCdqrJfubLxjZ": 1
     },
     "Q4_005": {
-      "NK-EL5cFqL5pRrFRBSUjny38g": 1,
-      "Q112041861": 1,
-      "NK-eXzFarXNX73XPhYRp9xM33": 1
+      "NK-SA8vmm8evWo5zUoVeN6g3H": 2,
+      "NK-g5c4xwc3CuQobtZZtNL64i": 2,
+      "NK-BxdfrmWUHNQUUCj5FE6tQt": 2,
+      "NK-9AU6V8ADXZysHRebqhpGz8": 2,
+      "NK-WDwNKSpjEwTaniJGoPAWTU": 2,
+      "NK-B95TF42hNDRBtmaRrW4wwp": 2
     },
     "Q4_006": {
-      "Q36597284": 1,
-      "NK-Z9oNBzxf4NzcB6GKXwgPUL": 1,
-      "Q20850503": 1,
-      "NK-SGoKLj97jDeyJGnSyRhJJN": 1,
-      "NK-h2aV4Qyf26ZsX33pRzHRDc": 1,
-      "Q120853746": 1,
-      "Q107586452": 1
+      "Q120855805": 2,
+      "Q120853399": 2,
+      "Q120852137": 2,
+      "Q120855240": 2,
+      "Q120854870": 2,
+      "Q120851800": 2,
+      "Q120853453": 2,
+      "Q120852209": 2,
+      "Q120853202": 2,
+      "Q120851545": 2,
+      "Q120855520": 2,
+      "Q120853334": 2,
+      "Q120853194": 2,
+      "Q120854828": 2,
+      "Q120854113": 2,
+      "Q120853792": 2
     },
     "Q4_007": {
-      "Q120852793": 1,
-      "NK-N7dfJjNtqB9hibmDaoviPf": 1,
-      "NK-TsnsTYDD5QeZ9gDbFB2WbU": 1,
-      "NK-3MPTNLvV5pezgcPmtqapAM": 1,
-      "NK-mFuJH7pUGnr7fegsQYbRWp": 1,
-      "NK-8H4ADaELozj4fx4NYAYZjF": 1,
-      "NK-n8gyfuPWedBXSbpTnLarj8": 1,
-      "NK-YHHfaWGJ4rhJczQmJrZVfC": 1,
-      "NK-Za9Z4Nz5aGAWsd3B8H4VrT": 1
+      "Q120855805": 2,
+      "Q120853399": 2,
+      "Q120852137": 2,
+      "Q120855240": 2,
+      "Q120854870": 2,
+      "Q120851800": 2,
+      "Q120853453": 2,
+      "Q120852209": 2,
+      "Q120853202": 2,
+      "Q120851545": 2,
+      "Q120855520": 2,
+      "Q120853334": 2,
+      "Q120853194": 2,
+      "Q120854828": 2,
+      "Q120854113": 2,
+      "Q120853792": 2
     },
     "Q4_008": {
-      "Q20850503": 1,
-      "Q36597284": 1,
-      "NK-Z9oNBzxf4NzcB6GKXwgPUL": 1,
-      "Q120852793": 1
+      "NK-K8SU4SNzr9PEYs6wc9r4VT": 2,
+      "acf-4f2df6168a6e6dd0795d5d3134c74f6ade51303e": 2,
+      "Q117875033": 2,
+      "Q117874377": 2,
+      "Q117874730": 2
     },
     "Q4_009": {
-      "NK-SGoKLj97jDeyJGnSyRhJJN": 1,
-      "Q107586452": 1,
-      "Q36597284": 1,
-      "Q20850503": 1
-    },
-    "Q4_010": {
-      "Q36597284": 1,
-      "Q120853746": 1,
-      "Q120852793": 1,
-      "Q20850503": 1
+      "NK-SGoKLj97jDeyJGnSyRhJJN": 2,
+      "Q107586452": 2
     },
     "Q4_011": {
-      "NK-kNULoiM7XfTYeWLtTZ4UHg": 1,
-      "NK-jLcvcAFxBd2aYNeqUvit3a": 1,
-      "NK-hQEF3vmPJKUQshxZRMEEgo": 1,
-      "NK-9iiiphJsGDHoyN8WZuof3Q": 1
+      "NK-WEiG5L6au7ktRSmXSPbBjE": 2,
+      "NK-kNULoiM7XfTYeWLtTZ4UHg": 2,
+      "NK-hQEF3vmPJKUQshxZRMEEgo": 2
     },
     "Q4_012": {
-      "NK-mZimbPviBCZ8d7BeGeK5nQ": 1,
-      "NK-nxAfGhdZUyo6cQJ6vVibxz": 1,
-      "NK-6mWPPVmJzBchaEjgzqcZeB": 1,
-      "NK-MkLoWstKvmwk5LKkKiWepk": 1,
-      "NK-Gn2TD79skZ3tSjuXvPmMfZ": 1
-    },
-    "Q4_013": {
-      "NK-Nz46UHrXiSCEWLkEQTdoPb": 1,
-      "NK-f8wa3QmkpZDMtjiA6AkMns": 1,
-      "NK-AmRGwyzifJDB2PHBJTGyyM": 1,
-      "NK-jF6xZDZzsiGDtJtGcBqoLi": 1,
-      "NK-f24scmxDu6J7gRYcS6nbKt": 1,
-      "Q461631": 1,
-      "NK-eih3utdAN5JxttKvdA2C7y": 1
+      "NK-nxAfGhdZUyo6cQJ6vVibxz": 2,
+      "NK-mZimbPviBCZ8d7BeGeK5nQ": 2
     },
     "Q4_014": {
-      "NK-jF6xZDZzsiGDtJtGcBqoLi": 1,
-      "NK-Nz46UHrXiSCEWLkEQTdoPb": 1,
-      "NK-f8wa3QmkpZDMtjiA6AkMns": 1,
-      "NK-AmRGwyzifJDB2PHBJTGyyM": 1,
-      "NK-f24scmxDu6J7gRYcS6nbKt": 1,
-      "NK-eih3utdAN5JxttKvdA2C7y": 1
+      "ca-sema-c75daea1cd04a9a94bed022dfe2fe1e284e4f77f": 2,
+      "NK-dk49S4xLEYXiKGHp3tqGSn": 2,
+      "NK-jF6xZDZzsiGDtJtGcBqoLi": 2,
+      "NK-5PJzeksBUtpVFoJHPNXeGj": 2
+    },
+    "Q4_010": {
+      "oc-companies-gb-00202231": 1
+    },
+    "Q4_013": {
+      "NK-BmhnwXehGfe4tnFs8FK7SW": 1,
+      "NK-Nz46UHrXiSCEWLkEQTdoPb": 2
     }
   }
 }
