@@ -41,6 +41,7 @@ models/
 *.pkl
 *.pickle
 chromadb/
+chroma_db/
 
 # ── Results and logs ──────────────────────────────────────────────────────────
 results/
