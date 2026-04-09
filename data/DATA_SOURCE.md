@@ -3,22 +3,33 @@
 ## Dataset Information
 
 **Dataset**: OpenSanctions Default
+
 **Version**: March 21, 2026 snapshot
-**Official URL**: https://www.opensanctions.org/datasets/default/
+
+**Official URL**: [https://www.opensanctions.org/datasets/default/](https://www.opensanctions.org/datasets/default/)
 
 ## Download Instructions
 
 ### Primary Dataset
+
 Download the latest version of `targets.nested.json` from:
-https://www.opensanctions.org/datasets/default/
+
+[https://www.opensanctions.org/datasets/default/](https://www.opensanctions.org/datasets/default/)
 
 Click on the download link for **targets.nested.json** (approximately 3.68 GB).
 
 ### File Placement
+
 After downloading, place the file in:
-```
+
+```text
 data/raw_data/targets.nested.json
 ```
+
+For local reruns, the repository also supports:
+
+- `data/raw_data/sample_10k.json` for quick reruns
+- `data/raw_data/sample_100k.json` for larger local validation
 
 ## Dataset Overview
 
@@ -31,6 +42,7 @@ data/raw_data/targets.nested.json
 ## Key Fields
 
 Each entity record contains:
+
 - `id`: Unique entity identifier
 - `schema`: Entity type (Person, Company, Vessel, etc.)
 - `caption`: Primary display name
@@ -46,12 +58,14 @@ Each entity record contains:
 
 ## Files in This Directory
 
-- `raw_data/targets.nested.json` - Main dataset (ignored by git due to size)
-- `raw_data/sample_targets.json` - Sample of 100 records for testing
-- `DATA_SOURCE.md` - This file
+- `raw_data/targets.nested.json` - full dataset, local only
+- `raw_data/sample_10k.json` - tracked 10K raw sample for quick reruns
+- `raw_data/sample_100k.json` - larger local-only raw sample
+- `DATA_SOURCE.md` - this file
 
 ## Notes
 
-- The main `targets.nested.json` file is excluded from git version control
-- Always download the latest version from the official source
-- Sample file is included in git for development/testing purposes
+- The main `targets.nested.json` file is excluded from git version control.
+- `sample_100k.json` is intended for local use and is not part of the default tracked dataset story.
+- The canonical rerun guide is `docs/rerun_pipeline.md`.
+- Always download the latest full dataset from the official source when you need a full-scale rerun.

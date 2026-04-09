@@ -2,7 +2,7 @@
 
 ## Purpose of this document
 
-This document is a long-form narrative of what we have done in the project so far, written in a way that can later be turned into presentation notes. It is not meant to replace the `README.md`, and it is not a planning checklist like `documents/implementation_phases.md`. Instead, it explains the project as a story: what problem we started from, what we discovered, what we built, why we made certain decisions, and what remains to be completed.
+This document is a long-form narrative of what we have done in the project so far, written in a way that can later be turned into presentation notes. It is not meant to replace the `README.md`, and it is not a planning checklist. Instead, it explains the project as a story: what problem we started from, what we discovered, what we built, why we made certain decisions, and what remains to be completed.
 
 All seven query types are now included in this version so the document can serve as a complete presentation source. The evaluation section is still deliberately partial, because the final evaluation write-up should be updated once the remaining evaluation work is finished.
 

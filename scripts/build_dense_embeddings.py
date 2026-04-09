@@ -7,7 +7,8 @@ Usage
   python scripts/build_dense_embeddings.py --docs data/json_format_data/full/documents.jsonl \\
       --limit 1000 --model minilm
 
-  python scripts/build_dense_embeddings.py --model all --chroma
+  python scripts/build_dense_embeddings.py --docs data/json_format_data/subset/documents.jsonl \\
+      --model minilm --chroma --run-tag 10K_YYYYMMDD
 
 Environment: HF_TOKEN or HUGGING_FACE_HUB_TOKEN for gated models; optional
 --hf-token path to a file containing the token.
@@ -372,7 +373,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--docs",
         type=str,
         default=None,
-        help="Path to documents.jsonl (default: full subset_100k fallback like build_index.py)",
+        help="Path to documents.jsonl (default: full/documents.jsonl, else subset/documents.jsonl)",
     )
     p.add_argument(
         "--limit",
@@ -455,7 +456,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         docs_path = root / "data" / "json_format_data" / "full" / "documents.jsonl"
         if not docs_path.exists():
-            docs_path = root / "data" / "json_format_data" / "subset_100k" / "documents.jsonl"
+            docs_path = root / "data" / "json_format_data" / "subset" / "documents.jsonl"
 
     models_dir = Path(args.models_dir) if args.models_dir else root / "models"
     chroma_dir = Path(args.chroma_dir) if args.chroma_dir else root / "chroma_db"
@@ -482,10 +483,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.device == "cuda" and not torch.cuda.is_available():
         print(
             "Error: --device cuda was requested but torch.cuda.is_available() is False.\n"
-            "  On Google Colab: Runtime → Change runtime type → GPU, then reinstall a CUDA\n"
-            "  PyTorch build (see notebooks/colab_dense_embeddings.ipynb). "
-            "Do not use `pip install -r requirements.txt` before fixing torch — it often "
-            "installs the CPU-only wheel from PyPI."
+            "  Install a CUDA-enabled PyTorch build from pytorch.org and confirm the\n"
+            "  local machine exposes a working GPU before retrying."
         )
         return 1
 
@@ -516,11 +515,9 @@ def main(argv: list[str] | None = None) -> int:
         if "+cpu" in tv:
             print(
                 "WARNING: Using CPU for encoding — PyTorch wheel is CPU-only "
-                f"({tv!r}). On Google Colab, `pip install -r requirements.txt` "
-                "often installs `torch` from PyPI and replaces the CUDA build.\n"
-                "  Fix: install CUDA PyTorch from pytorch.org, then "
-                "`pip install -r requirements-colab-dense.txt` "
-                "(see notebooks/colab_dense_embeddings.ipynb).\n"
+                f"({tv!r}). If you expected GPU encoding, install a CUDA-enabled "
+                "PyTorch build from pytorch.org and verify that `torch.cuda.is_available()` "
+                "returns True.\n"
             )
 
     t0 = time.time()

@@ -18,7 +18,7 @@ Usage
   python scripts/build_index.py --model identifier
 
   # Quick test on subset
-  python scripts/build_index.py --docs data/json_format_data/subset_100k/documents.jsonl
+  python scripts/build_index.py --docs data/json_format_data/subset/documents.jsonl
 
 Saved artefacts
 ---------------
@@ -67,7 +67,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--docs", type=str, default=None,
-        help="Path to documents.jsonl (default: data/json_format_data/full/documents.jsonl)",
+        help="Path to documents.jsonl (default: full/documents.jsonl, else subset/documents.jsonl)",
     )
     parser.add_argument(
         "--models-dir", type=str, default=None,
@@ -85,7 +85,7 @@ def main() -> None:
     else:
         docs_path = root / "data" / "json_format_data" / "full" / "documents.jsonl"
         if not docs_path.exists():
-            docs_path = root / "data" / "json_format_data" / "subset_100k" / "documents.jsonl"
+            docs_path = root / "data" / "json_format_data" / "subset" / "documents.jsonl"
 
     models_dir = Path(args.models_dir) if args.models_dir else root / "models"
 

@@ -1047,8 +1047,7 @@ Not covered in this course but important for web search.
 - Järvelin, K., & Kekäläinen, J. (2002). Cumulated gain-based evaluation of IR techniques. *ACM TOIS.* (nDCG paper)
 
 **This project:**
-- [Implementation phases](../../../documents/implementation_phases.md) (Phase 4–6: qrels, pooling, evaluation)
-- [Assignment 1](../../../documents/assignment_1.pdf) §3.4 Evaluation Strategy
+- [Assignment 1 Submission Report](../../../docs/assignment_1_submission_report.pdf) §3.4 Evaluation Strategy
 
 ---
 

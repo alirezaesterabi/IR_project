@@ -23,7 +23,7 @@ Usage
   python scripts/excel_to_json_qrels.py
   python scripts/excel_to_json_qrels.py --input data/potential_queries/queries_type_6.xlsx
   python scripts/excel_to_json_qrels.py --output-dir data/qrels
-  python scripts/excel_to_json_qrels.py --docs data/json_format_data/subset_100k/documents.jsonl
+  python scripts/excel_to_json_qrels.py --docs data/json_format_data/subset/documents.jsonl
 """
 
 import argparse
@@ -191,7 +191,7 @@ def main() -> None:
     else:
         docs_path = root / "data" / "json_format_data" / "full" / "documents.jsonl"
         if not docs_path.exists():
-            docs_path = root / "data" / "json_format_data" / "subset_100k" / "documents.jsonl"
+            docs_path = root / "data" / "json_format_data" / "subset" / "documents.jsonl"
 
     if args.input:
         input_files = [Path(args.input)]

@@ -16,7 +16,7 @@ Or from a notebook/script:
 
     run_pipeline(
         input_path=Path("data/raw_data/targets.nested.json"),
-        output_dir=Path("data/json_format_data/subset_100k"),
+        output_dir=Path("data/json_format_data/subset"),
         max_records=100_000,
     )
 """
@@ -49,7 +49,8 @@ def run_pipeline(
     input_path : Path, optional
         Source JSONL file. Defaults to data/raw_data/targets.nested.json.
     output_dir : Path, optional
-        Output directory. Defaults to data/json_format_data/subset_{max_records}.
+        Output directory. Defaults to data/json_format_data/subset for subset
+        runs, or data/json_format_data/full for full-corpus runs.
         Will be created if it does not exist.
     max_records : int, optional
         Process at most this many records. None = full dataset.
@@ -76,7 +77,7 @@ def run_pipeline(
     input_path = Path(input_path)
 
     if output_dir is None:
-        label = f"subset_{max_records // 1000}k" if max_records else "full"
+        label = "subset" if max_records else "full"
         output_dir = root / "data" / "json_format_data" / label
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -203,7 +204,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--output-dir", type=str, default=None,
-        help="Output directory (default: data/json_format_data/subset_<N>k)"
+        help="Output directory (default: data/json_format_data/subset or full)"
     )
     parser.add_argument(
         "--no-progress", action="store_true",
