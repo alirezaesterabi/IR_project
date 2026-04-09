@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenSanctions IR Project Presentation</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --slide-bg: #ffffff;
+      --text: #18212b;
+      --muted: #5a6775;
+      --accent: #214e84;
+      --accent-soft: #e8f0fb;
+      --border: #d7e0eb;
+      --shadow: 0 18px 40px rgba(15, 32, 56, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      padding: 24px 0 48px;
+    }
+
+    .deck {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .slide {
+      width: 13.333in;
+      min-height: 7.5in;
+      background: var(--slide-bg);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 0.6in 0.75in 0.55in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--accent) 0%, #4f88c6 100%);
+    }
+
+    .title-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 25px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      color: var(--accent);
+    }
+
+    h3 {
+      font-size: 17px;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 9.8in;
+      line-height: 1.45;
+    }
+
+    .meta {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .grid-even {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .bullets {
+      padding-left: 22px;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+
+    .bullets li {
+      margin-bottom: 14px;
+    }
+
+    .bullets.tight li {
+      margin-bottom: 10px;
+    }
+
+    .small {
+      font-size: 17px;
+    }
+
+    .callout {
+      background: var(--accent-soft);
+      border-left: 5px solid var(--accent);
+      padding: 16px 18px;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      background: #fbfdff;
+    }
+
+    .box h3 {
+      margin-bottom: 10px;
+    }
+
+    .box p,
+    .box ul {
+      font-size: 17px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .box ul {
+      padding-left: 20px;
+    }
+
+    .two-column-list {
+      columns: 2;
+      column-gap: 28px;
+      padding-left: 22px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .two-column-list li {
+      margin-bottom: 10px;
+      break-inside: avoid;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0.28in;
+      left: 0.75in;
+      right: 0.75in;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .timeline .step {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      background: #fbfdff;
+    }
+
+    .timeline .step strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .timeline .step span {
+      display: block;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .pipeline-shell {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fbfdff;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pipeline-head {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .pipeline-flow {
+      display: grid;
+      grid-template-columns: 1.1fr 0.22fr 1.2fr 0.22fr 1.2fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pipeline-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 12px 14px;
+      min-height: 96px;
+    }
+
+    .pipeline-card strong {
+      display: block;
+      font-size: 15px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .pipeline-card span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .pipeline-card.active {
+      background: var(--accent-soft);
+      border-color: #7aa6d8;
+      box-shadow: inset 0 0 0 2px rgba(33, 78, 132, 0.08);
+    }
+
+    .pipeline-arrow {
+      text-align: center;
+      font-size: 28px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .lane-stack {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .pipeline-mini {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    @page {
+      size: 13.333in 7.5in;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .deck {
+        gap: 0;
+      }
+
+      .slide {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        page-break-after: always;
+      }
+
+      .slide:last-child {
+        page-break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide title-slide">
+      <span class="tag">15-minute presentation</span>
+      <h1>OpenSanctions IR Project</h1>
+      <p class="subtitle">
+        Building a hybrid retrieval pipeline for sanctions entity search using
+        structured preprocessing, classical IR, dense retrieval, pooling, and fusion.
+      </p>
+      <p class="meta">
+        Based on `documents/presentation_source.md`<br />
+        Scope of this deck: all 7 query types
+      </p>
+      <div class="callout">
+        Core message: this project is not just about ranking documents. It is about
+        handling a difficult real-world retrieval problem where exact identifiers,
+        aliases, metadata filters, and semantic descriptions all matter.
+      </div>
+      <div class="footer">
+        <span>QMUL IR Project</span>
+        <span>1</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>1. Problem Motivation</h2>
+      <div class="grid-2">
+        <div>
+          <ul class="bullets">
+            <li>Sanctions search is a high-stakes IR problem: missing a relevant entity can have legal and regulatory consequences.</li>
+            <li>Users do not always search in the same way. Some queries are exact lookups, while others are descriptive or investigative.</li>
+            <li>That means a single retrieval strategy is unlikely to be enough across the full task.</li>
+            <li>Our goal was to build a system that can support multiple query behaviours rather than a simple keyword search demo.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Main challenge</h3>
+          <p>
+            We are not searching tidy documents. We are searching entities with aliases,
+            identifiers, nested metadata, and uneven descriptions gathered from many sources.
+          </p>
+          <p class="note">
+            Presentation angle: start by framing this as a real compliance retrieval problem,
+            not just a classroom ranking exercise.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Why this project matters</span>
+        <span>2</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>2. Why OpenSanctions Is Challenging</h2>
+      <div class="grid-2">
+        <div>
+          <ul class="bullets">
+            <li>The dataset is large, heterogeneous, and built from many international sources.</li>
+            <li>Records are nested and multi-field rather than flat, so they are not directly ready for IR indexing.</li>
+            <li>The same entity may appear with different aliases, identifiers, descriptions, or source-specific metadata.</li>
+            <li>Some entity types are easy to identify through strong identifiers, while others depend on names or descriptive text.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Why this matters for retrieval</h3>
+          <ul>
+            <li>Exact matching is necessary for identifier lookups.</li>
+            <li>Lexical ranking is useful for names and aliases.</li>
+            <li>Semantic retrieval is needed when wording does not overlap.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Dataset understanding came first</span>
+        <span>3</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>3. Preprocessing Became the Foundation</h2>
+      <div class="grid-2">
+        <div>
+          <ul class="bullets tight">
+            <li>We built a streaming parser so the raw file could be processed safely without loading everything into memory.</li>
+            <li>Each nested record was flattened into a retrieval-ready document representation.</li>
+            <li>We preserved a clear distinction between searchable text, raw identifiers, and structured metadata.</li>
+            <li>This preprocessing stage became the base that every later component depends on.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Processed document fields</h3>
+          <ul class="small">
+            <li>`doc_id`</li>
+            <li>`caption`</li>
+            <li>`schema`</li>
+            <li>`text_blob` for lexical retrieval</li>
+            <li>`tokens` for BM25</li>
+            <li>`identifiers` for exact matching</li>
+            <li>`metadata` for filters and context</li>
+            <li>`embedding_text` for dense retrieval</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 18px;">
+        Key design choice: we did not index raw JSON directly. We created an intermediate
+        document format shaped around retrieval needs.
+      </div>
+      <div class="footer">
+        <span>Representation before ranking</span>
+        <span>4</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>4. Text Processing Method</h2>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Field extraction stage</h3>
+          <ul>
+            <li>Group `name`, `alias`, and `previousName` as identity-bearing text.</li>
+            <li>Collect keyword-style fields such as sector, topics, legal form, and position.</li>
+            <li>Flatten free-text fields like `notes`, `description`, and `summary`.</li>
+            <li>Traverse nested sanctions and address objects to recover authority, reason, city, and address content.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Token-processing stage</h3>
+          <ul>
+            <li>Unicode normalisation, lowercasing, punctuation cleanup, and whitespace normalisation.</li>
+            <li>Light normalisation for names so identity signals are preserved.</li>
+            <li>Stop-word filtering and spaCy lemmatisation for free text to improve recall.</li>
+            <li>Identifiers kept raw; metadata kept separate from the main lexical text.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 18px;">
+        The final `text_blob` is assembled in a meaningful order: names first, then keyword fields,
+        then descriptive text, then sanctions and address content. This gives BM25 and TF-IDF a
+        cleaner lexical view of each entity.
+      </div>
+      <div class="footer">
+        <span>How preprocessing actually works</span>
+        <span>5</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>5. Query Types and Examples I</h2>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Type 1: Exact Identifier</h3>
+          <p>Query by exact field value such as IMO, MMSI, or registration number.</p>
+          <p class="note">Example: `IMO9296822`</p>
+          <p class="note">Metric: `Precision@1`, `MRR` | Secondary: `MAP`</p>
+        </div>
+        <div class="box">
+          <h3>Type 2: Name / Alias</h3>
+          <p>Lookup by entity name, alias, or historical name with possible variation.</p>
+          <p class="note">Example: `Angelica Schulte`</p>
+          <p class="note">Metric: `Precision@1`, `MRR` | Secondary: `MAP`</p>
+        </div>
+      </div>
+      <div class="grid-even" style="margin-top: 18px;">
+        <div class="box">
+          <h3>Type 3: Semantic / Descriptive</h3>
+          <p>User describes the target without knowing the exact entity name.</p>
+          <p class="note">Example: `Russian crude oil tanker evading sanctions in the Baltic Sea`</p>
+          <p class="note">Metric: `nDCG@10` | Secondary: `MAP`, `Recall@10`</p>
+        </div>
+        <div class="box">
+          <h3>Type 4: Relational / Graph</h3>
+          <p>Question about links between entities, ownership chains, or network relations.</p>
+          <p class="note">Example: `What vessels is Ketee Co Ltd linked to?`</p>
+          <p class="note">Metric: `nDCG@10` | Secondary: `MAP`, `Recall@10`</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Different search behaviours, different retrieval needs</span>
+        <span>6</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>6. Query Types and Examples II</h2>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Type 5: Cross-Dataset Deduplication</h3>
+          <p>Find records of the same entity across different sources and list entries.</p>
+          <p class="note">Example: `SAGITTA sanctions all sources`</p>
+          <p class="note">Metric: `Recall@10`, `Recall@20` | Secondary: `MAP`</p>
+        </div>
+        <div class="box">
+          <h3>Type 6: Jurisdiction / Filter</h3>
+          <p>Search constrained by authority, programme ID, country, or other metadata.</p>
+          <p class="note">Example: `OFAC sanctioned vessels Russian oil 2025`</p>
+          <p class="note">Metric: `Recall@10`, `Recall@20` | Secondary: `MAP`</p>
+        </div>
+      </div>
+      <div class="grid-even" style="margin-top: 18px;">
+        <div class="box">
+          <h3>Type 7: RAG Summarisation</h3>
+          <p>Return a grounded narrative answer built from retrieved evidence, not only a ranked list.</p>
+          <p class="note">Example: `Summarise all sanctions on the SAGITTA vessel`</p>
+          <p class="note">Metric: `RAGAS faithfulness` | Secondary: `answer relevance`</p>
+        </div>
+        <div class="box">
+          <h3>Overall metric logic</h3>
+          <p>
+            Different query types need different metrics because they represent
+            different information needs. At the system level, `Recall@10` is still
+            an important overall measure because missing a relevant entity is costly
+            in the sanctions domain.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Query types also determine evaluation</span>
+        <span>7</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>7. Two Retrieval Lanes</h2>
+      <div class="pipeline-shell">
+        <div class="pipeline-head">Architecture flow adapted from the assignment system diagram</div>
+        <div class="pipeline-flow">
+          <div class="pipeline-card">
+            <strong>Stage 1: Preprocessed corpus</strong>
+            <span>Each entity is represented through lexical text, identifiers, metadata, and `embedding_text`.</span>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="lane-stack">
+            <div class="pipeline-card">
+              <strong>Stage 2: Classical IR lane</strong>
+              <span>Identifier lookup, BM25, and TF-IDF over the lexical representation.</span>
+            </div>
+            <div class="pipeline-card active">
+              <strong>Stage 3: Dense retrieval lane</strong>
+              <span>Sentence embeddings and ChromaDB for semantic nearest-neighbour search.</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-card">
+            <strong>Stage 4: Hybrid ranking</strong>
+            <span>The two ranked outputs will later be combined rather than forcing one lane to dominate.</span>
+          </div>
+        </div>
+        <div class="pipeline-mini">This slide shows why the architecture needs two retrieval lanes before fusion.</div>
+      </div>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Classical IR lane</h3>
+          <ul>
+            <li>Uses exact identifiers, BM25, and TF-IDF.</li>
+            <li>Best for strong lexical evidence such as names and identifiers.</li>
+            <li>Interpretable and useful as the baseline retrieval stage.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Dense retrieval lane</h3>
+          <ul>
+            <li>Uses `embedding_text`, sentence-transformer embeddings, and ChromaDB.</li>
+            <li>Helps when relevant records do not share the same vocabulary as the query.</li>
+            <li>Adds semantic evidence for harder descriptive and relational queries.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Why we need two retrieval lanes</span>
+        <span>10</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>8. RRF Hybrid Ranking</h2>
+      <div class="pipeline-shell">
+        <div class="pipeline-head">Architecture flow adapted from the assignment system diagram</div>
+        <div class="pipeline-flow">
+          <div class="lane-stack">
+            <div class="pipeline-card">
+              <strong>Classical output</strong>
+              <span>Ranked list from Identifier, BM25, or TF-IDF.</span>
+            </div>
+            <div class="pipeline-card">
+              <strong>Dense output</strong>
+              <span>Ranked list from semantic nearest-neighbour search.</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-card active">
+            <strong>Stage 4: Reciprocal Rank Fusion</strong>
+            <span>Combine rank positions rather than trying to merge incompatible raw scores.</span>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-card">
+            <strong>Final hybrid results</strong>
+            <span>One fused ranking used for evaluation and later extensions.</span>
+          </div>
+        </div>
+        <div class="pipeline-mini">This is the step that turns two separate retrieval outputs into one hybrid result list.</div>
+      </div>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Why RRF is a good choice</h3>
+          <ul>
+            <li>Lexical and dense systems produce different score scales.</li>
+            <li>RRF combines ranks, so it avoids fragile score normalisation.</li>
+            <li>It is a practical way to capture complementary strengths.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>What this means conceptually</h3>
+          <ul>
+            <li>We do not force one model family to solve every query type.</li>
+            <li>The hybrid stage brings exact, lexical, and semantic evidence together.</li>
+            <li>This is the bridge from separate systems to one retrieval pipeline.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <span>From two ranked lists to one hybrid result</span>
+        <span>11</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>9. Building the Ground Truth</h2>
+      <div class="grid-even">
+        <div class="box">
+          <h3>Automatic or semi-automatic qrels</h3>
+          <ul>
+            <li><strong>Type 1:</strong> exact identifier match</li>
+            <li><strong>Type 2:</strong> name / alias / previous-name matching</li>
+            <li><strong>Type 5:</strong> same entity across datasets</li>
+            <li><strong>Type 6:</strong> metadata filters such as programme, country, or schema</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Pooling for types 3 and 4</h3>
+          <ul>
+            <li><strong>Type 3:</strong> descriptive queries cannot be judged by one field match</li>
+            <li><strong>Type 4:</strong> relational queries depend on links and context</li>
+            <li>Run multiple systems independently</li>
+            <li>Take top results from each system</li>
+            <li>Merge and deduplicate them into one judging pool</li>
+            <li>Assign manual relevance labels to the pooled set</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 18px;">
+        Pooling is how we make manual judgement practical: instead of reading the whole collection, we judge a smaller candidate set proposed by several retrieval systems.
+      </div>
+      <p class="note">
+        Type 7 is different again: it is not standard qrels-based evaluation because the output is a grounded narrative rather than only a ranked list.
+      </p>
+      <div class="footer">
+        <span>Different query types need different judgement strategies</span>
+        <span>12</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>10. Evaluation Status</h2>
+      <div class="grid-even">
+        <div class="box">
+          <h3>What is already in place</h3>
+          <ul>
+            <li>Query files organised by type</li>
+            <li>Qrels infrastructure</li>
+            <li>Pooling workflow for harder queries</li>
+            <li>Metric policy for all query types</li>
+            <li>Evaluation notebooks for run comparison</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>What we are not claiming yet</h3>
+          <ul>
+            <li>We are not presenting final comparative results here.</li>
+            <li>The evaluation story is intentionally left open for later update.</li>
+            <li>This version of the talk focuses on system construction and methodology.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">
+        This is a good place to say: the framework is ready, and the final results section will be updated once evaluation is complete.
+      </p>
+      <div class="footer">
+        <span>Evaluation is designed, but not finalised</span>
+        <span>13</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>11. Takeaways and Next Steps</h2>
+      <ul class="bullets">
+        <li>We turned a complex real-world dataset into a retrieval-ready corpus through structured preprocessing.</li>
+        <li>We designed the system around seven query behaviours instead of assuming one search pattern.</li>
+        <li>We implemented complementary retrieval lanes: exact, lexical, and dense.</li>
+        <li>We introduced pooling and fusion to support a more realistic IR workflow.</li>
+        <li>The next step is to complete and integrate the final evaluation story, including the different metric logic for Type 7.</li>
+      </ul>
+      <div class="callout" style="margin-top: 18px;">
+        Final message: the project progressed from understanding the retrieval problem,
+        to building the right document representation, to implementing a hybrid search architecture.
+      </div>
+      <div class="footer">
+        <span>Thank you</span>
+        <span>14</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
