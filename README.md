@@ -58,9 +58,17 @@ See [`data/DATA_SOURCE.md`](data/DATA_SOURCE.md) for download instructions.
 
 **What is tracked:**
 
-- `data/raw_data/sample_targets.json` — 100-record JSONL sample (used by all learning notebooks)
+- `data/raw_data/sample_targets.json` — 100-record legacy JSONL sample
+- `data/raw_data/sample_10k.json` — 10K raw sample for fast reruns / demos
 - `data/toy_example/documents.jsonl` — flattened and preprocessed version of the 100-record sample
 - `data/evaluation/queries_part_a.xlsx` — 50 auto-generated evaluation queries
+
+**Local-only data commonly used for reruns:**
+
+- `data/raw_data/sample_100k.json` — 100K raw sample for local validation
+- `data/raw_data/targets.nested.json` — full OpenSanctions dump
+
+For the current rerun workflow, see [`documents/rerun_pipeline.md`](documents/rerun_pipeline.md).
 
 ---
 
@@ -95,10 +103,18 @@ python -m venv env && source env/bin/activate
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 
-# 2. Run the preprocessing pipeline on the sample (no full dataset needed)
-python -m src.preprocessing.pipeline \
-    --input data/raw_data/sample_targets.json \
-    --output data/toy_example/documents.jsonl
+# 2. Run the shared pipeline from one of the tracked raw inputs
+# See documents/rerun_pipeline.md for the full step-by-step guide.
+.venv/bin/python - <<'PY'
+from pathlib import Path
+from src.preprocessing.pipeline import run_pipeline
+
+run_pipeline(
+    input_path=Path("data/raw_data/sample_10k.json"),
+    output_dir=Path("data/json_format_data/subset_100k"),
+    max_records=None,
+)
+PY
 
 # 3. Open the learning notebooks
 jupyter lab learning/modules/01_text_processing_indexing_retrieval/01_preprocessing.ipynb
@@ -132,8 +148,8 @@ python -m src.fusion.rrf \
     --dense results/runs/dense_minilm.csv \
     --output results/runs/rrf_minilm.csv
 
-# 5. Evaluate all available runs
-python scripts/evaluate_runs.py
+# 5. Evaluate in the main notebook
+jupyter lab notebooks/05_evaluation_types_1_6.ipynb
 ```
 
 To evaluate `bge-m3`, build the matching Chroma collection and run:
@@ -144,8 +160,12 @@ python -m src.fusion.rrf \
     --bm25 results/runs/bm25.csv \
     --dense results/runs/dense_bge_m3.csv \
     --output results/runs/rrf_bge_m3.csv
-python scripts/evaluate_runs.py
+jupyter lab notebooks/05_evaluation_types_1_6.ipynb
 ```
+
+The notebook writes its tables/plots into `notebooks/05_evaluation_types_1_6.ipynb`
+and exports CSV summaries under `results/evaluation/`. For a full rerun checklist,
+see `documents/rerun_pipeline.md`.
 
 ---
 

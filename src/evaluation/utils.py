@@ -214,6 +214,13 @@ def _run_for_queries(
     return out
 
 
+def _all_run_entries_empty(
+    run: Mapping[str, Mapping[str, float]],
+    query_ids: Iterable[str],
+) -> bool:
+    return all(not run.get(qid, {}) for qid in query_ids)
+
+
 def evaluate_type_subset(
     qrels: Mapping[str, Mapping[str, int]],
     run_dict: Mapping[str, Mapping[str, float]],
@@ -227,6 +234,8 @@ def evaluate_type_subset(
         return {m: float("nan") for m in metrics}
     q_sub = _qrels_for_queries(qrels, qids)
     r_sub = _run_for_queries(run_dict, qids)
+    if _all_run_entries_empty(r_sub, qids):
+        return {m: 0.0 for m in metrics}
     q_obj = Qrels(q_sub)
     r_obj = Run(r_sub)
     return evaluate(q_obj, r_obj, metrics)
@@ -291,6 +300,9 @@ def evaluate_per_query(
     rows: list[dict[str, Any]] = []
     for qid in query_ids:
         if qid not in qrels:
+            continue
+        if not run_dict.get(qid, {}):
+            rows.append({"query_id": qid, **{m: 0.0 for m in metrics}})
             continue
         q_obj = Qrels({qid: dict(qrels[qid])})
         r_obj = Run({qid: dict(run_dict.get(qid, {}))})

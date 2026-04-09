@@ -126,3 +126,25 @@ def test_evaluate_type_subset_ranx() -> None:
     m = evaluate_type_subset(qrels, run, ["q1"], ["map", "precision@1"])
     assert "map" in m
     assert m["precision@1"] == 1.0
+
+
+def test_evaluate_type_subset_empty_run_returns_zeroes() -> None:
+    pytest.importorskip("ranx")
+    from src.evaluation.utils import evaluate_type_subset
+
+    qrels = {"q1": {"d1": 1}, "q2": {"d2": 1}}
+    run = {"q1": {}, "q2": {}}
+    m = evaluate_type_subset(qrels, run, ["q1", "q2"], ["map", "precision@1"])
+    assert m == {"map": 0.0, "precision@1": 0.0}
+
+
+def test_evaluate_per_query_empty_run_returns_zeroes() -> None:
+    pytest.importorskip("ranx")
+    from src.evaluation.utils import evaluate_per_query
+
+    qrels = {"q1": {"d1": 1}}
+    run = {"q1": {}}
+    df = evaluate_per_query(qrels, run, ["q1"], ["map", "precision@1"])
+    assert df.iloc[0]["query_id"] == "q1"
+    assert df.iloc[0]["map"] == 0.0
+    assert df.iloc[0]["precision@1"] == 0.0
