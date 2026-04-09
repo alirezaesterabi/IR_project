@@ -90,9 +90,9 @@ def test_load_run_csv_rank_only(tmp_path: Path) -> None:
 def test_validate_run_coverage() -> None:
     run = {"q1": {"a": 1.0}, "q2": {}}
     df = validate_run_coverage(run, ["q1", "q2", "q3"], min_depth=1)
-    assert df.loc[df["query_id"] == "q1", "missing"].iloc[0] is False
-    assert df.loc[df["query_id"] == "q2", "missing"].iloc[0] is True
-    assert df.loc[df["query_id"] == "q3", "missing"].iloc[0] is True
+    assert not df.loc[df["query_id"] == "q1", "missing"].iloc[0]
+    assert df.loc[df["query_id"] == "q2", "missing"].iloc[0]
+    assert df.loc[df["query_id"] == "q3", "missing"].iloc[0]
 
 
 def test_build_bm25_rrf_comparison_table() -> None:

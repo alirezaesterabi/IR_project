@@ -59,7 +59,7 @@ TOP_K = 100  # number of results per query
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
 def results_to_ranked_list(
-    query_id: str, results: list[tuple[str, float]]
+    results: list[tuple[str, float]]
 ) -> list[tuple[str, int]]:
     """Convert retriever output [(doc_id, score), ...] to [(doc_id, rank), ...]."""
     return [(doc_id, rank) for rank, (doc_id, _score) in enumerate(results, start=1)]
@@ -362,10 +362,9 @@ def main():
 
     from src.retrieval.classical_ir import BM25Retriever, TFIDFRetriever, IdentifierRetriever
     from src.preprocessing.text_processing import TextProcessor
-    import chromadb
-    from sentence_transformers import SentenceTransformer
+    from src.retrieval.dense_retriever import DenseRetriever
     from src.retrieval.dense_config import DENSE_MODELS, model_file_suffix, compute_run_tag
-    import torch
+    import chromadb
 
     print("Loading models...")
     tp = TextProcessor()
@@ -379,14 +378,12 @@ def main():
     ident = IdentifierRetriever()
     ident.load(models_dir / "identifier" / "index.pkl")
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    # Discover available ChromaDB collections and build DenseRetrievers
     client = chromadb.PersistentClient(path=str(chroma_dir))
     existing_colls = [c.name for c in client.list_collections()]
 
-    dense_models = {}
-    dense_collections = {}
+    dense_retrievers: dict[str, DenseRetriever] = {}
     for model_key in ["minilm", "bge-m3"]:
-        spec = DENSE_MODELS[model_key]
         suffix = model_file_suffix(model_key)
         run_tag = compute_run_tag(None)
         coll_name = f"opensanctions_{suffix}_{run_tag}"
@@ -394,15 +391,18 @@ def main():
             matching = sorted([n for n in existing_colls if n.startswith(f"opensanctions_{suffix}_")])
             coll_name = matching[-1] if matching else None
         if coll_name:
+            # Extract run_tag from the discovered collection name
+            prefix = f"opensanctions_{suffix}_"
+            discovered_run_tag = coll_name[len(prefix):]
             print(f"  {model_key}: collection {coll_name}")
-            dense_collections[model_key] = client.get_collection(name=coll_name)
+            dense_retrievers[model_key] = DenseRetriever(
+                model_key=model_key,
+                run_tag=discovered_run_tag,
+                chroma_dir=chroma_dir,
+                models_dir=models_dir,
+            )
         else:
             print(f"  WARNING: No collection found for {model_key}")
-
-        st_model = SentenceTransformer(spec.hf_name, device=device)
-        if device == "cuda":
-            st_model = st_model.half()
-        dense_models[model_key] = st_model
 
     retriever_keys = ["bm25", "tfidf", "identifier", "dense_minilm", "dense_bge_m3"]
     print("\nAll models loaded.\n")
@@ -418,7 +418,7 @@ def main():
             combined = " ".join(q["query_texts"])
             tokens = tp.tokenize_name(combined)
             hits = bm25.search(tokens, k=TOP_K)
-            r[q["query_id"]] = results_to_ranked_list(q["query_id"], hits)
+            r[q["query_id"]] = results_to_ranked_list(hits)
         results["bm25"] = r
 
         # TF-IDF
@@ -427,7 +427,7 @@ def main():
             combined = " ".join(q["query_texts"])
             normalised = tp.normalize(combined)
             hits = tfidf.search(normalised, k=TOP_K)
-            r[q["query_id"]] = results_to_ranked_list(q["query_id"], hits)
+            r[q["query_id"]] = results_to_ranked_list(hits)
         results["tfidf"] = r
 
         # Identifier
@@ -440,33 +440,21 @@ def main():
                     if doc_id not in seen:
                         seen.add(doc_id)
                         hits.append((doc_id, score))
-            r[q["query_id"]] = results_to_ranked_list(q["query_id"], hits)
+            r[q["query_id"]] = results_to_ranked_list(hits)
         results["identifier"] = r
 
-        # Dense models
+        # Dense models (via DenseRetriever)
         for model_key, label in [("minilm", "dense_minilm"), ("bge-m3", "dense_bge_m3")]:
-            if model_key not in dense_collections:
+            if model_key not in dense_retrievers:
                 results[label] = {}
                 continue
-            coll = dense_collections[model_key]
-            st_model = dense_models[model_key]
+            retriever = dense_retrievers[model_key]
             r = {}
             for q in queries:
                 query_text = " ".join(q["query_texts"])
-                q_emb = st_model.encode(
-                    [query_text],
-                    normalize_embeddings=True,
-                    convert_to_numpy=True,
-                ).tolist()
-                res = coll.query(
-                    query_embeddings=q_emb,
-                    n_results=TOP_K,
-                    include=["distances"],
-                )
-                doc_ids = res["ids"][0]
-                distances = res["distances"][0]
-                ranked = [(did, 1.0 - dist) for did, dist in zip(doc_ids, distances)]
-                r[q["query_id"]] = results_to_ranked_list(q["query_id"], ranked)
+                hits = retriever.search(query_text, k=TOP_K, include_metadata=False)
+                ranked = [(doc_id, score) for doc_id, score, _meta in hits]
+                r[q["query_id"]] = results_to_ranked_list(ranked)
             results[label] = r
 
         return results
@@ -515,11 +503,14 @@ def main():
         all_type_data.append((qt, fused_df, eval_df, summary))
         print(f"  Completed type {qt} in {summary['elapsed_s']}s\n")
 
-    # ── Cleanup dense models ──────────────────────────────────────────
-    for m in dense_models.values():
-        del m
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
+    # ── Cleanup dense retrievers ────────────────────────────────────────
+    dense_retrievers.clear()
+    try:
+        import torch
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    except ImportError:
+        pass
 
     # ── Write combined Excel workbook ─────────────────────────────────
     print("─" * 60)
