@@ -66,7 +66,7 @@ python -m ipykernel install --user --name ir_project_venv --display-name "Python
 
 Choose one profile before starting the pipeline. The later steps use the same canonical downstream locations, but the raw input and dense run tag should match the profile you picked.
 
-### 10K
+### 10K Preprocess
 
 ```python
 RAW_INPUT = Path("data/raw_data/sample_10k.json")
@@ -74,7 +74,7 @@ RUN_TAG = "10K_YYYYMMDD"
 DENSE_LIMIT = 10000
 ```
 
-### 100K
+### 100K Preprocess
 
 ```python
 RAW_INPUT = Path("data/raw_data/sample_100k.json")
@@ -82,7 +82,7 @@ RUN_TAG = "100K_YYYYMMDD"
 DENSE_LIMIT = 100000
 ```
 
-### Full
+### Full Preprocess
 
 ```python
 RAW_INPUT = Path("data/raw_data/targets.nested.json")
@@ -94,7 +94,7 @@ DENSE_LIMIT = None
 
 Use the profile that matches the corpus you want to process.
 
-### 10K
+### 10K Dense Build
 
 ```bash
 .venv/bin/python - <<'PY'
@@ -112,7 +112,7 @@ run_pipeline(
 PY
 ```
 
-### 100K
+### 100K Dense Build
 
 ```bash
 .venv/bin/python - <<'PY'
@@ -130,7 +130,7 @@ run_pipeline(
 PY
 ```
 
-### Full
+### Full Dense Build
 
 ```bash
 .venv/bin/python - <<'PY'
@@ -176,43 +176,43 @@ Expected outputs:
 
 Use the `RUN_TAG` and `DENSE_LIMIT` that match your chosen profile.
 
-### 10K
+### 10K Dense Export
 
 ```bash
 .venv/bin/python scripts/build_dense_embeddings.py \
   --docs data/json_format_data/subset/documents.jsonl \
   --limit 10000 \
-  --model minilm \
+  --model bge-m3 \
   --chroma \
   --run-tag 10K_20260409
 ```
 
-### 100K
+### 100K Dense Export
 
 ```bash
 .venv/bin/python scripts/build_dense_embeddings.py \
   --docs data/json_format_data/subset/documents.jsonl \
   --limit 100000 \
-  --model minilm \
+  --model bge-m3 \
   --chroma \
   --run-tag 100K_20260409
 ```
 
-### Full
+### Full Dense Export
 
 ```bash
 .venv/bin/python scripts/build_dense_embeddings.py \
   --docs data/json_format_data/subset/documents.jsonl \
-  --model minilm \
+  --model bge-m3 \
   --chroma \
   --run-tag FULL_20260409
 ```
 
 Expected outputs:
 
-- `models/doc_embeddings_minilm_<RUN_TAG>.npy`
-- `models/doc_ids_minilm_<RUN_TAG>.json`
-- Chroma collection `opensanctions_minilm_<RUN_TAG>`
+- `models/doc_embeddings_bge_m3_<RUN_TAG>.npy`
+- `models/doc_ids_bge_m3_<RUN_TAG>.json`
+- Chroma collection `opensanctions_bge_m3_<RUN_TAG>`
 
 ## Step 4: Export BM25 Run
 
@@ -233,24 +233,24 @@ Use the same `RUN_TAG` you used when building dense embeddings.
 ### 10K
 
 ```bash
-.venv/bin/python scripts/export_dense_run.py --model minilm --run-tag 10K_20260409
+.venv/bin/python scripts/export_dense_run.py --model bge-m3 --run-tag 10K_20260409
 ```
 
 ### 100K
 
 ```bash
-.venv/bin/python scripts/export_dense_run.py --model minilm --run-tag 100K_20260409
+.venv/bin/python scripts/export_dense_run.py --model bge-m3 --run-tag 100K_20260409
 ```
 
 ### Full
 
 ```bash
-.venv/bin/python scripts/export_dense_run.py --model minilm --run-tag FULL_20260409
+.venv/bin/python scripts/export_dense_run.py --model bge-m3 --run-tag FULL_20260409
 ```
 
 Expected output:
 
-- `results/runs/dense_minilm.csv`
+- `results/runs/dense_bge_m3.csv`
 
 ## Step 6: Fuse With RRF
 
@@ -259,13 +259,13 @@ This command is the same for `10K`, `100K`, and `full` because it always reads t
 ```bash
 .venv/bin/python -m src.fusion.rrf \
   --bm25 results/runs/bm25.csv \
-  --dense results/runs/dense_minilm.csv \
-  --output results/runs/rrf_minilm.csv
+  --dense results/runs/dense_bge_m3.csv \
+  --output results/runs/rrf_bge_m3.csv
 ```
 
 Expected output:
 
-- `results/runs/rrf_minilm.csv`
+- `results/runs/rrf_bge_m3.csv`
 
 ## Step 7: Evaluate In The Notebook
 
@@ -276,8 +276,8 @@ This notebook is the primary evaluation step for the rerun pipeline:
 It expects the canonical run files produced in the earlier steps:
 
 - `results/runs/bm25.csv`
-- `results/runs/dense_minilm.csv`
-- `results/runs/rrf_minilm.csv`
+- `results/runs/dense_bge_m3.csv`
+- `results/runs/rrf_bge_m3.csv`
 
 This step is also the same for `10K`, `100K`, and `full`. The notebook reads whichever canonical run files were most recently generated.
 
@@ -307,13 +307,15 @@ The `nbconvert` command above assumes you registered the `.venv` once as `ir_pro
 Expected outputs:
 
 - rendered outputs inside `notebooks/05_evaluation_types_1_6.ipynb`
-- `results/evaluation/overall_summary.csv`
-- `results/evaluation/by_type_bm25.csv`
-- `results/evaluation/by_type_dense_minilm.csv`
-- `results/evaluation/by_type_rrf_minilm.csv`
-- `results/evaluation/per_query_*.csv`
-- `results/evaluation/coverage_*.csv`
-- `results/evaluation/comparison_bm25_vs_rrf_minilm.csv`
+- `results/evaluation/types_1_6_bm25_by_type.csv`
+- `results/evaluation/types_1_6_bm25_overall.csv`
+- `results/evaluation/types_1_6_bm25_per_query.csv`
+- `results/evaluation/types_1_6_dense_by_type.csv`
+- `results/evaluation/types_1_6_rrf_by_type.csv`
+- `results/evaluation/types_1_6_rrf_overall.csv`
+- `results/evaluation/types_1_6_rrf_per_query.csv`
+- `results/evaluation/types_1_6_bm25_vs_rrf_by_type.csv`
+- `results/evaluation/types_1_6_bm25_vs_rrf_overall.csv`
 
 Script alternative:
 
