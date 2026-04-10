@@ -267,7 +267,7 @@ Expected output:
 
 - `results/runs/rrf_bge_m3.csv`
 
-## Step 7: Evaluate In The Notebook
+## Step 7: Evaluate Types 1-6 In The Notebook
 
 This notebook is the primary evaluation step for the rerun pipeline:
 
@@ -323,8 +323,146 @@ Script alternative:
 .venv/bin/python scripts/evaluate_runs.py
 ```
 
+## Step 8: Install Optional Type 7 RAG Dependencies
+
+The remaining steps are optional and extend the canonical retrieval pipeline with
+Type 7 narrative-answer generation and `RAGAS` evaluation.
+
+Install the additional dependencies once:
+
+```bash
+.venv/bin/pip install -r requirements-rag.txt
+```
+
+If you plan to use the default local generation/evaluation path, make sure
+Ollama is running and the selected model is available:
+
+```bash
+ollama serve
+ollama pull gpt-oss:20b
+```
+
+## Step 9: Generate Canonical Type 7 Queries If Needed
+
+This step derives Type 7 narrative-answer queries from the existing Type 3 and
+Type 4 query sets and writes them into the canonical `data/queries/` location.
+
+You do not need to rerun this step for every RAG execution.
+
+Treat it as a one-time setup or maintenance step that only needs to be rerun if:
+
+- `data/queries/queries_type_3.json` changes
+- `data/queries/queries_type_4.json` changes
+- `scripts/rag/generate_type7_queries.py` changes
+- the team wants to regenerate or redesign the canonical Type 7 prompts
+
+```bash
+.venv/bin/python scripts/rag/generate_type7_queries.py
+```
+
+Expected outputs:
+
+- `data/queries/type7_queries.json`
+- `data/queries/type7_queries_review.xlsx`
+
+## Step 10: Prepare Type 7 RAG Context
+
+This step starts from the canonical fused run and joins the top retrieved
+documents with the generated Type 7 queries.
+
+This is the first recurring step in the Type 7 RAG rerun flow.
+
+```bash
+.venv/bin/python scripts/rag/prepare_context.py \
+  --run results/runs/rrf_bge_m3.csv \
+  --docs data/json_format_data/subset/documents.jsonl \
+  --queries data/queries/type7_queries.json \
+  --top-k 10 \
+  --run-tag CURRENT
+```
+
+Expected outputs:
+
+- `results/rag/context_CURRENT.jsonl`
+- `results/rag/context_CURRENT.xlsx`
+
+## Step 11: Generate Type 7 Answers
+
+This step sends each Type 7 query plus its prepared top-k context to the chosen
+LLM and stores one grounded answer per query.
+
+```bash
+.venv/bin/python scripts/rag/generate_answers.py \
+  --input results/rag/context_CURRENT.jsonl \
+  --model gpt-oss:20b \
+  --prompt-version v1 \
+  --output results/rag/answers_CURRENT.jsonl
+```
+
+Expected outputs:
+
+- `results/rag/answers_CURRENT.jsonl`
+- `results/rag/answers_CURRENT.xlsx`
+- `results/rag/raw_responses_CURRENT.json`
+
+## Step 12: Evaluate Type 7 Answers With RAGAS
+
+The backend evaluation script computes per-query `RAGAS` metrics using the
+generated answers, the prepared contexts, and a pseudo-ground-truth field built
+from retrieved content, matching the current project evaluation direction.
+
+```bash
+.venv/bin/python scripts/rag/evaluate_answers.py \
+  --answers results/rag/answers_CURRENT.jsonl \
+  --context results/rag/context_CURRENT.jsonl \
+  --queries data/queries/type7_queries.json \
+  --output-dir results/rag/evaluation/CURRENT
+```
+
+Expected outputs:
+
+- `results/rag/evaluation/CURRENT/ragas_input.json`
+- `results/rag/evaluation/CURRENT/per_query.csv`
+- `results/rag/evaluation/CURRENT/summary.json`
+- `results/rag/evaluation/CURRENT/enriched.xlsx`
+
+## Step 13: Review Type 7 Evaluation In The Notebook
+
+This notebook is the professor-facing surface for the Type 7 workflow. It reads
+the script-generated evaluation artifacts and displays the queries, answers,
+contexts, and `RAGAS` results in one place.
+
+Open the notebook from the repository root and run all cells:
+
+```bash
+. .venv/bin/activate
+jupyter lab notebooks/06_type7_rag_evaluation.ipynb
+```
+
+If you prefer a non-interactive execution that still writes outputs into the
+notebook file itself:
+
+```bash
+.venv/bin/python -m jupyter nbconvert \
+  --to notebook \
+  --execute \
+  --inplace \
+  --ExecutePreprocessor.timeout=1200 \
+  --ExecutePreprocessor.kernel_name=ir_project_venv \
+  notebooks/06_type7_rag_evaluation.ipynb
+```
+
+The notebook expects these upstream files to exist first:
+
+- `data/queries/type7_queries.json`
+- `results/rag/context_CURRENT.jsonl`
+- `results/rag/answers_CURRENT.jsonl`
+- `results/rag/evaluation/CURRENT/per_query.csv`
+- `results/rag/evaluation/CURRENT/summary.json`
+
 ## Notes
 
 - The current query and qrels files under `data/queries/` and `data/qrels/` are reused across reruns.
 - Smaller corpora can lead to shallow or empty coverage for some query types. This is expected and should be interpreted as a dataset-size limitation, not necessarily a pipeline failure.
 - The evaluation helpers now handle empty-run subsets without crashing, so very small reruns can still produce reports.
+- Type 7 uses query generation plus answer-level `RAGAS` evaluation, so it is intentionally separate from the qrels-based Types 1-6 notebook flow.
