@@ -84,7 +84,9 @@ def iter_query_rows(queries_df) -> Iterable[dict[str, str]]:
 
 def export_bm25_run(*, output_path: Path, queries_df, models_dir: Path, top_k: int) -> None:
     from src.retrieval.classical_ir import BM25Retriever
+    from src.preprocessing.text_processing import TextProcessor
 
+    tp = TextProcessor()
     bm25 = BM25Retriever()
     bm25.load(models_dir / "bm25")
 
@@ -96,7 +98,8 @@ def export_bm25_run(*, output_path: Path, queries_df, models_dir: Path, top_k: i
         )
         writer.writeheader()
         for row in iter_query_rows(queries_df):
-            hits = bm25.search(query_tokens_bm25(row["query_text"]), k=top_k)
+            normalised = tp.normalize(row["query_text"])
+            hits = bm25.search(query_tokens_bm25(normalised), k=top_k)
             for rank, (doc_id, score) in enumerate(hits, start=1):
                 writer.writerow(
                     {
