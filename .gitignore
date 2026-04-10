@@ -44,7 +44,6 @@ chromadb/
 chroma_db/
 
 # ── Results and logs ──────────────────────────────────────────────────────────
-results/
 logs/
 *.log
 
