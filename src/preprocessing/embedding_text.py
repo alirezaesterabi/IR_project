@@ -196,4 +196,19 @@ def build_embedding_text(doc: dict[str, Any]) -> str:
         if isinstance(blob, str) and blob:
             parts.append(blob[:500])
 
-    return " ".join(parts)
+    # Append name-rich prefix from text_blob so Latin transliterations and
+    # alternative script name variants are always present in the embedding.
+    # text_blob starts with name tokens (all variants, transliterations,
+    # aliases) before shifting to contextual text like "sanction", "debarment".
+    blob = doc.get("text_blob") or ""
+    if isinstance(blob, str) and blob:
+        blob_tokens = blob.split()[:50]
+        name_prefix = " ".join(blob_tokens)
+        parts.append(f"Also known as: {name_prefix}.")
+
+    result = " ".join(parts)
+    # Cap at 200 whitespace-split tokens to avoid inflating embedding cost
+    result_tokens = result.split()
+    if len(result_tokens) > 200:
+        result = " ".join(result_tokens[:200])
+    return result
