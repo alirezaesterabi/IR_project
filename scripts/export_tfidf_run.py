@@ -56,6 +56,7 @@ def main(argv: list[str] | None = None) -> int:
         sys.path.insert(0, str(root))
 
     from src.evaluation.utils import default_data_paths, merge_all_types_queries
+    from src.preprocessing.text_processing import TextProcessor
     from src.retrieval.classical_ir import TFIDFRetriever
 
     queries_dir = Path(args.queries_dir) if args.queries_dir else root / "data" / "queries"
@@ -72,6 +73,7 @@ def main(argv: list[str] | None = None) -> int:
         query_paths = {i: queries_dir / f"queries_type_{i}.json" for i in range(1, 7)}
     queries_df = merge_all_types_queries(query_paths)
 
+    tp = TextProcessor()
     tfidf = TFIDFRetriever()
     tfidf.load(tfidf_dir)
 
@@ -94,7 +96,8 @@ def main(argv: list[str] | None = None) -> int:
         )
         writer.writeheader()
         for row in iter_query_rows(queries_df):
-            hits = tfidf.search(row["query_text"], k=args.top_k)
+            normalised = tp.normalize(row["query_text"])
+            hits = tfidf.search(normalised, k=args.top_k)
             for rank, (doc_id, score) in enumerate(hits, start=1):
                 writer.writerow({
                     "query_id": row["query_id"],
