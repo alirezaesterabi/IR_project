@@ -120,10 +120,33 @@ def fuse_and_write(
     k : int
         RRF constant (default 60).
     """
-    bm25_lists = load_ranked_list(bm25_path)
-    dense_lists = load_ranked_list(dense_path)
+    fuse_and_write_multi([bm25_path, dense_path], output_path, k=k)
 
-    all_query_ids = sorted(set(bm25_lists.keys()) | set(dense_lists.keys()))
+
+def fuse_and_write_multi(
+    run_paths: List[str],
+    output_path: str,
+    k: int = 60,
+) -> None:
+    """
+    Load N ranked lists, fuse with RRF, and write output CSV.
+
+    Parameters
+    ----------
+    run_paths : list of str
+        Paths to ranked-list CSVs (any number).
+    output_path : str
+        Path for the fused output CSV.
+    k : int
+        RRF constant (default 60).
+    """
+    all_lists: List[Dict[str, List[Tuple[str, int]]]] = []
+    for path in run_paths:
+        all_lists.append(load_ranked_list(path))
+
+    all_query_ids = sorted(
+        set().union(*(lists.keys() for lists in all_lists))
+    )
 
     rrf = ReciprocalRankFusion(k=k)
 
@@ -132,10 +155,8 @@ def fuse_and_write(
         writer.writerow(["query_id", "doc_id", "rank", "rrf_score"])
 
         for qid in all_query_ids:
-            bm25_ranked = bm25_lists.get(qid, [])
-            dense_ranked = dense_lists.get(qid, [])
-
-            fused = rrf.fuse(bm25_ranked, dense_ranked)
+            ranked_lists = [lists.get(qid, []) for lists in all_lists]
+            fused = rrf.fuse(*ranked_lists)
 
             for fused_rank, (doc_id, score) in enumerate(fused, start=1):
                 writer.writerow([qid, doc_id, fused_rank, f"{score:.6f}"])
@@ -143,13 +164,16 @@ def fuse_and_write(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Fuse BM25 and dense retrieval results using Reciprocal Rank Fusion"
+        description="Fuse retrieval results using Reciprocal Rank Fusion"
     )
     parser.add_argument(
-        "--bm25", required=True, help="Path to BM25 ranked-list CSV"
+        "--bm25", help="Path to BM25 ranked-list CSV (legacy 2-input mode)"
     )
     parser.add_argument(
-        "--dense", required=True, help="Path to dense retrieval ranked-list CSV"
+        "--dense", help="Path to dense retrieval ranked-list CSV (legacy 2-input mode)"
+    )
+    parser.add_argument(
+        "--runs", nargs="+", help="Paths to ranked-list CSVs (N-input mode)"
     )
     parser.add_argument(
         "--output", required=True, help="Path for fused output CSV"
@@ -159,5 +183,10 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    fuse_and_write(args.bm25, args.dense, args.output, k=args.k)
+    if args.runs:
+        fuse_and_write_multi(args.runs, args.output, k=args.k)
+    elif args.bm25 and args.dense:
+        fuse_and_write(args.bm25, args.dense, args.output, k=args.k)
+    else:
+        parser.error("Provide either --runs or both --bm25 and --dense")
     print(f"Fused output written to {args.output}")

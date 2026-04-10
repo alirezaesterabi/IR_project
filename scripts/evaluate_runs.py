@@ -61,10 +61,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Directory for evaluation CSV outputs (default: results/evaluation).",
     )
     parser.add_argument("--bm25-run", type=str, default=None)
+    parser.add_argument("--tfidf-run", type=str, default=None)
+    parser.add_argument("--identifier-run", type=str, default=None)
     parser.add_argument("--dense-minilm-run", type=str, default=None)
     parser.add_argument("--dense-bge-m3-run", type=str, default=None)
     parser.add_argument("--rrf-minilm-run", type=str, default=None)
     parser.add_argument("--rrf-bge-m3-run", type=str, default=None)
+    parser.add_argument("--rrf-all-run", type=str, default=None)
     parser.add_argument(
         "--min-depth",
         type=int,
@@ -116,6 +119,12 @@ def main(argv: list[str] | None = None) -> int:
 
     run_paths = {
         "bm25": Path(args.bm25_run) if args.bm25_run else runs_dir / "bm25.csv",
+        "tfidf": Path(args.tfidf_run) if args.tfidf_run else runs_dir / "tfidf.csv",
+        "identifier": (
+            Path(args.identifier_run)
+            if args.identifier_run
+            else runs_dir / "identifier.csv"
+        ),
         "dense_minilm": (
             Path(args.dense_minilm_run)
             if args.dense_minilm_run
@@ -135,6 +144,11 @@ def main(argv: list[str] | None = None) -> int:
             Path(args.rrf_bge_m3_run)
             if args.rrf_bge_m3_run
             else runs_dir / "rrf_bge_m3.csv"
+        ),
+        "rrf_all": (
+            Path(args.rrf_all_run)
+            if args.rrf_all_run
+            else runs_dir / "rrf_all.csv"
         ),
     }
 
@@ -195,6 +209,14 @@ def main(argv: list[str] | None = None) -> int:
             )
         )
         _write_df(comp, output_dir / "comparison_bm25_vs_rrf_bge_m3.csv")
+
+    if "bm25" in evaluated_by_type and "rrf_all" in evaluated_by_type:
+        comp = round_metrics_df(
+            build_bm25_rrf_comparison_table(
+                evaluated_by_type["bm25"], evaluated_by_type["rrf_all"]
+            )
+        )
+        _write_df(comp, output_dir / "comparison_bm25_vs_rrf_all.csv")
 
     print(f"\nWrote evaluation outputs to {output_dir}")
     return 0
