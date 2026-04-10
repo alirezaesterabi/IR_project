@@ -1,6 +1,8 @@
 # Evaluation Analysis Report
 
-**Generated:** 2026-04-10 (final — after fix/embedding-text-latin-names)
+**DATE:** 2026-04-10  
+**SAMPLE:** Full dataset  
+**Generated:** 2026-04-10 (final — after fix/embedding-text-latin-names)  
 **Dataset:** OpenSanctions full corpus (1,249,379 documents)
 **Pipeline:** 5-retriever RRF fusion (BM25 + TF-IDF + Identifier + MiniLM + BGE-M3)
 **Fixes applied:** query normalisation (BM25/TF-IDF dispatch) + Latin names in embedding_text

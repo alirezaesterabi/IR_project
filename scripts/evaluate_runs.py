@@ -74,6 +74,24 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=10,
         help="Minimum expected retrieved depth for coverage checks (default: 10).",
     )
+    parser.add_argument(
+        "--sample-size",
+        type=str,
+        default="Full dataset",
+        metavar="LABEL",
+        help='Corpus scale label for the Markdown report, e.g. "10K", "100K", "Full dataset" (default: Full dataset).',
+    )
+    parser.add_argument(
+        "--report-path",
+        type=str,
+        default=None,
+        help="Write Types 1–6 Markdown report to this path (default: <repo>/docs/evaluation_report.md).",
+    )
+    parser.add_argument(
+        "--no-report",
+        action="store_true",
+        help="Skip writing the Markdown report in docs/.",
+    )
     return parser.parse_args(argv)
 
 
@@ -88,6 +106,7 @@ def main(argv: list[str] | None = None) -> int:
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
 
+    from src.evaluation.report_md import write_types_1_6_evaluation_report
     from src.evaluation.utils import (
         build_bm25_rrf_comparison_table,
         default_data_paths,
@@ -164,6 +183,7 @@ def main(argv: list[str] | None = None) -> int:
     print()
 
     evaluated_by_type: dict[str, pd.DataFrame] = {}
+    per_query_by_system: dict[str, pd.DataFrame] = {}
     overall_rows: list[dict[str, float | str]] = []
     found_any = False
 
@@ -180,6 +200,7 @@ def main(argv: list[str] | None = None) -> int:
         overall = evaluate_overall_types_1_6(qrels, run_dict, queries_df)
 
         evaluated_by_type[system] = per_type
+        per_query_by_system[system] = per_query
         overall_rows.append({"system": system, **overall})
 
         _write_df(per_type, output_dir / f"by_type_{system}.csv")
@@ -217,6 +238,42 @@ def main(argv: list[str] | None = None) -> int:
             )
         )
         _write_df(comp, output_dir / "comparison_bm25_vs_rrf_all.csv")
+
+    if (
+        not args.no_report
+        and "bm25" in evaluated_by_type
+        and "rrf_bge_m3" in evaluated_by_type
+        and "bm25" in per_query_by_system
+        and "rrf_bge_m3" in per_query_by_system
+    ):
+        report_path = (
+            Path(args.report_path)
+            if args.report_path
+            else root / "docs" / "evaluation_report.md"
+        )
+        overall_by_system = {row["system"]: row for row in overall_rows}
+        bm25_o = overall_by_system.get("bm25", {})
+        rrf_o = overall_by_system.get("rrf_bge_m3", {})
+        dense_bt = evaluated_by_type.get("dense_bge_m3")
+        if dense_bt is not None and dense_bt.empty:
+            dense_bt = None
+        systems_list = sorted(evaluated_by_type.keys())
+        write_types_1_6_evaluation_report(
+            path=report_path,
+            sample_size=args.sample_size,
+            bm25_by_type=evaluated_by_type["bm25"],
+            rrf_by_type=evaluated_by_type["rrf_bge_m3"],
+            bm25_overall={k: bm25_o[k] for k in bm25_o if k != "system"},
+            rrf_overall={k: rrf_o[k] for k in rrf_o if k != "system"},
+            dense_by_type=dense_bt,
+            systems_evaluated=systems_list,
+        )
+        print(f"[ok] Wrote Markdown report: {report_path}")
+    elif not args.no_report:
+        print(
+            "[skip] Markdown report needs bm25.csv and rrf_bge_m3.csv under runs "
+            "(or pass explicit run paths)."
+        )
 
     print(f"\nWrote evaluation outputs to {output_dir}")
     return 0
