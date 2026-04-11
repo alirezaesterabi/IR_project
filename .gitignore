@@ -47,6 +47,16 @@ chroma_db/
 logs/
 *.log
 
+# Local rerun-only evaluation outputs
+results/evaluation/types_1_6_*.csv
+results/evaluation/by_type_rrf_minilm.csv
+results/evaluation/comparison_bm25_vs_rrf_minilm.csv
+results/evaluation/coverage_rrf_minilm.csv
+results/evaluation/per_query_rrf_minilm.csv
+
+# Local experimental run outputs
+results/runs/rrf_minilm.csv
+
 # ── OS / IDE ──────────────────────────────────────────────────────────────────
 .DS_Store
 .DS_Store?

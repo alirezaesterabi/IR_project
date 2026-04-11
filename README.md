@@ -130,3 +130,9 @@ the first 100 rows of `data/raw_data/sample_10k.json`.
 For the exact step-by-step pipeline, use:
 
 - `docs/rerun_pipeline.md`
+
+## Contributors
+
+- Alireza Esterabi — `alireza@Alirezas-MacBook-Air.local`
+- giantflyingegg — `abwaham@gmail.com`
+- matc88 — `61077888+matc88@users.noreply.github.com`

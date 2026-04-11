@@ -281,8 +281,6 @@ It expects the canonical run files produced in the earlier steps:
 
 This step is also the same for `10K`, `100K`, and `full`. The notebook reads whichever canonical run files were most recently generated.
 
-Set the corpus scale label for the Markdown report: in the notebook configuration cell, assign `SAMPLE_SIZE` to `"10K"`, `"100K"`, or `"Full dataset"` so `docs/evaluation_report.md` records which rerun you ran.
-
 Open the notebook from the repository root and run all cells:
 
 ```bash
@@ -309,7 +307,6 @@ The `nbconvert` command above assumes you registered the `.venv` once as `ir_pro
 Expected outputs:
 
 - rendered outputs inside `notebooks/05_evaluation_types_1_6.ipynb`
-- `docs/evaluation_report.md` — human-readable report (**DATE**, **SAMPLE**, overall MAP/Recall@10, per-type MAP comparison, full per-type metrics including e.g. P@1 / nDCG@10 / recall as in `TYPE_METRICS`, optional dense-by-type section; no per-query rows)
 - `results/evaluation/types_1_6_bm25_by_type.csv`
 - `results/evaluation/types_1_6_bm25_overall.csv`
 - `results/evaluation/types_1_6_bm25_per_query.csv`
@@ -319,14 +316,6 @@ Expected outputs:
 - `results/evaluation/types_1_6_rrf_per_query.csv`
 - `results/evaluation/types_1_6_bm25_vs_rrf_by_type.csv`
 - `results/evaluation/types_1_6_bm25_vs_rrf_overall.csv`
-
-Script alternative:
-
-```bash
-.venv/bin/python scripts/evaluate_runs.py --sample-size "Full dataset"
-```
-
-Use `--sample-size` to match your rerun (`10K`, `100K`, or `Full dataset`). The script writes the same Markdown report to `docs/evaluation_report.md` when both `results/runs/bm25.csv` and `results/runs/rrf_bge_m3.csv` exist. Override the path with `--report-path /path/to/report.md`; skip the report with `--no-report`.
 
 ## Step 8: Install Optional Type 7 RAG Dependencies
 
@@ -464,6 +453,90 @@ The notebook expects these upstream files to exist first:
 - `results/rag/answers_CURRENT.jsonl`
 - `results/rag/evaluation/CURRENT/per_query.csv`
 - `results/rag/evaluation/CURRENT/summary.json`
+
+## Step 14: Generate The Final Markdown Report With A Prompt
+
+After you run both evaluation notebooks, create the professor-facing Markdown
+report manually with an LLM prompt instead of a repo script.
+
+Save the final report to:
+
+- `docs/evaluation_report.md`
+
+Before prompting, gather these structured outputs.
+
+Types 1-6 inputs from `notebooks/05_evaluation_types_1_6.ipynb`:
+
+- `results/evaluation/types_1_6_bm25_by_type.csv`
+- `results/evaluation/types_1_6_bm25_overall.csv`
+- `results/evaluation/types_1_6_bm25_per_query.csv`
+- `results/evaluation/types_1_6_dense_by_type.csv`
+- `results/evaluation/types_1_6_rrf_by_type.csv`
+- `results/evaluation/types_1_6_rrf_overall.csv`
+- `results/evaluation/types_1_6_rrf_per_query.csv`
+- `results/evaluation/types_1_6_bm25_vs_rrf_by_type.csv`
+- `results/evaluation/types_1_6_bm25_vs_rrf_overall.csv`
+
+Type 7 inputs from `notebooks/06_type7_rag_evaluation.ipynb`:
+
+- `results/rag/evaluation/CURRENT/per_query.csv`
+- `results/rag/evaluation/CURRENT/summary.json`
+- optionally `results/rag/evaluation/CURRENT/enriched.xlsx` for manual review
+
+Use `results/evaluation_analysis.md` as the style reference for:
+
+- concise overall findings
+- per-query-type analysis
+- evidence-based caveats
+- suggested next steps for each query type when the metrics support them
+
+This is a manual prompt-based reporting step. Nothing in the repo now writes
+`docs/evaluation_report.md` automatically.
+
+Copy the prompt below into your LLM tool and attach or paste the notebook
+outputs listed above.
+
+```text
+Write a Markdown evaluation report for this IR project using only the supplied
+evaluation artifacts.
+
+Output path:
+- Save the final Markdown as `docs/evaluation_report.md`
+
+Use these sources:
+- Types 1-6 outputs from `notebooks/05_evaluation_types_1_6.ipynb`
+- Type 7 outputs from `notebooks/06_type7_rag_evaluation.ipynb`
+- `results/evaluation_analysis.md` as a style reference only, not as a source
+  of numbers unless the same numbers are present in the supplied artifacts
+
+Requirements:
+1. Do not invent values, rankings, query counts, or explanations.
+2. Use only the supplied CSV/JSON/notebook outputs as evidence.
+3. Summarize Types 1-6 per model and per query type.
+4. Summarize Type 7 separately using the supplied `RAGAS` outputs.
+5. For each query type, review the results and suggest practical next steps
+   only when they are supported by the evidence.
+6. Keep the report concise, professor-facing, and written in Markdown.
+7. If a metric or comparison is unavailable, say so explicitly.
+
+Structure:
+- Title and metadata
+- Overall summary
+- Types 1-6 results by query type
+- Type 7 summary
+- Recommended next steps by query type
+- Short conclusion
+
+Additional guidance:
+- For Types 1-6, focus on the main systems present in the supplied files and
+  compare BM25, dense, and RRF where available.
+- For Type 7, summarize the evaluation outcome from
+  `results/rag/evaluation/CURRENT/summary.json` and use
+  `results/rag/evaluation/CURRENT/per_query.csv` only for high-level patterns.
+- Keep “next steps” concrete, such as query normalisation, metadata filters,
+  retriever changes, prompt changes, or data-quality review, but only if they
+  follow from the supplied evidence.
+```
 
 ## Notes
 

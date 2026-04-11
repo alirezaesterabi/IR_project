@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import csv
 import importlib.util
-import json
 import sys
 import types
 from pathlib import Path
@@ -161,61 +160,3 @@ def test_export_bm25_run_writes_shared_schema(monkeypatch, tmp_path: Path) -> No
     assert rows[0]["bm25_score"] == "12.500000000"
 
 
-def test_evaluate_runs_main_writes_reports(tmp_path: Path) -> None:
-    pytest.importorskip("ranx")
-    mod = _load_script("evaluate_runs.py")
-
-    queries_dir = tmp_path / "queries"
-    qrels_dir = tmp_path / "qrels"
-    runs_dir = tmp_path / "runs"
-    output_dir = tmp_path / "out"
-    queries_dir.mkdir()
-    qrels_dir.mkdir()
-    runs_dir.mkdir()
-
-    for qtype in range(1, 7):
-        if qtype == 1:
-            queries_payload = {
-                "query_type": 1,
-                "queries": [
-                    {"query_id": "Q1_001", "query_type": 1, "query_texts": ["alpha"]}
-                ],
-            }
-            qrels_payload = {"query_type": 1, "qrels": {"Q1_001": {"d1": 1}}}
-        else:
-            queries_payload = {"query_type": qtype, "queries": []}
-            qrels_payload = {"query_type": qtype, "qrels": {}}
-
-        (queries_dir / f"queries_type_{qtype}.json").write_text(
-            json.dumps(queries_payload), encoding="utf-8"
-        )
-        (qrels_dir / f"qrels_type_{qtype}.json").write_text(
-            json.dumps(qrels_payload), encoding="utf-8"
-        )
-
-    (runs_dir / "bm25.csv").write_text(
-        "query_id,doc_id,rank,bm25_score\nQ1_001,d1,1,10.0\n",
-        encoding="utf-8",
-    )
-    (runs_dir / "rrf_minilm.csv").write_text(
-        "query_id,doc_id,rank,rrf_score\nQ1_001,d1,1,0.5\n",
-        encoding="utf-8",
-    )
-
-    code = mod.main(
-        [
-            "--queries-dir",
-            str(queries_dir),
-            "--qrels-dir",
-            str(qrels_dir),
-            "--runs-dir",
-            str(runs_dir),
-            "--output-dir",
-            str(output_dir),
-        ]
-    )
-    assert code == 0
-    assert (output_dir / "overall_summary.csv").exists()
-    assert (output_dir / "by_type_bm25.csv").exists()
-    assert (output_dir / "by_type_rrf_minilm.csv").exists()
-    assert (output_dir / "comparison_bm25_vs_rrf_minilm.csv").exists()
