@@ -1,4 +1,4 @@
-# Information Retrieval Project — OpenSanctions Entity Search
+# Information Retrieval System for Sanctioned Entity Matching
 
 An end-to-end retrieval system for sanctions entity search over the
 [OpenSanctions](https://www.opensanctions.org/) dataset. The supported local
@@ -29,13 +29,14 @@ Colab is not a supported workflow for this repository.
 ## Repository Structure
 
 ```text
-IR_project/
+information-retrieval-system-for-sanctioned-entity-matching/
 ├── data/
 │   ├── raw_data/                   # Raw OpenSanctions inputs and local samples
 │   ├── json_format_data/           # Canonical processed corpora
 │   ├── queries/                    # Query JSON files, including Type 7
 │   └── qrels/                      # Qrels JSON files
 ├── docs/
+│   ├── evaluation_analysis.md          # Evaluation analysis report
 │   ├── rerun_pipeline.md               # Canonical rerun guide
 │   ├── presentation_outline.md         # Presentation source
 │   ├── presentation_slides_export.html # Presentation export
@@ -76,7 +77,7 @@ Use a Python `3.11+` virtual environment from the repository root.
 
 ```bash
 git clone <repo-url>
-cd IR_project
+cd information-retrieval-system-for-sanctioned-entity-matching
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
@@ -133,6 +134,6 @@ For the exact step-by-step pipeline, use:
 
 ## Contributors
 
-- Alireza Esterabi — `alireza@Alirezas-MacBook-Air.local`
+- Alireza Esterabi — `ali.esterabi@gmail.com`
 - giantflyingegg — `abwaham@gmail.com`
 - matc88 — `61077888+matc88@users.noreply.github.com`

@@ -483,7 +483,7 @@ Type 7 inputs from `notebooks/06_type7_rag_evaluation.ipynb`:
 - `results/rag/evaluation/CURRENT/summary.json`
 - optionally `results/rag/evaluation/CURRENT/enriched.xlsx` for manual review
 
-Use `results/evaluation_analysis.md` as the style reference for:
+Use `docs/evaluation_analysis.md` as the style reference for:
 
 - concise overall findings
 - per-query-type analysis
@@ -506,7 +506,7 @@ Output path:
 Use these sources:
 - Types 1-6 outputs from `notebooks/05_evaluation_types_1_6.ipynb`
 - Type 7 outputs from `notebooks/06_type7_rag_evaluation.ipynb`
-- `results/evaluation_analysis.md` as a style reference only, not as a source
+- `docs/evaluation_analysis.md` as a style reference only, not as a source
   of numbers unless the same numbers are present in the supplied artifacts
 
 Requirements:
